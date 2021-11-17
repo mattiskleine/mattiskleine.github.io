@@ -1,0 +1,154 @@
+@font-face {
+  font-family: MontserratLight;
+  src: url(fonts/Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(fonts/Nunito/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url(fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  --pageHeight: 1388px;
+  overflow-x: hidden;
+}
+
+#bottom_space {
+  position: absolute;
+  top: var(--pageHeight);
+  height: 50px;
+  width: 100vw;
+}
+
+#alerts {
+  position: fixed;
+  top: 20px;
+  transform: translateX(calc(50vw - 50%));
+  background-color: #dddddd;
+  padding: 10px 20px;
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity .5s;
+  font-family: Montserrat;
+  color: #444444;
+  box-shadow: 0px 0px 10px #444444;
+  z-index: 5;
+}
+
+#menu_bar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #284E76;
+  z-index: 4;
+  box-shadow: 2px 3px 15px -3px #444444;
+}
+
+#menu_bar_logo {
+  position: absolute;
+  top: 50%;
+  left: 10vw;
+  height: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.menu_bar_item {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: Merriweather;
+  font-size: 12pt;
+  color: #dddddd;
+  cursor: pointer;
+  transform: scale(1) translate(-50% -50%);
+  transition: transform .2s;
+}
+.menu_bar_item:hover {
+  color: #ffffff;
+  transform: scale(1.1) translateY(-50%);
+}
+.menu_bar_item_active {
+  color: #ffffff;
+  transform: scale(1.1) translateY(-50%);
+}
+
+#menu_bar_projects {
+  right: 52%;
+}
+
+#menu_bar_about {
+  left: 52%;
+}
+
+#menu_bar_line {
+  position: absolute;
+  top: 70%;
+  left: calc(52% - 5px);
+  right: calc(48% - 80px);
+  height: 2px;
+  background-color: #dddddd;
+  border-radius: 10px;
+  transition: all .3s;
+}
+
+#cv {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 58.4vw;
+  height: calc(58.4vw * 1.41);
+  background-color: #fefefe;
+  transition: left .5s;
+  box-shadow: 0.6vw 0.83vw 1.19vw #aaaaaa;
+}
+
+.project {
+  position: absolute;
+  left: -12.5vw;
+  transform: translateX(-50%);
+  transition: left .5s;
+  width: 25vw;
+  height: calc(25vw * 0.5625);
+  background-color: #E36C83;
+  border-radius: 3vw;
+  cursor: pointer;
+}
+
+.project_hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  opacity: .8;
+}
+
+#project1 {
+  top: 200px;
+}
+
+#project2 {
+  top: 200px;
+}

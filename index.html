@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="index_script.js"></script>
+<link rel="stylesheet" href="index_style.css">
+<link rel="shortcut icon" href="#" />
+<title>Mattis Kleine</title>
+</head>
+<body>
+
+<div id="alerts"></div>
+
+<div id="menu_bar">
+  <img id="menu_bar_logo" src="images/logo.svg">
+  <div id="menu_bar_projects" class="menu_bar_item" onclick="openPageProjects()">projects</div>
+  <div id="menu_bar_about" class="menu_bar_item menu_bar_item_active" onclick="openPageAbout()">about me</div>
+  <div id="menu_bar_line"></div>
+</div>
+
+<object id="cv" data="objects/cv/cv.html"></object>
+
+<div id="project1" class="project" onmouseover="hoverProject(1)" onmouseout="unhoverProject(1)">
+  <div id="project1_hover" class="project_hover"></div>
+</div>
+
+<div id="project2" class="project" onmouseover="hoverProject(2)" onmouseout="unhoverProject(2)">
+  <div id="project2_hover" class="project_hover"></div>
+</div>
+
+<div id="bottom_space"></div>
+
+</body>
+</html>
