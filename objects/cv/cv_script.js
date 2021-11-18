@@ -1,14 +1,20 @@
-function showAlert(x) {
+function showAlertParent(x,t) {
+  parent.document.getElementById('alerts').style.display = 'block';
   parent.document.getElementById('alerts').innerHTML = x;
-  parent.document.getElementById('alerts').style.opacity = 1;
-  setTimeout(function(){
-    parent.document.getElementById('alerts').style.opacity = 0;
-  }, 1500);
+  setTimeout(() => {
+    parent.document.getElementById('alerts').style.opacity = 1;
+    setTimeout(() => {
+      parent.document.getElementById('alerts').style.opacity = 0;
+      setTimeout(() => {
+        parent.document.getElementById('alerts').style.display = 'none';
+      }, 500);
+    }, t);
+  }, 20);
 }
 
 function copyToClipboard(x) {
   navigator.clipboard.writeText(x);
-  showAlert('copied to clipboard!');
+  showAlertParent('copied to clipboard!', 1500);
 }
 
 function showTextBox(x) {

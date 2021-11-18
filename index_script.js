@@ -1,5 +1,20 @@
 window.onload = function() {
   openPageProjects();
+  showAlert('this site is still under construction...', 3000);
+}
+
+function showAlert(x,t) {
+  document.getElementById('alerts').style.display = 'block';
+  document.getElementById('alerts').innerHTML = x;
+  setTimeout(() => {
+    document.getElementById('alerts').style.opacity = 1;
+    setTimeout(() => {
+      document.getElementById('alerts').style.opacity = 0;
+      setTimeout(() => {
+        document.getElementById('alerts').style.display = 'none';
+      }, 500);
+    }, t);
+  }, 20);
 }
 
 function openPageProjects() {
