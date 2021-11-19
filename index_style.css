@@ -133,6 +133,7 @@ body {
   background-color: #E36C83;
   border-radius: 3vw;
   cursor: pointer;
+  border: .3vw solid #444444;
 }
 
 .project_hover {
@@ -148,6 +149,10 @@ body {
 
 #project1 {
   top: 200px;
+  background-image: url(images/adam_preview.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #project2 {

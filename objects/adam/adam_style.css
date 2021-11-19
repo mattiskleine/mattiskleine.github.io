@@ -1,14 +1,133 @@
+@import url("../../index_style.css");
+
 #background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  opacity: .5;
 }
+
 
 #bear {
   position: absolute;
-  bottom: 5%;
-  left: 1%;
-  height: 45%;
+  top: 29vw;
+  right: 4.5%;
+  width: 20%;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}
+
+.honey {
+  position: absolute;
+  top: 8vw;
+  width: 10vw;
+  height: 10vw;
+}
+
+.honey_pot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotate(0deg);
+  cursor: pointer;
+  transition: transform .5s;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}
+
+#honey_yellow {
+  left: 8%;
+}
+
+#honey_red {
+  left: 23%;
+}
+
+#honey_blue {
+  left: 38%;
+}
+
+#honey_green {
+  left: 53%;
+}
+
+.honey_drop {
+  position: absolute;
+  top: 69%;
+  left: 85%;
+  width: 22%;
+  transform-origin: 30% top;
+  transform: scale(0);
+  transition: transform .5s;
+}
+
+#pipe {
+  position: absolute;
+  top: 26vw;
+  left: 14%;
+  width: 60%;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}
+
+#honey_pot {
+  position: absolute;
+  top: 42vw;
+  right: 18%;
+  width: 13%;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}
+
+#honey_pot_overlay {
+  position: absolute;
+  top: 42vw;
+  right: 18%;
+  width: 13%;
+}
+
+#honey_container {
+  position: absolute;
+  top: 40vw;
+  right: 22.9%;
+  width: 4%;
+  height: 5vw;
+  overflow: hidden;
+}
+
+#honey {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  transform-origin: 30% top;
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+
+#speechbubble {
+  position: absolute;
+  background-color: #ffffff;
+  color: #444444;
+  top: 10vw;
+  right: 1vw;
+  border-radius: 3vw;
+  border: .5vw solid #666666;
+  font-family: Montserrat;
+  font-size: 2vw;
+  text-align: center;
+  padding: 2vw;
+  max-width: 30vw;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}
+
+#score {
+  position: absolute;
+  top: 50vw;
+  left: 1vw;
+  font-family: Montserrat;
+  font-size: 2vw;
+  color: #444444;
+  padding: .5vw 1vw;
+  background-color: #ffffff;
+  border-radius: 2vw;
+  border: .3vw solid #666666;
 }
