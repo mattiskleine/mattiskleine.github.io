@@ -29,6 +29,27 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-family: Nunito;
+  font-size: 2vw;
+  text-align: center;
+  color: #444444;
+}
+
+h2 {
+  font-family: MontserratLight;
+  font-size: 1.1vw;
+  text-align: center;
+  color: #444444;
+}
+
+p {
+  font-family: MontserratLight;
+  font-size: 1.3vw;
+  text-align: center;
+  color: #444444;
+}
+
 #bottom_space {
   position: absolute;
   top: var(--pageHeight);
@@ -125,9 +146,9 @@ body {
 
 .project {
   position: absolute;
-  left: -12.5vw;
+  left: -13vw;
   transform: translateX(-50%);
-  transition: left .5s;
+  transition: left .5s, opacity .5s;
   width: 25vw;
   height: calc(25vw * 0.5625);
   background-color: #E36C83;
@@ -139,12 +160,14 @@ body {
 .project_hover {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: -.4vw;
+  left: -.4vw;
+  right: -.4vw;
+  bottom: -.4vw;
   background-color: #ffffff;
-  opacity: .8;
+  border-radius: 3vw;
+  opacity: .9;
+  padding: 1vw 2vw;;
 }
 
 #project1 {
@@ -157,4 +180,77 @@ body {
 
 #project2 {
   top: 200px;
+}
+
+.project_content {
+  position: absolute;
+  top: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  opacity: 0;
+  display: none;
+  transition: opacity .5s;
+  overflow: hidden;
+}
+
+#project1_content {
+  height: 60vw;
+}
+
+#adam1 {
+  position: absolute ;
+  top: 10vw;
+  left: 0;
+  width: 60vw;
+  height: 33.75vw;
+  transition: transform .5s;
+  border-radius: 2vw;
+}
+
+#toggle_container {
+  position: absolute;
+  top: 45vw;
+  left: 50%;
+  width: 22vw;
+  height: 4vw;
+  transform: translateX(-50%);
+  background-color: #5EBD9C;
+  border-radius: 10vw;
+  transition: background-color .5s;
+}
+
+.toggle_stage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: Nunito;
+  font-size: 1.5vw;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#toggle_stage1 {
+  left: 2vw;
+}
+
+#toggle_stage2 {
+  right: 2vw;
+}
+
+#toggle_button {
+  position: absolute;
+  top: .4vw;
+  height: 3.2vw;
+  border-radius: 10vw;
+  background-color: #ffffff;
+  filter: drop-shadow(.1vw .1vw .3vw rgb(0 0 0 / 0.2));
+  font-family: Nunito;
+  font-size: 1.5vw;
+  color: #444444;
+  box-sizing: border-box;
+  padding: .6vw 1.6vw;
+  cursor: default;
+  transform: translateX(.4vw);
+  transition: transform .5s;
 }

@@ -70,10 +70,9 @@ function calculateHoney() {
 }
 
 function newHoney() {
-  if (counterHoneyColors < 2) {
-    randomTasks = 0;
-  } else {
-    var randomTasks = Math.floor(Math.random() * 4);
+  var randomTasks = 0;
+  if (counterHoneyColors > 2) {
+    randomTasks = Math.floor(Math.random() * 4);
   }
   if (randomTasks == 0) {
     var i = 0;
@@ -154,6 +153,14 @@ function checkHoney() {
   if (equal == 1) {
     score++;
     document.getElementById('score').innerHTML = 'score: ' + score;
+    document.getElementById('score').style.transform = 'scale(1.5)';
+    setTimeout(() => {
+      document.getElementById('score').style.transition = 'transform 1s';
+      document.getElementById('score').style.transform = 'scale(1)';
+      setTimeout(() => {
+        document.getElementById('score').style.transition = 'transform 0s';
+      }, 1000);
+    }, 100);
     newHoney();
     checkHoney();
   }

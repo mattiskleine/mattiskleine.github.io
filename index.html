@@ -20,11 +20,25 @@
 <object id="cv" data="objects/cv/cv.html"></object>
 
 <div id="project1" class="project" onmouseover="hoverProject(1)" onmouseout="unhoverProject(1)">
-  <div id="project1_hover" class="project_hover"></div>
+  <div id="project1_hover" class="project_hover" onclick="openProject(0)">
+    <h1>Binary Bamse</h1>
+    <h2>A teddybear's paw as input method and a delightful GUI conveying the basics of IT to elementary-aged children.</h2>
+  </div>
 </div>
 
 <div id="project2" class="project" onmouseover="hoverProject(2)" onmouseout="unhoverProject(2)">
   <div id="project2_hover" class="project_hover"></div>
+</div>
+
+<div id="project1_content" class="project_content">
+  <h1>Binary Bamse</h2>
+  <p>some description</p>
+  <object id="adam1" data="objects/adam/adam1.html"></object>
+  <div id="toggle_container">
+    <div id="toggle_stage1" class="toggle_stage" onclick="toggleAdam()">stage 1</div>
+    <div id="toggle_stage2" class="toggle_stage" onclick="toggleAdam()">stage 2</div>
+    <div id="toggle_button">stage 1</div>
+  </div>
 </div>
 
 <div id="bottom_space"></div>

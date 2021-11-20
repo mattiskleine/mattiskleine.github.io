@@ -8,7 +8,6 @@
   opacity: .5;
 }
 
-
 #bear {
   position: absolute;
   top: 29vw;
@@ -122,7 +121,7 @@
 #score {
   position: absolute;
   top: 50vw;
-  left: 1vw;
+  left: 3vw;
   font-family: Montserrat;
   font-size: 2vw;
   color: #444444;
@@ -130,4 +129,5 @@
   background-color: #ffffff;
   border-radius: 2vw;
   border: .3vw solid #666666;
+  transition: transform 0s;
 }
