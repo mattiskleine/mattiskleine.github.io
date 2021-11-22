@@ -11,7 +11,7 @@
 <div id="alerts"></div>
 
 <div id="menu_bar">
-  <img id="menu_bar_logo" src="images/logo.svg">
+  <img id="menu_bar_logo" src="images/mk_logo.svg">
   <div id="menu_bar_projects" class="menu_bar_item" onclick="openPageProjects()">projects</div>
   <div id="menu_bar_about" class="menu_bar_item menu_bar_item_active" onclick="openPageAbout()">about me</div>
   <div id="menu_bar_line"></div>
@@ -19,15 +19,22 @@
 
 <object id="cv" data="objects/cv/cv.html"></object>
 
-<div id="project1" class="project" onmouseover="hoverProject(1)" onmouseout="unhoverProject(1)">
-  <div id="project1_hover" class="project_hover" onclick="openProject(0)">
-    <h1>Binary Bamse</h1>
-    <h2>A teddybear's paw as input method and a delightful GUI conveying the basics of IT to elementary-aged children.</h2>
+<div id="project0" class="project" onmouseover="hoverProject(0)" onmouseout="unhoverProject(0)" onclick="openProject(0)">
+  <img id="project0_img" class="project_img_even" src="images/adam_preview.svg">
+  <div id="project0_box" class="project_box_even">
+    <div id="project0_heading" class="project_heading">Binary Bamse</div>
+    <div id="project0_subheading" class="project_subheading">B. Eng. Semester 2</div>
   </div>
+  <div id="project0_hover" class="project_hover_even"></div>
 </div>
 
-<div id="project2" class="project" onmouseover="hoverProject(2)" onmouseout="unhoverProject(2)">
-  <div id="project2_hover" class="project_hover"></div>
+<div id="project1" class="project" onmouseover="hoverProject(1)" onmouseout="unhoverProject(1)">
+  <img id="project1_img" class="project_img_uneven" src="">
+  <div id="project1_box" class="project_box_uneven">
+    <div id="project1_heading" class="project_heading">Title</div>
+    <div id="project1_subheading" class="project_subheading">Origin</div>
+  </div>
+  <div id="project1_hover" class="project_hover_uneven"></div>
 </div>
 
 <div id="project1_content" class="project_content">
@@ -40,8 +47,6 @@
     <div id="toggle_button">stage 1</div>
   </div>
 </div>
-
-<div id="bottom_space"></div>
 
 </body>
 </html>

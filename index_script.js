@@ -19,39 +19,26 @@ function showAlert(x,t) {
 
 function openPageProjects() {
   hideProject();
-  document.getElementById('menu_bar_line').style.left = "calc(48% - 68px)";
+  document.getElementById('menu_bar_line').style.left = "calc(48% - 4.6vw)";
   setTimeout(() => {
-    document.getElementById('menu_bar_line').style.right = "calc(52% - 5px)";
+    document.getElementById('menu_bar_line').style.right = "calc(52% - .2vw)";
   }, 200);
   document.getElementById('menu_bar_about').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_projects').classList.add('menu_bar_item_active');
   document.getElementById('cv').style.left = '150%';
-  var projects = document.getElementsByClassName('project');
-  for (var i = 0; i < projects.length; i++) {
-    projects[i].style.display = 'block';
-  }
-  setTimeout(() => {
-    for (var i = 0; i < projects.length; i++) {
-      projects[i].style.opacity = '1';
-    }
-    projects[0].style.left = '35vw';
-    projects[1].style.left = '65vw';
-  }, 20);
-  document.getElementById('bottom_space').style.top = '500px';
+  showProjectPreviews();
 }
 
 function openPageAbout() {
   hideProject();
-  document.getElementById('menu_bar_line').style.right = "calc(48% - 80px)";
+  document.getElementById('menu_bar_line').style.right = "calc(48% - 5.4vw)";
   setTimeout(function(){
-    document.getElementById('menu_bar_line').style.left = "calc(52% - 5px)";
+    document.getElementById('menu_bar_line').style.left = "calc(52% - .2vw)";
   }, 200);
   document.getElementById('menu_bar_projects').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_about').classList.add('menu_bar_item_active');
   document.getElementById('cv').style.left = '50%';
-  document.getElementById('project1').style.left = '-13vw';
-  document.getElementById('project2').style.left = '-13vw';
-  document.getElementById('bottom_space').style.top = 'var(--pageHeight)';
+  hideProjectPreviews();
 }
 
 window.addEventListener('scroll', menuBarPosition);
@@ -70,15 +57,27 @@ function menuBarPosition() {
 
 function hoverProject(x) {
   document.getElementById('project' + x + '_hover').style.display = 'block';
+  document.getElementById('project' + x + '_box').style.backgroundColor = '#222222';
+  document.getElementById('project' + x + '_heading').style.color = '#eeeeee';
 }
 
 function unhoverProject(x) {
   document.getElementById('project' + x + '_hover').style.display = 'none';
+  document.getElementById('project' + x + '_box').style.backgroundColor = '#eeeeee';
+  document.getElementById('project' + x + '_heading').style.color = '#444444';
 }
 
 function openProject(x) {
-  var projects = document.getElementsByClassName('project');
+  hideProjectPreviews();
   var project_content = document.getElementsByClassName('project_content');
+  project_content[x].style.display = 'block';
+  setTimeout(() => {
+    project_content[x].style.opacity = '1';
+  }, 500);
+}
+
+function hideProject() {
+  var projects = document.getElementsByClassName('project_content');
   for (var i = 0; i < projects.length; i++) {
     projects[i].style.opacity = '0';
   }
@@ -86,24 +85,32 @@ function openProject(x) {
     for (var i = 0; i < projects.length; i++) {
       projects[i].style.display = 'none';
     }
-    project_content[x].style.display = 'block';
-    setTimeout(() => {
-      project_content[x].style.opacity = '1';
-    }, 20);
   }, 500);
-
 }
 
-function hideProject() {
-  var projects = document.getElementsByClassName('project_content');
-  for (var i = 0; i < projects.length; i++) {
-    projects[i].style.opacity = 0;
+function hideProjectPreviews() {
+  var projects = document.getElementsByClassName('project');
+  for(var i = 0; i < projects.length; i++) {
+    projects[i].style.transform = 'translateX(-100vw)';
   }
   setTimeout(() => {
     for (var i = 0; i < projects.length; i++) {
       projects[i].style.display = 'none';
     }
   }, 500);
+}
+
+function showProjectPreviews() {
+  var projects = document.getElementsByClassName('project');
+  for (var i = 0; i < projects.length; i++) {
+    projects[i].style.display = 'block';
+  }
+  setTimeout(() => {
+    for (var i = 0; i < projects.length; i++) {
+      projects[i].style.opacity = '1';
+      projects[i].style.transform = 'translatex(0)';
+    }
+  }, 20);
 }
 
 var adam = 1;
@@ -122,6 +129,7 @@ function toggleAdam() {
     document.getElementById('adam1').style.transform = 'translateX(0)';
   }
 }
+
 /*
 write property of child
 document.getElementById('cv').contentWindow.document.getElementById('skills_description_creative').style.opacity = '0';

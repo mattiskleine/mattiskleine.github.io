@@ -1,0 +1,60 @@
+@import url("../../index_style.css");
+
+body {
+  height: auto;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: .5;
+}
+
+#bear {
+  position: absolute;
+  top: 29vw;
+  left: 4.5%;
+  width: 20%;
+  transform: scaleX(-1);
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}
+
+#speechbubble {
+  position: absolute;
+  background-color: #ffffff;
+  color: #444444;
+  top: 30vw;
+  left: 25vw;
+  border-radius: 3vw;
+  border: .5vw solid #666666;
+  font-family: Montserrat;
+  font-size: 2vw;
+  text-align: center;
+  padding: 2vw;
+  max-width: 30vw;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}
+
+#score {
+  position: absolute;
+  top: 50vw;
+  right: 3vw;
+  font-family: Montserrat;
+  font-size: 2vw;
+  color: #444444;
+  padding: .5vw 1vw;
+  background-color: #ffffff;
+  border-radius: 2vw;
+  border: .3vw solid #666666;
+  transition: transform 0s;
+}
+
+#nest {
+  position: absolute;
+  top: 18vw;
+  right: -4.5vw;
+  width: 30%;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+}

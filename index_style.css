@@ -25,22 +25,22 @@
 
 body {
   margin: 0;
-  --pageHeight: 1388px;
   overflow-x: hidden;
+  height: 100vw;
 }
 
 h1 {
-  font-family: Nunito;
-  font-size: 2vw;
+  font-family: MontserratMedium;
+  font-size: 1.5vw;
   text-align: center;
   color: #444444;
 }
 
 h2 {
   font-family: MontserratLight;
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-align: center;
-  color: #444444;
+  color: #888888;
 }
 
 p {
@@ -50,20 +50,13 @@ p {
   color: #444444;
 }
 
-#bottom_space {
-  position: absolute;
-  top: var(--pageHeight);
-  height: 50px;
-  width: 100vw;
-}
-
 #alerts {
   position: fixed;
-  top: 35px;
+  top: 2.4vw;
   transform: translateX(calc(50vw - 50%));
   background-color: #dddddd;
-  padding: 10px 20px;
-  border-radius: 50px;
+  padding: 1vw 2vw;
+  border-radius: 10vw;
   opacity: 0;
   transition: opacity .5s;
   font-family: Montserrat;
@@ -75,20 +68,20 @@ p {
 
 #menu_bar {
   position: absolute;
-  top: 20px;
+  top: 2vw;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 5vw;
   background-color: #284E76;
   z-index: 4;
-  box-shadow: 2px 3px 15px -3px #444444;
+  box-shadow: 0 .8vw 2vw -1vw #444444;
 }
 
 #menu_bar_logo {
   position: absolute;
   top: 50%;
   left: 10vw;
-  height: 50px;
+  height: 3vw;
   transform: translateY(-50%);
   cursor: pointer;
 }
@@ -98,7 +91,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   font-family: Merriweather;
-  font-size: 12pt;
+  font-size: 1.1vw;
   color: #dddddd;
   cursor: pointer;
   transform: scale(1) translate(-50% -50%);
@@ -124,17 +117,17 @@ p {
 #menu_bar_line {
   position: absolute;
   top: 70%;
-  left: calc(52% - 5px);
-  right: calc(48% - 80px);
-  height: 2px;
+  left: calc(52% - .2vw);
+  right: calc(48% - 5.4vw);
+  height: .1vw;
   background-color: #dddddd;
-  border-radius: 10px;
+  border-radius: 1vw;
   transition: all .3s;
 }
 
 #cv {
   position: absolute;
-  top: 200px;
+  top: 12vw;
   left: 50%;
   transform: translateX(-50%);
   width: 58.4vw;
@@ -146,40 +139,98 @@ p {
 
 .project {
   position: absolute;
-  left: -13vw;
-  transform: translateX(-50%);
-  transition: left .5s, opacity .5s;
-  width: 25vw;
-  height: calc(25vw * 0.5625);
-  background-color: #E36C83;
-  border-radius: 3vw;
-  cursor: pointer;
-  border: .3vw solid #444444;
+  left: 10vw;
+  width: 80vw;
+  transform: translateX(-100vw);
+  transition: transform .5s, opacity .5s;
+  height: 30vw;
 }
 
-.project_hover {
+.project_img_even {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #666666;
+}
+
+.project_box_even {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30vw;
+  background-color: #eeeeee;
+  padding-top: 12vw;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.project_hover_even {
   display: none;
   position: absolute;
-  top: -.4vw;
-  left: -.4vw;
-  right: -.4vw;
-  bottom: -.4vw;
-  background-color: #ffffff;
-  border-radius: 3vw;
-  opacity: .9;
-  padding: 1vw 2vw;;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50vw;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.project_img_uneven {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #666666;
+}
+
+.project_box_uneven {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30vw;
+  background-color: #eeeeee;
+  padding-top: 12vw;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.project_hover_uneven {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50vw;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.project_heading {
+  font-family: MontserratMedium;
+  font-size: 1.5vw;
+  text-align: center;
+  color: #444444;
+  padding-bottom: .5vw;
+}
+
+.project_subheading {
+  font-family: MontserratLight;
+  font-size: 1vw;
+  text-align: center;
+  color: #888888;
+}
+
+#project0 {
+  top: 12vw;
 }
 
 #project1 {
-  top: 200px;
-  background-image: url(images/adam_preview.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#project2 {
-  top: 200px;
+  top: 44vw;
 }
 
 .project_content {
@@ -187,30 +238,29 @@ p {
   top: 10vw;
   left: 50%;
   transform: translateX(-50%);
-  width: 60vw;
-  opacity: 0;
+  width: 80vw;
   display: none;
   transition: opacity .5s;
   overflow: hidden;
 }
 
 #project1_content {
-  height: 60vw;
+  height: 62vw;
 }
 
 #adam1 {
   position: absolute ;
   top: 10vw;
   left: 0;
-  width: 60vw;
-  height: 33.75vw;
+  width: 80vw;
+  height: 45vw;
   transition: transform .5s;
   border-radius: 2vw;
 }
 
 #toggle_container {
   position: absolute;
-  top: 45vw;
+  top: 57vw;
   left: 50%;
   width: 22vw;
   height: 4vw;
