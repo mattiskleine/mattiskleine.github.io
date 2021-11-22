@@ -83,7 +83,6 @@ p {
   left: 10vw;
   height: 3vw;
   transform: translateY(-50%);
-  cursor: pointer;
 }
 
 .menu_bar_item {
@@ -251,16 +250,27 @@ p {
 #adam1 {
   position: absolute ;
   top: 10vw;
-  left: 0;
-  width: 80vw;
-  height: 45vw;
+  left: 10vw;
+  width: 60vw;
+  height: 33.75vw;
+  transition: transform .5s;
+  border-radius: 2vw;
+}
+
+#adam2 {
+  position: absolute ;
+  top: 10vw;
+  left: 10vw;
+  width: 60vw;
+  height: 33.75vw;
+  transform: translateX(120%);
   transition: transform .5s;
   border-radius: 2vw;
 }
 
 #toggle_container {
   position: absolute;
-  top: 57vw;
+  top: 45vw;
   left: 50%;
   width: 22vw;
   height: 4vw;

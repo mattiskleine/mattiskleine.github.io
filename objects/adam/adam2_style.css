@@ -40,14 +40,14 @@ body {
 #score {
   position: absolute;
   top: 50vw;
-  right: 3vw;
+  left: 3vw;
   font-family: Montserrat;
   font-size: 2vw;
   color: #444444;
   padding: .5vw 1vw;
   background-color: #ffffff;
   border-radius: 2vw;
-  border: .3vw solid #666666;
+  border: .3vw solid #582e12;
   transition: transform 0s;
 }
 
@@ -57,4 +57,136 @@ body {
   right: -4.5vw;
   width: 30%;
   filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+  cursor: pointer;
+}
+
+.bit {
+  position: absolute;
+  top: 2vw;
+  padding: 0 1.5vw;
+  background-color: #ffffff;
+  color: #444444;
+  font-family: Nunito;
+  font-size: 3vw;
+  border-radius: 1.5vw;
+  border: .3vw solid #444444;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+  cursor: pointer;
+  transition: transform 0s;
+  user-select: none;
+}
+
+#bit4 {
+  left: 10vw;
+}
+
+#bit3 {
+  left: 32vw;
+}
+
+#bit2 {
+  left: 54vw;
+}
+
+#bit1 {
+  left: 76vw;
+}
+
+#hive_number {
+  position: absolute;
+  top: 42vw;
+  right: 21vw;
+  font-family: Nunito;
+  font-size: 3vw;
+  color: #444444;
+  padding: 0 1vw;
+  background-color: #ffffff;
+  border-radius: 10vw;
+  border: .3vw solid #582e12;
+  transition: transform 0s;
+}
+
+.bee {
+  position: absolute;
+  top: 8vw;
+  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+#bee1 {
+  left: 75vw;
+  width: 8vw;
+}
+
+#bee2_1 {
+  left: 51vw;
+  width: 6vw;
+}
+#bee2_2 {
+  left: 57vw;
+  width: 6vw;
+  top: 10vw;
+}
+
+#bee3_1 {
+  left: 35vw;
+  width: 4vw;
+  top: 7vw;
+}
+#bee3_2 {
+  left: 34.5vw;
+  width: 5vw;
+  top: 11.7vw;
+}
+#bee3_3 {
+  left: 30vw;
+  width: 4.5vw;
+  top: 8vw;
+}
+#bee3_4 {
+  left: 30vw;
+  width: 3.5vw;
+  top: 13vw;
+}
+
+#bee4_1 {
+  left: 10vw;
+  width: 6vw;
+  top: 9vw;
+}
+#bee4_2 {
+  left: 16vw;
+  width: 4vw;
+  top: 7vw;
+}
+#bee4_3 {
+  left: 6vw;
+  width: 3vw;
+  top: 7vw;
+}
+#bee4_4 {
+  left: 17vw;
+  width: 3.5vw;
+  top: 11vw;
+}
+#bee4_5 {
+  left: 10vw;
+  width: 2.5vw;
+  top: 7vw;
+}
+#bee4_6 {
+  left: 5vw;
+  width: 4vw;
+  top: 10vw;
+}
+#bee4_7 {
+  left: 7vw;
+  width: 5vw;
+  top: 13vw;
+}
+#bee4_8 {
+  left: 14vw;
+  width: 4vw;
+  top: 14vw;
 }

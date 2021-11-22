@@ -1,6 +1,5 @@
 window.onload = function() {
-  openPageProjects();
-  showAlert('this site is still under construction...', 3000);
+  
 }
 
 function showAlert(x,t) {
@@ -120,13 +119,15 @@ function toggleAdam() {
     document.getElementById('toggle_container').style.backgroundColor = '#519E83';
     document.getElementById('toggle_button').style.transform = 'translateX(13.4vw)';
     document.getElementById('toggle_button').innerHTML = 'stage 2';
-    document.getElementById('adam1').style.transform = 'translateX(-100%)';
+    document.getElementById('adam1').style.transform = 'translateX(-120%)';
+    document.getElementById('adam2').style.transform = 'translateX(0)';
   } else {
     adam = 1;
     document.getElementById('toggle_container').style.backgroundColor = '#5EBD9C';
     document.getElementById('toggle_button').style.transform = 'translateX(0.4vw)';
     document.getElementById('toggle_button').innerHTML = 'stage 1';
     document.getElementById('adam1').style.transform = 'translateX(0)';
+    document.getElementById('adam2').style.transform = 'translateX(120%)';
   }
 }
 
