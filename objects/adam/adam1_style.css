@@ -135,3 +135,50 @@ body {
   border: .3vw solid #666666;
   transition: transform 0s;
 }
+
+@keyframes wiggle {
+  0%   {
+    transform-origin: 70% bottom;
+    transform: rotate(20deg);
+  }
+  5%   {
+    transform-origin: 70% bottom;
+    transform: rotate(19deg);
+  }
+  25%   {
+    transform-origin: 70% bottom;
+    transform: rotate(0deg);
+  }
+  26%   {
+    transform-origin: 30% bottom;
+    transform: rotate(0deg);
+  }
+  45%  {
+    transform-origin: 30% bottom;
+    transform: rotate(-19deg);
+  }
+  50%  {
+    transform-origin: 30% bottom;
+    transform: rotate(-20deg);
+  }
+  55%  {
+    transform-origin: 30% bottom;
+    transform: rotate(-19deg);
+  }
+  75%   {
+    transform-origin: 30% bottom;
+    transform: rotate(0deg);
+  }
+  76%   {
+    transform-origin: 70% bottom;
+    transform: rotate(0deg);
+  }
+  95% {
+    transform-origin: 70% bottom;
+    transform: rotate(19deg);
+  }
+  100% {
+    transform-origin: 70% bottom;
+    transform: rotate(20deg);
+  }
+}

@@ -1,5 +1,12 @@
 window.onload = function() {
-  
+  var projects = document.getElementsByClassName('project');
+  for(var i = 0; i < projects.length; i++) {
+    projects[i].style.transform = 'translateX(-100vw)';
+  }
+  document.getElementById('cv').style.transform = 'translateX(100%)';
+  setTimeout(() => {
+    document.getElementById('cv').style.transform = 'translateX(-50%)';
+  }, 500);
 }
 
 function showAlert(x,t) {
@@ -24,7 +31,7 @@ function openPageProjects() {
   }, 200);
   document.getElementById('menu_bar_about').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_projects').classList.add('menu_bar_item_active');
-  document.getElementById('cv').style.left = '150%';
+  document.getElementById('cv').style.transform = 'translateX(100%)';
   showProjectPreviews();
 }
 
@@ -36,7 +43,7 @@ function openPageAbout() {
   }, 200);
   document.getElementById('menu_bar_projects').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_about').classList.add('menu_bar_item_active');
-  document.getElementById('cv').style.left = '50%';
+  document.getElementById('cv').style.transform = 'translateX(-50%)';
   hideProjectPreviews();
 }
 
@@ -56,14 +63,20 @@ function menuBarPosition() {
 
 function hoverProject(x) {
   document.getElementById('project' + x + '_hover').style.display = 'block';
-  document.getElementById('project' + x + '_box').style.backgroundColor = '#222222';
-  document.getElementById('project' + x + '_heading').style.color = '#eeeeee';
+  setTimeout(() => {
+    document.getElementById('project' + x + '_hover').style.opacity = '.7';
+    document.getElementById('project' + x).style.backgroundColor = '#222222';
+    document.getElementById('project' + x + '_heading').style.color = '#eeeeee';
+  }, 20);
 }
 
 function unhoverProject(x) {
-  document.getElementById('project' + x + '_hover').style.display = 'none';
-  document.getElementById('project' + x + '_box').style.backgroundColor = '#eeeeee';
+  document.getElementById('project' + x + '_hover').style.opacity = '0';
+  document.getElementById('project' + x).style.backgroundColor = '#eeeeee';
   document.getElementById('project' + x + '_heading').style.color = '#444444';
+  setTimeout(() => {
+    document.getElementById('project' + x + '_hover').style.display = 'none';
+  }, 500);
 }
 
 function openProject(x) {

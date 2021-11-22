@@ -7,6 +7,7 @@ var honeyColors = ['yellow', 'red', 'blue', 'green'];
 var counterHoneyColors = 0;
 var honeyColorActive = [];
 var score = 0;
+var aniColor = '';
 
 function startHoney(x) {
   var pot = document.getElementById('honey_pot_' + x);
@@ -82,6 +83,10 @@ function newHoney() {
         document.getElementById('speechbubble').innerHTML = '"I want ' + honeyColors[randomColor] + ' honey, please."';
         honeyColorActive.length = 0;
         honeyColorActive[0] = honeyColors[randomColor];
+        if(counterHoneyColors == 0) {
+          document.getElementById('honey_' + honeyColors[randomColor]).style.animation = 'wiggle 2s linear infinite';
+          aniColor = honeyColors[randomColor];
+        }
         i = 1;
       }
     }
@@ -164,4 +169,8 @@ function checkHoney() {
     newHoney();
     checkHoney();
   }
+}
+
+function stopAnimation() {
+  document.getElementById('honey_' + aniColor).style.animation = 'wiggle 2s linear'
 }

@@ -30,24 +30,25 @@ body {
 }
 
 h1 {
-  font-family: MontserratMedium;
-  font-size: 1.5vw;
+  font-family: Nunito;
+  font-size: 2vw;
   text-align: center;
   color: #444444;
 }
 
 h2 {
-  font-family: MontserratLight;
-  font-size: 1vw;
-  text-align: center;
-  color: #888888;
-}
-
-p {
-  font-family: MontserratLight;
+  font-family: Nunito;
   font-size: 1.3vw;
   text-align: center;
   color: #444444;
+}
+
+p {
+  font-family: Nunito;
+  font-size: 1.3vw;
+  text-align: center;
+  color: #888888;
+  line-height: 2vw;
 }
 
 #alerts {
@@ -129,10 +130,10 @@ p {
   top: 12vw;
   left: 50%;
   transform: translateX(-50%);
+  transition: transform .5s;
   width: 58.4vw;
   height: calc(58.4vw * 1.41);
   background-color: #fefefe;
-  transition: left .5s;
   box-shadow: 0.6vw 0.83vw 1.19vw #aaaaaa;
 }
 
@@ -140,29 +141,19 @@ p {
   position: absolute;
   left: 10vw;
   width: 80vw;
-  transform: translateX(-100vw);
-  transition: transform .5s, opacity .5s;
+  transition: transform .5s, background-color .5s;
   height: 30vw;
+  background-color: #eeeeee;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .project_img_even {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
+  width: 54vw;
   background-color: #666666;
-}
-
-.project_box_even {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 30vw;
-  background-color: #eeeeee;
-  padding-top: 12vw;
-  box-sizing: border-box;
-  cursor: pointer;
 }
 
 .project_hover_even {
@@ -172,29 +163,38 @@ p {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 50vw;
-  opacity: .5;
+  width: 54vw;
+  opacity: 0;
   cursor: pointer;
+  transition: opacity .5s;
+}
+
+.project_heading_even {
+  position: absolute;
+  font-family: MontserratMedium;
+  font-size: 1.5vw;
+  color: #444444;
+  right: 12.5vw;
+  top: 12vw;
+  transform: translateX(50%);
+  transition: color .5s;
+}
+
+.project_subheading_even {
+  position: absolute;
+  font-family: MontserratLight;
+  font-size: 1vw;
+  color: #888888;
+  right: 12.5vw;
+  top: 15vw;
+  transform: translateX(50%);
 }
 
 .project_img_uneven {
   position: absolute;
   right: 0;
   top: 0;
-  height: 100%;
-  background-color: #666666;
-}
-
-.project_box_uneven {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 30vw;
-  background-color: #eeeeee;
-  padding-top: 12vw;
-  box-sizing: border-box;
-  cursor: pointer;
+  width: 54vw;
 }
 
 .project_hover_uneven {
@@ -204,24 +204,31 @@ p {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 50vw;
-  opacity: .5;
+  width: 54vw;
+  opacity: 0;
   cursor: pointer;
+  transition: opacity .5s;
 }
 
-.project_heading {
+.project_heading_uneven {
+  position: absolute;
   font-family: MontserratMedium;
   font-size: 1.5vw;
-  text-align: center;
   color: #444444;
-  padding-bottom: .5vw;
+  left: 12.5vw;
+  top: 12vw;
+  transform: translateX(-50%);
+  transition: color .5s;
 }
 
-.project_subheading {
+.project_subheading_uneven {
+  position: absolute;
   font-family: MontserratLight;
   font-size: 1vw;
-  text-align: center;
   color: #888888;
+  left: 12.5vw;
+  top: 15vw;
+  transform: translateX(-50%);
 }
 
 #project0 {
@@ -237,20 +244,20 @@ p {
   top: 10vw;
   left: 50%;
   transform: translateX(-50%);
-  width: 80vw;
+  width: 60vw;
   display: none;
   transition: opacity .5s;
   overflow: hidden;
 }
 
-#project1_content {
-  height: 62vw;
+#project0_content {
+  height: 100vw;
 }
 
 #adam1 {
   position: absolute ;
-  top: 10vw;
-  left: 10vw;
+  top: 39vw;
+  left: 0;
   width: 60vw;
   height: 33.75vw;
   transition: transform .5s;
@@ -259,8 +266,8 @@ p {
 
 #adam2 {
   position: absolute ;
-  top: 10vw;
-  left: 10vw;
+  top: 39vw;
+  left: 0;
   width: 60vw;
   height: 33.75vw;
   transform: translateX(120%);
@@ -270,7 +277,7 @@ p {
 
 #toggle_container {
   position: absolute;
-  top: 45vw;
+  top: 74vw;
   left: 50%;
   width: 22vw;
   height: 4vw;
@@ -278,6 +285,7 @@ p {
   background-color: #5EBD9C;
   border-radius: 10vw;
   transition: background-color .5s;
+  user-select: none;
 }
 
 .toggle_stage {
@@ -313,4 +321,8 @@ p {
   cursor: default;
   transform: translateX(.4vw);
   transition: transform .5s;
+}
+
+#white_space_project0 {
+  margin-bottom: 42vw;
 }
