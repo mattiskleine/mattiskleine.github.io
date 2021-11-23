@@ -68,34 +68,67 @@ p {
 }
 
 #menu_bar {
-  position: absolute;
-  top: 2vw;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   height: 5vw;
-  background-color: #284E76;
+  background-color: #F7505D;
   z-index: 4;
-  box-shadow: 0 .8vw 2vw -1vw #444444;
+  transition: all .4s;
 }
 
 #menu_bar_logo {
   position: absolute;
   top: 50%;
+  left: 50%;
+  width: 17.8vw;
+  height: 4vw;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #ffffff;
+  font-family: MontserratMedium;
+}
+
+.menu_bar_logo_upper {
+  position: absolute;
+  font-size: 4vw;
+  bottom: 0;
+}
+
+.menu_bar_logo_lower {
+  position: absolute;
+  font-size: 2vw;
+  bottom: .45vw;
+}
+
+#menu_bar_logo_m {
+  left: 0;
+}
+
+#menu_bar_logo_attis {
+  left: 4.1vw;
+}
+
+#menu_bar_logo_k {
   left: 10vw;
-  height: 3vw;
-  transform: translateY(-50%);
+}
+
+#menu_bar_logo_leine {
+  left: 12.6vw;
 }
 
 .menu_bar_item {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-family: Merriweather;
+  font-family: Montserrat;
+  font-weight: bolder;
   font-size: 1.1vw;
-  color: #dddddd;
+  color: #ffffff;
   cursor: pointer;
   transform: scale(1) translate(-50% -50%);
-  transition: transform .2s;
+  transition: transform .2s, color .4s;
 }
 .menu_bar_item:hover {
   color: #ffffff;
@@ -107,22 +140,31 @@ p {
 }
 
 #menu_bar_projects {
-  right: 52%;
+  left: 5vw;
 }
 
 #menu_bar_about {
-  left: 52%;
+  left: 12vw;
 }
 
 #menu_bar_line {
   position: absolute;
   top: 70%;
-  left: calc(52% - .2vw);
-  right: calc(48% - 5.4vw);
+  left: 11.8vw;
+  right: 82.3vw;
   height: .1vw;
   background-color: #dddddd;
   border-radius: 1vw;
   transition: all .3s;
+}
+
+#menu_bar_mail {
+  position: absolute;
+  top: 2vw;
+  right: 5vw;
+  height: 1vw;
+  transition: all .3s;
+  cursor: pointer;
 }
 
 #cv {
@@ -141,7 +183,7 @@ p {
   position: absolute;
   left: 10vw;
   width: 80vw;
-  transition: transform .5s, background-color .5s;
+  transition: transform .3s, background-color .3s;
   height: 30vw;
   background-color: #eeeeee;
   cursor: pointer;
@@ -166,7 +208,7 @@ p {
   width: 54vw;
   opacity: 0;
   cursor: pointer;
-  transition: opacity .5s;
+  transition: opacity .3s;
 }
 
 .project_heading_even {
@@ -177,7 +219,7 @@ p {
   right: 12.5vw;
   top: 12vw;
   transform: translateX(50%);
-  transition: color .5s;
+  transition: color .3s;
 }
 
 .project_subheading_even {
@@ -207,7 +249,7 @@ p {
   width: 54vw;
   opacity: 0;
   cursor: pointer;
-  transition: opacity .5s;
+  transition: opacity .3s;
 }
 
 .project_heading_uneven {
@@ -218,7 +260,7 @@ p {
   left: 12.5vw;
   top: 12vw;
   transform: translateX(-50%);
-  transition: color .5s;
+  transition: color .3s;
 }
 
 .project_subheading_uneven {
