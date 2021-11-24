@@ -23,6 +23,11 @@
   src: url(fonts/Merriweather/Merriweather-Regular.ttf);
 }
 
+@font-face {
+  font-family: FreightNeoPro;
+  src: url(fonts/FreightNeoPro/FreightNeoProLight.otf);
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -30,23 +35,22 @@ body {
 }
 
 h1 {
-  font-family: Nunito;
-  font-size: 2vw;
-  text-align: center;
+  font-family: FreightNeoPro;
+  font-size: 3vw;
   color: #444444;
 }
 
 h2 {
-  font-family: Nunito;
-  font-size: 1.3vw;
-  text-align: center;
+  font-family: FreightNeoPro;
+  font-size: 1.5vw;
+  font-weight: bolder;
   color: #444444;
 }
 
 p {
-  font-family: Nunito;
-  font-size: 1.3vw;
-  text-align: center;
+  font-family: FreightNeoPro;
+  font-size: 1.5vw;
+  text-align: justify;
   color: #888888;
   line-height: 2vw;
 }
@@ -73,7 +77,7 @@ p {
   left: 0;
   right: 0;
   height: 5vw;
-  background-color: #F7505D;
+  background-color: #809CB2;
   z-index: 4;
   transition: all .4s;
 }
@@ -82,40 +86,10 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 17.8vw;
   height: 4vw;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  color: #ffffff;
-  font-family: MontserratMedium;
-}
-
-.menu_bar_logo_upper {
-  position: absolute;
-  font-size: 4vw;
-  bottom: 0;
-}
-
-.menu_bar_logo_lower {
-  position: absolute;
-  font-size: 2vw;
-  bottom: .45vw;
-}
-
-#menu_bar_logo_m {
-  left: 0;
-}
-
-#menu_bar_logo_attis {
-  left: 4.1vw;
-}
-
-#menu_bar_logo_k {
-  left: 10vw;
-}
-
-#menu_bar_logo_leine {
-  left: 12.6vw;
+  filter: brightness(100);
 }
 
 .menu_bar_item {
@@ -165,6 +139,7 @@ p {
   height: 1vw;
   transition: all .3s;
   cursor: pointer;
+  filter: brightness(100);
 }
 
 #cv {
@@ -283,7 +258,7 @@ p {
 
 .project_content {
   position: absolute;
-  top: 10vw;
+  top: 8vw;
   left: 50%;
   transform: translateX(-50%);
   width: 60vw;
@@ -293,12 +268,12 @@ p {
 }
 
 #project0_content {
-  height: 100vw;
+  height: 106vw;
 }
 
 #adam1 {
   position: absolute ;
-  top: 39vw;
+  top: 12vw;
   left: 0;
   width: 60vw;
   height: 33.75vw;
@@ -308,7 +283,7 @@ p {
 
 #adam2 {
   position: absolute ;
-  top: 39vw;
+  top: 12vw;
   left: 0;
   width: 60vw;
   height: 33.75vw;
@@ -319,7 +294,7 @@ p {
 
 #toggle_container {
   position: absolute;
-  top: 74vw;
+  top: 48vw;
   left: 50%;
   width: 22vw;
   height: 4vw;
@@ -328,6 +303,7 @@ p {
   border-radius: 10vw;
   transition: background-color .5s;
   user-select: none;
+  filter: drop-shadow(.1vw .1vw .3vw rgb(0 0 0 / 0.2));
 }
 
 .toggle_stage {
@@ -365,6 +341,6 @@ p {
   transition: transform .5s;
 }
 
-#white_space_project0 {
-  margin-bottom: 42vw;
+#project0_whitespace1 {
+  margin-top: 43vw;
 }

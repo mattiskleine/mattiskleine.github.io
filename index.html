@@ -11,12 +11,7 @@
 <div id="alerts"></div>
 
 <div id="menu_bar">
-  <div id="menu_bar_logo">
-    <div id="menu_bar_logo_m" class="menu_bar_logo_upper">m</div>
-    <div id="menu_bar_logo_attis" class="menu_bar_logo_lower">attis</div>
-    <div id="menu_bar_logo_k" class="menu_bar_logo_upper">k</div>
-    <div id="menu_bar_logo_leine" class="menu_bar_logo_lower">leine</div>
-  </div>
+  <img id="menu_bar_logo" src="images/mk_logo.svg">
   <div id="menu_bar_projects" class="menu_bar_item" onclick="openPageProjects()">projects</div>
   <div id="menu_bar_about" class="menu_bar_item menu_bar_item_active" onclick="openPageAbout()">about me</div>
   <div id="menu_bar_line"></div>
@@ -41,8 +36,15 @@
 
 <div id="project0_content" class="project_content">
   <h1>Binary Bamse</h2>
-  <p>A teddy bear's paw as a joystick and a delightful GUI conveying the fundamentals of IT.</br></br></p>
-  <h2>Background</h2>
+  <p>A teddy bear's paw as a joystick and a delightful GUI, conveying the fundamentals of IT.</br></br></p>
+  <object id="adam1" data="objects/adam/adam1.html"></object>
+  <object id="adam2" data="objects/adam/adam2.html"></object>
+  <div id="toggle_container">
+    <div id="toggle_stage1" class="toggle_stage" onclick="toggleAdam()">stage 1</div>
+    <div id="toggle_stage2" class="toggle_stage" onclick="toggleAdam()">stage 2</div>
+    <div id="toggle_button">stage 1</div>
+  </div>
+  <h2 id="project0_whitespace1">Background</h2>
   <p>
     In medievel times, only a small number of people could read and write, and it gave them a great advantage.
     Today, every child learns reading and writing. But while IT plays an increasing part in our lives,
@@ -52,24 +54,15 @@
     This project was an attempt to teach the binary number system to children between 6 and 10 years.
   </p>
   <h2>The Concept</h2>
-  <p id="white_space_project0">
+  <p>
     A cute graphical user interface guides the child through 2 stages. First, the very basic if-then
     principle is taught by tipping over pots of honey. Then, the binary number system is taught by gathering
-    4 bits of bees in a beehive. Give it a try!
-  </p>
-  <object id="adam1" data="objects/adam/adam1.html"></object>
-  <object id="adam2" data="objects/adam/adam2.html"></object>
-  <div id="toggle_container">
-    <div id="toggle_stage1" class="toggle_stage" onclick="toggleAdam()">stage 1</div>
-    <div id="toggle_stage2" class="toggle_stage" onclick="toggleAdam()">stage 2</div>
-    <div id="toggle_button">stage 1</div>
-  </div>
-  <p>
+    4 bits of bees in a beehive. Give it a try!</br></br>
     During the 'lesson', the child sits next to a large teddy bear, holding its paw and tapping the fingers to
     select the honey pots or bee bits. Pieces of conductive cloth on the paw are connected to a modified wireless
     keyboard inside the teddy bears cushion.
   </p>
-  <h2>Outcome</h2>
+  <h2>Results</h2>
   <p>
     A short questionnaire after the use gathered information about experience and learning retention. 100% of all
     participants (8-12 years) were able to convert 4-bit binary numbers to the decimal system. 92% could even apply
