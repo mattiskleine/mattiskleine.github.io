@@ -7,7 +7,7 @@ var honeyColors = ['yellow', 'red', 'blue', 'green'];
 var counterHoneyColors = 0;
 var honeyColorActive = [];
 var score = 0;
-var aniColor = '';
+var aniColor = 'yellow';
 
 function startHoney(x) {
   var pot = document.getElementById('honey_pot_' + x);
@@ -172,5 +172,5 @@ function checkHoney() {
 }
 
 function stopAnimation() {
-  document.getElementById('honey_' + aniColor).style.animation = 'wiggle 2s linear'
+  document.getElementById('honey_' + aniColor).style.animation = 'wiggle 2s linear 0'
 }

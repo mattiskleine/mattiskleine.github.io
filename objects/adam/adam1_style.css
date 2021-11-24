@@ -139,11 +139,11 @@ body {
 @keyframes wiggle {
   0%   {
     transform-origin: 70% bottom;
-    transform: rotate(20deg);
+    transform: rotate(15deg);
   }
   5%   {
     transform-origin: 70% bottom;
-    transform: rotate(19deg);
+    transform: rotate(13deg);
   }
   25%   {
     transform-origin: 70% bottom;
@@ -155,15 +155,15 @@ body {
   }
   45%  {
     transform-origin: 30% bottom;
-    transform: rotate(-19deg);
+    transform: rotate(-13deg);
   }
   50%  {
     transform-origin: 30% bottom;
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
   }
   55%  {
     transform-origin: 30% bottom;
-    transform: rotate(-19deg);
+    transform: rotate(-13deg);
   }
   75%   {
     transform-origin: 30% bottom;
@@ -175,10 +175,10 @@ body {
   }
   95% {
     transform-origin: 70% bottom;
-    transform: rotate(19deg);
+    transform: rotate(13deg);
   }
   100% {
     transform-origin: 70% bottom;
-    transform: rotate(20deg);
+    transform: rotate(15deg);
   }
 }

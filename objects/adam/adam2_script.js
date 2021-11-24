@@ -8,7 +8,7 @@ var newNumberDecimal = 0;
 var currentNumberBinary = [0,0,0,0];
 var currentNumberDecimal = 0;
 var score = 0;
-var correct = ['Great!', 'Amazing!', 'Good job!', 'Thanks!', 'Thank you!', 'I really appreciate it!', 'Thank you very much!'];
+var correct = ['Great!', 'Amazing!', 'Good job!', 'Thanks!', 'Thank you!', 'Thank you very much!', 'Nicely done!'];
 
 function newNumber() {
   var rnd = 0, i = 0;
@@ -52,22 +52,20 @@ function setBit(x) {
 
 function checkNumbers() {
   if(currentNumberDecimal == newNumberDecimal) {
-    score++;
-    document.getElementById('score').innerHTML = 'score: ' + score;
-    document.getElementById('score').style.transform = 'scale(1.5)';
     setTimeout(() => {
-      document.getElementById('score').style.transition = 'transform 1s';
-      document.getElementById('score').style.transform = 'scale(1)';
-      setTimeout(() => {
-        document.getElementById('score').style.transition = 'transform 0s';
-      }, 1000);
-    }, 100);
-    var rnd = Math.floor(Math.random() * correct.length);
-    document.getElementById('speechbubble').innerHTML = correct[rnd];
+      var printedBits = document.getElementsByClassName('bit');
+      for(var i = 0; i < printedBits.length; i++) {
+        printedBits[i].style.transform = "scale(1.2)";
+        printedBits[i].style.top= "22vw";
+      }
+      printedBits[0].style.left = "28vw";
+      printedBits[1].style.left = "38vw";
+      printedBits[2].style.left = "48vw";
+      printedBits[3].style.left = "58vw";
+    }, 500);
     setTimeout(() => {
-      newNumber();
-      resetBits();
-    }, 1500);
+      setScore();
+    }, 2000);
   }
 }
 
@@ -77,9 +75,15 @@ function resetBits() {
   document.getElementById('hive_number').innerHTML = currentNumberDecimal;
   var printedBits = document.getElementsByClassName('bit');
   for(var i = 0; i < 4; i++) {
+    printedBits[i].style.transform = "scale(1)";
+    printedBits[i].style.top= "2vw";
     printedBits[i].innerHTML = '0';
     animateBitBees(i);
   }
+  printedBits[0].style.left = "10vw";
+  printedBits[1].style.left = "32vw";
+  printedBits[2].style.left = "54vw";
+  printedBits[3].style.left = "76vw";
 }
 
 function animateBitBees(x) {
@@ -124,4 +128,23 @@ function animateBitBees(x) {
       }
     }
   }
+}
+
+function setScore() {
+  score++;
+  document.getElementById('score').innerHTML = 'score: ' + score;
+  document.getElementById('score').style.transform = 'scale(1.5)';
+  setTimeout(() => {
+    document.getElementById('score').style.transition = 'transform 1s';
+    document.getElementById('score').style.transform = 'scale(1)';
+    setTimeout(() => {
+      document.getElementById('score').style.transition = 'transform 0s';
+    }, 1000);
+  }, 100);
+  var rnd = Math.floor(Math.random() * correct.length);
+  document.getElementById('speechbubble').innerHTML = correct[rnd];
+  setTimeout(() => {
+    newNumber();
+    resetBits();
+  }, 2000);
 }

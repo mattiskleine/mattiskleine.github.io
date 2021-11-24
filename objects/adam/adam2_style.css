@@ -72,7 +72,7 @@ body {
   border: .3vw solid #444444;
   filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
   cursor: pointer;
-  transition: transform 0s;
+  transition: all .5s;
   user-select: none;
 }
 

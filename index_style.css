@@ -77,9 +77,10 @@ p {
   left: 0;
   right: 0;
   height: 5vw;
-  background-color: #809CB2;
+  background-color: #ffffff;
   z-index: 4;
   transition: all .4s;
+  box-shadow: 0 .1vw 2vw -1.2vw #666666;
 }
 
 #menu_bar_logo {
@@ -89,7 +90,7 @@ p {
   height: 4vw;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  filter: brightness(100);
+  //filter: brightness(100);
 }
 
 .menu_bar_item {
@@ -99,17 +100,17 @@ p {
   font-family: Montserrat;
   font-weight: bolder;
   font-size: 1.1vw;
-  color: #ffffff;
+  color: #666666;
   cursor: pointer;
   transform: scale(1) translate(-50% -50%);
   transition: transform .2s, color .4s;
 }
 .menu_bar_item:hover {
-  color: #ffffff;
+  color: #444444;
   transform: scale(1.1) translateY(-50%);
 }
 .menu_bar_item_active {
-  color: #ffffff;
+  color: #444444;
   transform: scale(1.1) translateY(-50%);
 }
 
@@ -127,7 +128,7 @@ p {
   left: 11.8vw;
   right: 82.3vw;
   height: .1vw;
-  background-color: #dddddd;
+  background-color: #666666;
   border-radius: 1vw;
   transition: all .3s;
 }
@@ -139,7 +140,17 @@ p {
   height: 1vw;
   transition: all .3s;
   cursor: pointer;
-  filter: brightness(100);
+  //filter: brightness(100);
+}
+
+#menu_bar_linkedin {
+  position: absolute;
+  top: 1.8vw;
+  right: 8vw;
+  height: 1.4vw;
+  transition: all .3s;
+  cursor: pointer;
+  //filter: brightness(100);
 }
 
 #cv {
@@ -258,25 +269,21 @@ p {
 
 .project_content {
   position: absolute;
-  top: 8vw;
+  top: 10vw;
   left: 50%;
   transform: translateX(-50%);
-  width: 60vw;
+  width: 50vw;
   display: none;
   transition: opacity .5s;
-  overflow: hidden;
-}
-
-#project0_content {
-  height: 106vw;
 }
 
 #adam1 {
   position: absolute ;
   top: 12vw;
-  left: 0;
-  width: 60vw;
-  height: 33.75vw;
+  left: 50%;
+  width: 70vw;
+  height: 39.375vw;
+  transform: translateX(-50%);
   transition: transform .5s;
   border-radius: 2vw;
 }
@@ -284,9 +291,9 @@ p {
 #adam2 {
   position: absolute ;
   top: 12vw;
-  left: 0;
-  width: 60vw;
-  height: 33.75vw;
+  left: 50%;
+  width: 70vw;
+  height: 39.375vw;
   transform: translateX(120%);
   transition: transform .5s;
   border-radius: 2vw;
@@ -294,7 +301,7 @@ p {
 
 #toggle_container {
   position: absolute;
-  top: 48vw;
+  top: 53vw;
   left: 50%;
   width: 22vw;
   height: 4vw;
@@ -341,6 +348,16 @@ p {
   transition: transform .5s;
 }
 
+#project0_whitespace0 {
+  margin-top: 50vw;
+}
+
 #project0_whitespace1 {
-  margin-top: 43vw;
+  margin-bottom: 5vw;
+}
+
+#project0_paw {
+  margin-left: -10vw;
+  width: 70vw;
+  border-radius: 2vw;
 }

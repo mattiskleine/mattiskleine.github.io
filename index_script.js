@@ -52,23 +52,27 @@ window.addEventListener('scroll', menuBarColor);
 function menuBarColor() {
   var item = document.getElementsByClassName('menu_bar_item');
   if (window.scrollY > 0) {
+    /*
+    document.getElementById('menu_bar').style.boxShadow = '0 .1vw 2vw -1.2vw #666666';
     document.getElementById('menu_bar').style.backgroundColor = '#ffffff';
     document.getElementById('menu_bar_line').style.backgroundColor = '#809CB2';
     document.getElementById('menu_bar_logo').style.filter = 'none';
     document.getElementById('menu_bar_mail').style.filter = 'none';
-    document.getElementById('menu_bar').style.boxShadow = '0 .1vw 2vw -1.2vw #809CB2';
     for(var i = 0; i < item.length; i++) {
       item[i].style.color = '#809CB2';
     }
+    */
   } else {
+    /*
+    document.getElementById('menu_bar').style.boxShadow = 'none';
     document.getElementById('menu_bar').style.backgroundColor = '#809CB2';
     document.getElementById('menu_bar_line').style.backgroundColor = '#dddddd';
     document.getElementById('menu_bar_logo').style.filter = 'brightness(1000)';
     document.getElementById('menu_bar_mail').style.filter = 'brightness(1000)';
-    document.getElementById('menu_bar').style.boxShadow = 'none';
     for(var i = 0; i < item.length; i++) {
       item[i].style.color = '#ffffff';
     }
+    */
   }
 }
 
@@ -143,15 +147,15 @@ function toggleAdam() {
     document.getElementById('toggle_container').style.backgroundColor = '#519E83';
     document.getElementById('toggle_button').style.transform = 'translateX(13.4vw)';
     document.getElementById('toggle_button').innerHTML = 'stage 2';
-    document.getElementById('adam1').style.transform = 'translateX(-120%)';
-    document.getElementById('adam2').style.transform = 'translateX(0)';
+    document.getElementById('adam1').style.transform = 'translateX(-180%)';
+    document.getElementById('adam2').style.transform = 'translateX(-50%)';
   } else {
     adam = 1;
     document.getElementById('toggle_container').style.backgroundColor = '#5EBD9C';
     document.getElementById('toggle_button').style.transform = 'translateX(0.4vw)';
     document.getElementById('toggle_button').innerHTML = 'stage 1';
-    document.getElementById('adam1').style.transform = 'translateX(0)';
-    document.getElementById('adam2').style.transform = 'translateX(120%)';
+    document.getElementById('adam1').style.transform = 'translateX(-50%)';
+    document.getElementById('adam2').style.transform = 'translateX(80%)';
   }
 }
 
