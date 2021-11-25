@@ -126,7 +126,7 @@ p {
   position: absolute;
   top: 70%;
   left: 11.8vw;
-  right: 82.3vw;
+  right: 84.4vw;
   height: .1vw;
   background-color: #eeeeee;
   border-radius: 1vw;
@@ -150,9 +150,80 @@ p {
   right: 7vw;
 }
 
+#scroll_header {
+  position: fixed;
+  top: 5vw;
+  left: 0;
+  width: 100vw;
+  height: 38vw;
+  overflow: hidden;
+}
+
+#scroll_header_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+#scroll_header_over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .8;
+  background-color: #5587b3;
+}
+
+.scroll_header_text {
+  position: absolute;
+  color: #ffffff;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#scroll_header_text_header {
+  font-family: MontserratMedium;
+  font-weight: bold;
+  font-size: 5vw;
+  top: 5vw;
+}
+
+#scroll_header_text_sub {
+  font-family: MontserratMedium;
+  font-size: 2vw;
+  top: 11vw;
+  width: 42vw;
+  line-height: 3vw;
+}
+
+#scroll_header_text_subsub {
+  font-family: MontserratLight;
+  font-size: 1.5vw;
+  top: 21vw;
+  width: 50vw;
+}
+
+#scroll_header_arrow {
+  top: 28vw;
+  width: 3.5vw;
+  cursor: pointer;
+}
+
+#content {
+  position: absolute;
+  top: 38vw;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  background-color: #ffffff;
+}
+
 #cv {
   position: absolute;
-  top: 12vw;
+  top: 5vw;
   left: 50%;
   transform: translateX(-50%);
   transition: transform .5s;
@@ -257,11 +328,11 @@ p {
 }
 
 #project0 {
-  top: 12vw;
+  top: 43vw;
 }
 
 #project1 {
-  top: 44vw;
+  top: 75vw;
 }
 
 .project_content {

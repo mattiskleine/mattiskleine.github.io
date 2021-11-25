@@ -32,18 +32,20 @@ function openPageProjects() {
   document.getElementById('menu_bar_about').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_projects').classList.add('menu_bar_item_active');
   document.getElementById('cv').style.transform = 'translateX(100%)';
+  document.getElementById('scroll_header_text_subsub').innerHTML = 'Scroll down to see my work!';
   showProjectPreviews();
 }
 
 function openPageAbout() {
   hideProject();
-  document.getElementById('menu_bar_line').style.right = "82.3vw";
+  document.getElementById('menu_bar_line').style.right = "84.4vw";
   setTimeout(function(){
     document.getElementById('menu_bar_line').style.left = "11.8vw";
   }, 200);
   document.getElementById('menu_bar_projects').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_about').classList.add('menu_bar_item_active');
   document.getElementById('cv').style.transform = 'translateX(-50%)';
+  document.getElementById('scroll_header_text_subsub').innerHTML = 'Scroll down to see my CV!';
   hideProjectPreviews();
 }
 
@@ -73,6 +75,15 @@ function menuBarColor() {
     }
     for(var i = 0; i < item.length; i++) {
       item[i].style.color = '#ffffff';
+    }
+  }
+  var viewWidth = window.innerWidth;
+  var scrollHeightDesired = viewWidth / 100 * 20;
+  var opacity = 1 - (1 / scrollHeightDesired * window.scrollY);
+  var texts = document.getElementsByClassName('scroll_header_text');
+  if(window.scrollY <= scrollHeightDesired) {
+    for(var i = 0; i < texts.length; i++) {
+      texts[i].style.opacity = opacity;
     }
   }
 }
