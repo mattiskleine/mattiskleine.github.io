@@ -80,7 +80,6 @@ p {
   background-color: #4480AB;
   z-index: 4;
   transition: all .4s;
-  box-shadow: 0 .7vw .9vw -1.2vw #666666;
 }
 
 #menu_bar_logo {
@@ -161,9 +160,10 @@ p {
 
 #scroll_header_img {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   width: 100vw;
+  transform: translateY(-50%);
 }
 
 #scroll_header_over {
@@ -173,7 +173,7 @@ p {
   right: 0;
   bottom: 0;
   opacity: .8;
-  background-color: #5587b3;
+  background-color: #222222;
 }
 
 .scroll_header_text {
@@ -210,6 +210,11 @@ p {
   top: 28vw;
   width: 3.5vw;
   cursor: pointer;
+  transition: top .2s;
+}
+
+#scroll_header_arrow:hover {
+  top: 28.5vw;
 }
 
 #content {

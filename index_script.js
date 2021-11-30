@@ -77,8 +77,7 @@ function menuBarColor() {
       item[i].style.color = '#ffffff';
     }
   }
-  var viewWidth = window.innerWidth;
-  var scrollHeightDesired = viewWidth / 100 * 20;
+  var scrollHeightDesired = window.innerWidth / 100 * 20;
   var opacity = 1 - (1 / scrollHeightDesired * window.scrollY);
   var texts = document.getElementsByClassName('scroll_header_text');
   if(window.scrollY <= scrollHeightDesired) {
@@ -86,6 +85,13 @@ function menuBarColor() {
       texts[i].style.opacity = opacity;
     }
   }
+}
+
+function scrollDown() {
+  window.scrollTo({
+    top: window.innerWidth / 100 * 33,
+    behavior: 'smooth'
+  });
 }
 
 function hoverProject(x) {
