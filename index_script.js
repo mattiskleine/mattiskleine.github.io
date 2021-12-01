@@ -67,7 +67,7 @@ function menuBarColor() {
     }
   } else {
     document.getElementById('menu_bar').style.boxShadow = 'none';
-    document.getElementById('menu_bar').style.backgroundColor = '#4480AB';
+    document.getElementById('menu_bar').style.backgroundColor = '#1C1F22';
     document.getElementById('menu_bar_line').style.backgroundColor = '#eeeeee';
     document.getElementById('menu_bar_logo').style.filter = 'brightness(100)';
     for(var i = 0; i < icon.length; i++) {
