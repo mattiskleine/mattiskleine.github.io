@@ -5,14 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "dev": "npx nodemon main.js -e js,html,css"
+    "dev": "nodemon main.js -e js,html,css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }
