@@ -1,3 +1,5 @@
+var projectActive = 0;
+
 window.onload = function() {
   var projects = document.getElementsByClassName('project');
   for(var i = 0; i < projects.length; i++) {
@@ -24,7 +26,9 @@ function showAlert(x,t) {
 }
 
 function openPageProjects() {
-  hideProject();
+  if(projectActive == 1) {
+    hideProject();
+  }
   document.getElementById('menu_bar_line').style.left = "4.8vw";
   setTimeout(() => {
     document.getElementById('menu_bar_line').style.right = "90.3vw";
@@ -32,12 +36,15 @@ function openPageProjects() {
   document.getElementById('menu_bar_about').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_projects').classList.add('menu_bar_item_active');
   document.getElementById('cv').style.transform = 'translateX(100%)';
-  document.getElementById('scroll_header_text_subsub').innerHTML = 'Scroll down to see my work!';
+  document.getElementById('scroll_header_text_subsub').innerHTML = 'Scroll down to see my projects!';
   showProjectPreviews();
+  document.getElementById('scroll_header').style.height = '38vw';
 }
 
 function openPageAbout() {
-  hideProject();
+  if(projectActive == 1) {
+    hideProject();
+  }
   document.getElementById('menu_bar_line').style.right = "84.4vw";
   setTimeout(function(){
     document.getElementById('menu_bar_line').style.left = "11.8vw";
@@ -47,6 +54,7 @@ function openPageAbout() {
   document.getElementById('cv').style.transform = 'translateX(-50%)';
   document.getElementById('scroll_header_text_subsub').innerHTML = 'Scroll down to see my CV!';
   hideProjectPreviews();
+  document.getElementById('scroll_header').style.height = '38vw';
 }
 
 window.addEventListener('scroll', menuBarColor);
@@ -83,6 +91,7 @@ function menuBarColor() {
   if(window.scrollY <= scrollHeightDesired) {
     for(var i = 0; i < texts.length; i++) {
       texts[i].style.opacity = opacity;
+      document.getElementById('scroll_header_bg').style.opacity = opacity / 2;
     }
   }
 }
@@ -114,10 +123,15 @@ function unhoverProject(x) {
 
 function openProject(x) {
   hideProjectPreviews();
+  projectActive = 1;
   var project_content = document.getElementsByClassName('project_content');
   project_content[x].style.display = 'block';
   setTimeout(() => {
     project_content[x].style.opacity = '1';
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }, 500);
 }
 
@@ -130,6 +144,11 @@ function hideProject() {
     for (var i = 0; i < projects.length; i++) {
       projects[i].style.display = 'none';
     }
+    window.scrollTo({
+      top: window.innerWidth / 100 * 33,
+      behavior: 'smooth'
+    });
+    projectActive = 0;
   }, 500);
 }
 
@@ -138,6 +157,7 @@ function hideProjectPreviews() {
   for(var i = 0; i < projects.length; i++) {
     projects[i].style.transform = 'translateX(-100vw)';
   }
+  document.getElementById('scroll_header').style.height = '0';
   setTimeout(() => {
     for (var i = 0; i < projects.length; i++) {
       projects[i].style.display = 'none';

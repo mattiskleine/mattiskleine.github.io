@@ -1,5 +1,8 @@
 window.onload = function() {
   newHoney();
+  setTimeout(() => {
+    init = 1;
+  }, 500);
 }
 
 var honeyPotStatus = {yellow: 0, red: 0, blue: 0, green: 0, counter: 0};
@@ -8,6 +11,7 @@ var counterHoneyColors = 0;
 var honeyColorActive = [];
 var score = 0;
 var aniColor = 'yellow';
+var init = 0;
 
 function startHoney(x) {
   var pot = document.getElementById('honey_pot_' + x);
@@ -172,5 +176,7 @@ function checkHoney() {
 }
 
 function stopAnimation() {
-  document.getElementById('honey_' + aniColor).style.animation = 'wiggle 2s linear 0'
+  if(init == 1) {
+    document.getElementById('honey_' + aniColor).style.animation = 'wiggle 2s linear 0';
+  }
 }

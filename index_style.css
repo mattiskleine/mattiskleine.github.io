@@ -86,7 +86,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 4vw;
+  height: 3.5vw;
   transform: translate(-50%, -50%);
   cursor: pointer;
   filter: brightness(100);
@@ -215,6 +215,62 @@ p {
 
 #scroll_header_arrow:hover {
   top: 28.5vw;
+}
+
+#scroll_header_bg {
+  position: absolute;
+  top: 0;
+  left: -9vw;
+  width: 40vw;
+  height: 40vw;
+  opacity: .5;
+}
+
+#scroll_header_bg_move1 {
+  animation: rotation 40s infinite linear;
+}
+
+#scroll_header_bg_move2 {
+  animation: rotation 70s infinite linear;
+}
+
+#scroll_header_bg_move3 {
+  animation: rotation 130s infinite linear;
+}
+
+#scroll_header_bg_move4 {
+  animation: rotation 100s infinite linear;
+}
+
+#scroll_header_bg_move5 {
+  animation: rotation 300s infinite linear;
+}
+
+#scroll_header_bg_ring {
+  animation: focus 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes focus {
+  0% {transform: scale(.9);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(.9);}
+}
+
+.scroll_header_bg_element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #content {
@@ -352,7 +408,7 @@ p {
 
 #adam1 {
   position: absolute ;
-  top: 12vw;
+  top: 13vw;
   left: 50%;
   width: 70vw;
   height: 39.375vw;
@@ -363,7 +419,7 @@ p {
 
 #adam2 {
   position: absolute ;
-  top: 12vw;
+  top: 13vw;
   left: 50%;
   width: 70vw;
   height: 39.375vw;
@@ -374,7 +430,7 @@ p {
 
 #toggle_container {
   position: absolute;
-  top: 53vw;
+  top: 54vw;
   left: 50%;
   width: 22vw;
   height: 4vw;
