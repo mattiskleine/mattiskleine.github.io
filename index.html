@@ -27,7 +27,6 @@
   <img id="scroll_header_arrow" class="scroll_header_text" src="images/arrow.svg" onclick="scrollDown()">
   <div id="scroll_header_bg">
     <img id="scroll_header_bg_static" class="scroll_header_bg_element" src="images/bg/bg_parts_static.svg">
-    <img id="scroll_header_bg_ring" class="scroll_header_bg_element" src="images/bg/bg_parts_ring.svg">
     <img id="scroll_header_bg_move1" class="scroll_header_bg_element" src="images/bg/bg_parts_move1.svg">
     <img id="scroll_header_bg_move2" class="scroll_header_bg_element" src="images/bg/bg_parts_move2.svg">
     <img id="scroll_header_bg_move3" class="scroll_header_bg_element" src="images/bg/bg_parts_move3.svg">
@@ -38,58 +37,71 @@
 
 <div id="content">
   <object id="cv" data="objects/cv/cv.html"></object>
-</div>
 
-<div id="project0" class="project" onclick="openProject(0)" onmouseenter="hoverProject(0)" onmouseleave="unhoverProject(0)">
-  <img id="project0_img" class="project_img_even" src="images/preview_adam.png">
-  <div id="project0_heading" class="project_heading_even">Binary Bamse</div>
-  <div id="project0_subheading" class="project_subheading_even">B. Eng. Semester 2</div>
-  <div id="project0_hover" class="project_hover_even"></div>
-</div>
-
-<div id="project1" class="project" onclick="openProject(1)" onmouseenter="hoverProject(1)" onmouseleave="unhoverProject(1)">
-  <img id="project1_img" class="project_img_uneven" src="">
-  <div id="project1_heading" class="project_heading_uneven">Title</div>
-  <div id="project1_subheading" class="project_subheading_uneven">Origin</div>
-  <div id="project1_hover" class="project_hover_uneven"></div>
-</div>
-
-<div id="project0_content" class="project_content">
-  <h1>Binary Bamse</h1>
-  <p>A teddy bear's paw as a joystick and a delightful GUI, conveying IT fundamentals. Give it a try!</p>
-  <object id="adam1" data="objects/adam/adam1.html"></object>
-  <object id="adam2" data="objects/adam/adam2.html"></object>
-  <div id="toggle_container">
-    <div id="toggle_stage1" class="toggle_stage" onclick="toggleAdam()">stage 1</div>
-    <div id="toggle_stage2" class="toggle_stage" onclick="toggleAdam()">stage 2</div>
-    <div id="toggle_button">stage 1</div>
+  <div id="project0" class="project" onclick="openProject(0)" onmouseenter="hoverProject(0)" onmouseleave="unhoverProject(0)">
+    <img id="project0_img" class="project_img_even" src="images/preview_adam.png">
+    <div id="project0_heading" class="project_heading_even">Binary Bamse</div>
+    <div id="project0_subheading" class="project_subheading_even">B. Eng. Semester 2</div>
+    <div id="project0_hover" class="project_hover_even"></div>
   </div>
-  <h2 id="project0_whitespace0">Background</h2>
-  <p>
-    In medievel times, only a small number of people could read and write, and it gave them a great advantage.
-    Today, every child learns reading and writing. But while IT plays an increasing part in our lives,
-    only a small number of people can read and write it's code, and it too gives them an advantage.</br></br>
-    A scenario, in which children learn IT in elementary school is not unlikely in close future. In fact,
-    the nature of children's imaginative and divergent thinking could be harvested in IT development.
-    This project was an attempt to teach the binary number system to children between 8 and 10 years.
-  </p>
-  <h2>Concept</h2>
-  <p>
-    A cute graphical user interface guides the child through 2 stages. First, the very basic if-then
-    principle is taught by tipping over pots of honey. Then, the binary number system is taught by gathering
-    4 bits of bees in a beehive.</br>
-    During the 'lesson', the child sits next to a large teddy bear, holding its paw and tapping the fingers to
-    select the honey pots or bee bits. Pieces of conductive cloth on the paw are connected to a modified wireless
-    keyboard inside the teddy bears cushion.
-  </p>
-  <img id="project0_paw" src="images/project0_paw.png">
-  <h2>Results</h2>
-  <p id="project0_whitespace1">
-    A short questionnaire after the use gathered information about experience and learning retention. 100% of all
-    participants (8-12 years) were able to convert 4-bit binary numbers to the decimal system reliably. 92% could even apply
-    the principle to a 6-bit number. A statistically unreliable – but still interesting – result shows higher retention when using tangible HCI
-    (the paw joystick) compared to using a regular mouse.
-  </p>
+
+  <div id="project1" class="project" onclick="openProject(1)" onmouseenter="hoverProject(1)" onmouseleave="unhoverProject(1)">
+    <img id="project1_img" class="project_img_uneven" src="">
+    <div id="project1_heading" class="project_heading_uneven">Title</div>
+    <div id="project1_subheading" class="project_subheading_uneven">Origin</div>
+    <div id="project1_hover" class="project_hover_uneven"></div>
+  </div>
+</div>
+
+<div class="project_content">
+  <div id="project0_content_section0" class="project_content_section">
+    <h1>Binary Bamse</h1>
+    <p>A teddy bear's paw as a joystick and a delightful GUI, conveying IT fundamentals. Give it a try!</p>
+    <object id="adam1" data="objects/adam/adam1.html"></object>
+    <object id="adam2" data="objects/adam/adam2.html"></object>
+    <div id="toggle_container">
+      <div id="toggle_stage1" class="toggle_stage" onclick="toggleAdam()">stage 1</div>
+      <div id="toggle_stage2" class="toggle_stage" onclick="toggleAdam()">stage 2</div>
+      <div id="toggle_button">stage 1</div>
+    </div>
+  </div>
+
+  <div id="project0_content_section1" class="project_content_section">
+    <h2>Background</h2>
+    <p>
+      In medievel times, only a small number of people could read and write, and it gave them a great advantage.
+      Today, every child learns reading and writing. But while IT plays an increasing part in our lives,
+      only a small number of people can read and write it's code, and it too gives them an advantage.</br></br>
+      A scenario, in which children learn IT in elementary school is not unlikely in close future. In fact,
+      the nature of children's imaginative and divergent thinking could be harvested in IT development.
+      This project was an attempt to teach the binary number system to children between age 8 and 10.
+    </p>
+  </div>
+
+  <div id="project0_content_section2" class="project_content_section">
+    <h2 id="project0_content_section2_heading">Concept</h2>
+    <p id="project0_content_section2_text">
+      A cute graphical user interface guides the child through 2 stages. First, the very basic if-then
+      principle is taught by tipping over pots of honey. Then, the binary number system is taught by gathering
+      4 bits of bees in a beehive.</br></br>
+      During the 'lesson', the child sits next to a large teddy bear, holding its paw and tapping the fingers to
+      select the honey pots or bee bits. Pieces of conductive cloth on the paw are connected to a modified wireless
+      keyboard inside the teddy bears cushion.
+    </p>
+    <img id="project0_paw" src="images/project0_paw.png">
+  </div>
+
+  <div id="project0_content_section3" class="project_content_section">
+    <h2>Results</h2>
+    <p>
+      A short questionnaire after the use gathered information about experience and learning retention. 100% of all
+      participants (8-12 years) were able to convert 4-bit binary numbers to the decimal system reliably. 92% could even apply
+      the principle to a 6-bit number. A statistically unreliable – but still interesting – result shows higher retention when using tangible HCI
+      (the paw joystick) compared to using a regular mouse.
+    </p>
+    <img id="project0_questions" src="images/project0_questions.svg">
+  </div>
+
 </div>
 
 </body>

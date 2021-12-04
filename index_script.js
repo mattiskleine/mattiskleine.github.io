@@ -1,14 +1,8 @@
-var projectActive = 0;
-
 window.onload = function() {
-  var projects = document.getElementsByClassName('project');
-  for(var i = 0; i < projects.length; i++) {
-    projects[i].style.transform = 'translateX(-100vw)';
-  }
-  document.getElementById('cv').style.transform = 'translateX(100%)';
-  setTimeout(() => {
-    document.getElementById('cv').style.transform = 'translateX(-50%)';
-  }, 500);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
 function showAlert(x,t) {
@@ -24,6 +18,8 @@ function showAlert(x,t) {
     }, t);
   }, 20);
 }
+
+var projectActive = 0;
 
 function openPageProjects() {
   if(projectActive == 1) {
@@ -59,19 +55,21 @@ function openPageAbout() {
 
 window.addEventListener('scroll', menuBarColor);
 
+var scrollWindowActive = 1;
+
 function menuBarColor() {
   var item = document.getElementsByClassName('menu_bar_item');
   var icon = document.getElementsByClassName('menu_bar_icon');
   if (window.scrollY > 0) {
     document.getElementById('menu_bar').style.boxShadow = '0 .7vw .9vw -1.2vw #666666';
     document.getElementById('menu_bar').style.backgroundColor = '#ffffff';
-    document.getElementById('menu_bar_line').style.backgroundColor = '#4480AB';
+    document.getElementById('menu_bar_line').style.backgroundColor = '#666666';
     document.getElementById('menu_bar_logo').style.filter = 'none';
     for(var i = 0; i < icon.length; i++) {
       icon[i].style.filter = 'none';
     }
     for(var i = 0; i < item.length; i++) {
-      item[i].style.color = '#4480AB';
+      item[i].style.color = '#444444';
     }
   } else {
     document.getElementById('menu_bar').style.boxShadow = 'none';
@@ -94,6 +92,11 @@ function menuBarColor() {
       document.getElementById('scroll_header_bg').style.opacity = opacity / 2;
     }
   }
+  if(window.scrollY < window.innerWidth / 100 * 43 && scrollWindowActive == 1) {
+    document.getElementById('scroll_header').style.display = 'block';
+  } else {
+    document.getElementById('scroll_header').style.display = 'none';
+  }
 }
 
 function scrollDown() {
@@ -104,24 +107,19 @@ function scrollDown() {
 }
 
 function hoverProject(x) {
-  document.getElementById('project' + x + '_hover').style.display = 'block';
-  setTimeout(() => {
-    document.getElementById('project' + x + '_hover').style.opacity = '.7';
-    document.getElementById('project' + x).style.backgroundColor = '#222222';
-    document.getElementById('project' + x + '_heading').style.color = '#eeeeee';
-  }, 20);
+  document.getElementById('project' + x + '_hover').style.opacity = '.7';
+  document.getElementById('project' + x).style.backgroundColor = '#222222';
+  document.getElementById('project' + x + '_heading').style.color = '#eeeeee';
 }
 
 function unhoverProject(x) {
   document.getElementById('project' + x + '_hover').style.opacity = '0';
   document.getElementById('project' + x).style.backgroundColor = '#eeeeee';
   document.getElementById('project' + x + '_heading').style.color = '#444444';
-  setTimeout(() => {
-    document.getElementById('project' + x + '_hover').style.display = 'none';
-  }, 300);
 }
 
 function openProject(x) {
+  scrollWindowActive = 0;
   hideProjectPreviews();
   projectActive = 1;
   var project_content = document.getElementsByClassName('project_content');
@@ -136,6 +134,7 @@ function openProject(x) {
 }
 
 function hideProject() {
+  scrollWindowActive = 1;
   var projects = document.getElementsByClassName('project_content');
   for (var i = 0; i < projects.length; i++) {
     projects[i].style.opacity = '0';

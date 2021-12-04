@@ -38,6 +38,7 @@ h1 {
   font-family: FreightNeoPro;
   font-size: 3vw;
   color: #444444;
+  text-align: center;
 }
 
 h2 {
@@ -45,14 +46,16 @@ h2 {
   font-size: 1.5vw;
   font-weight: bolder;
   color: #444444;
+  text-align: center;
 }
 
 p {
   font-family: FreightNeoPro;
   font-size: 1.5vw;
-  text-align: justify;
   color: #888888;
   line-height: 2vw;
+  text-align: center;
+  margin: 0 25vw 0 25vw;
 }
 
 #alerts {
@@ -246,10 +249,6 @@ p {
   animation: rotation 300s infinite linear;
 }
 
-#scroll_header_bg_ring {
-  animation: focus 10s infinite linear;
-}
-
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -257,12 +256,6 @@ p {
   to {
     transform: rotate(359deg);
   }
-}
-
-@keyframes focus {
-  0% {transform: scale(.9);}
-  50% {transform: scale(1.2);}
-  100% {transform: scale(.9);}
 }
 
 .scroll_header_bg_element {
@@ -277,7 +270,7 @@ p {
   position: absolute;
   top: 38vw;
   left: 0;
-  width: 100vw;
+  right: 0;
   height: 100vw;
   background-color: #ffffff;
 }
@@ -298,6 +291,7 @@ p {
   position: absolute;
   left: 10vw;
   width: 80vw;
+  transform: translateX(-100vw);
   transition: transform .3s, background-color .3s;
   height: 30vw;
   background-color: #eeeeee;
@@ -314,7 +308,6 @@ p {
 }
 
 .project_hover_even {
-  display: none;
   position: absolute;
   background-color: #000000;
   top: 0;
@@ -355,7 +348,6 @@ p {
 }
 
 .project_hover_uneven {
-  display: none;
   position: absolute;
   background-color: #000000;
   top: 0;
@@ -389,26 +381,45 @@ p {
 }
 
 #project0 {
-  top: 43vw;
+  top: 5vw;
 }
 
 #project1 {
-  top: 75vw;
+  top: 38vw;
 }
 
 .project_content {
   position: absolute;
-  top: 10vw;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50vw;
+  top: 5vw;
+  left: 0;
+  right: 0;
   display: none;
   transition: opacity .5s;
+  background-color: #ffffff;
+}
+
+.project_content_section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding-top: 2vw;
+  overflow: hidden;
+}
+
+#project0_content_section0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  height: 63vw;
 }
 
 #adam1 {
   position: absolute ;
-  top: 13vw;
+  top: 15vw;
   left: 50%;
   width: 70vw;
   height: 39.375vw;
@@ -419,7 +430,7 @@ p {
 
 #adam2 {
   position: absolute ;
-  top: 13vw;
+  top: 15vw;
   left: 50%;
   width: 70vw;
   height: 39.375vw;
@@ -430,7 +441,7 @@ p {
 
 #toggle_container {
   position: absolute;
-  top: 54vw;
+  top: 56vw;
   left: 50%;
   width: 22vw;
   height: 4vw;
@@ -477,16 +488,54 @@ p {
   transition: transform .5s;
 }
 
-#project0_whitespace0 {
-  margin-top: 50vw;
+#project0_content_section1 {
+  position: absolute;
+  top: 63vw;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  height: 27vw;
 }
 
-#project0_whitespace1 {
-  margin-bottom: 5vw;
+#project0_content_section2 {
+  position: absolute;
+  top: 90vw;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  height: 34vw;
+  padding-top: 7vw;
+}
+
+#project0_content_section2_heading {
+  text-align: left;
+  margin-left: 58vw;
+}
+
+#project0_content_section2_text {
+  text-align: left;
+  margin: auto 10vw auto 58vw;
 }
 
 #project0_paw {
-  margin-left: -10vw;
+  position: absolute;
+  top: 5vw;
+  right: 46vw;
+  width: 59vw;
+}
+
+#project0_content_section3 {
+  position: absolute;
+  top: 131vw;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  height: 42vw;
+}
+
+#project0_questions {
+  position: absolute;
+  top: 20vw;
+  left: 15vw;
   width: 70vw;
-  border-radius: 2vw;
 }
