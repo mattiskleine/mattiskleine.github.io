@@ -127,6 +127,7 @@ body {
   left: 20vw;
   width: 60vw;
   transform: rotate(-10deg) scale(.5);
+  transition: transform 1s;
 }
 
 #paper {

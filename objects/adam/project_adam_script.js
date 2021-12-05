@@ -21,9 +21,11 @@ function toggleAdam() {
   }
 }
 
-var sec1 = document.getElementById('section1');
-window.addEventListener('scroll', handleScroll());
+window.addEventListener('scroll', handleScroll);
 
 function handleScroll() {
-
+  var sec1 = document.getElementById('section1');
+  if(sec1.getBoundingClientRect().top < (window.innerHeight / 100 * 20)) {
+    document.getElementById('paper_container').style.transform = "rotate(-10deg) scale(1)";
+  }
 }
