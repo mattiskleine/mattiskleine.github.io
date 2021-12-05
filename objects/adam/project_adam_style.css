@@ -126,8 +126,9 @@ body {
   top: 8vw;
   left: 20vw;
   width: 60vw;
-  transform: rotate(-10deg) scale(.5);
-  transition: transform 1s;
+  height: 38vw;
+  transform: rotate(-10deg) scale(.2);
+  transition: transform .5s;
 }
 
 #paper {
@@ -196,13 +197,136 @@ body {
 #paw {
   position: absolute;
   top: 5vw;
-  right: 46vw;
-  width: 59vw;
+  right: 60vw;
+  width: 42vw;
+}
+
+#feature0 {
+  position: absolute;
+  top: 8vw;
+  left: 30vw;
+  width: 0;
+  height: 4vw;
+  overflow: hidden;
+  transition: width .5s;
+}
+
+#feature0_dot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: #462e23;
+}
+
+#feature0_line {
+  position: absolute;
+  bottom: .4vw;
+  left: .5vw;
+  right: 0;
+  height: .2vw;
+  border-radius: 1vw;
+  background-color: #462e23;
+}
+
+#feature0_text {
+  position: absolute;
+  top: 8vw;
+  right: 44vw;
+  font-family: FreightNeoPro;
+  font-size: 1.5vw;
+  color: #888888;text-align: right;
+  opacity: 0;
+  transition: opacity .5s .5s;
+}
+
+#feature1 {
+  position: absolute;
+  top: 19vw;
+  left: 35vw;
+  width: 0;
+  height: 3vw;
+  overflow: hidden;
+  transition: width .5s;
+}
+
+#feature1_dot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: #462e23;
+}
+
+#feature1_line {
+  position: absolute;
+  bottom: .4vw;
+  left: .5vw;
+  right: 0;
+  height: .2vw;
+  border-radius: 1vw;
+  background-color: #462e23;
+}
+
+#feature1_text {
+  position: absolute;
+  top: 19.7vw;
+  right: 44vw;
+  font-family: FreightNeoPro;
+  font-size: 1.5vw;
+  color: #888888;
+  opacity: 0;
+  transition: opacity .5s .5s;
+}
+
+#feature2 {
+  position: absolute;
+  top: 29.7vw;
+  left: 29vw;
+  width: 0;
+  height: 3vw;
+  overflow: hidden;
+  transition: width .5s;
+}
+
+#feature2_dot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: #462e23;
+}
+
+#feature2_line {
+  position: absolute;
+  bottom: .4vw;
+  left: .5vw;
+  right: 0;
+  height: .2vw;
+  border-radius: 1vw;
+  background-color: #462e23;
+}
+
+#feature2_text {
+  position: absolute;
+  top: 29vw;
+  right: 44vw;
+  font-family: FreightNeoPro;
+  font-size: 1.5vw;
+  color: #888888;
+  opacity: 0;
+  transition: opacity .5s .5s;
 }
 
 #section3 {
   position: absolute;
-  top: 180vw;
+  top: 171vw;
   left: 0;
   right: 0;
   background-color: #fafafa;
