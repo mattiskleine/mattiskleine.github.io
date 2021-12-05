@@ -36,7 +36,7 @@
 </div>
 
 <div id="content">
-  <object id="cv" data="objects/cv/cv.html"></object>
+  <iframe id="cv" src="objects/cv/cv.html"></iframe>
 
   <div id="project0" class="project" onclick="openProject(0)" onmouseenter="hoverProject(0)" onmouseleave="unhoverProject(0)">
     <img id="project0_img" class="project_img_even" src="images/preview_adam.png">
@@ -53,12 +53,15 @@
   </div>
 </div>
 
+<iframe id="project0_content" class="project_content" src="objects/adam/project_adam.html"></iframe>
+
+<!--
 <div class="project_content">
   <div id="project0_content_section0" class="project_content_section">
     <h1>Binary Bamse</h1>
     <p>A teddy bear's paw as a joystick and a delightful GUI, conveying IT fundamentals. Give it a try!</p>
-    <object id="adam1" data="objects/adam/adam1.html"></object>
-    <object id="adam2" data="objects/adam/adam2.html"></object>
+    <iframe id="adam1" src="objects/adam/adam1.html"></iframe>
+    <iframe id="adam2" src="objects/adam/adam2.html"></iframe>
     <div id="toggle_container">
       <div id="toggle_stage1" class="toggle_stage" onclick="toggleAdam()">stage 1</div>
       <div id="toggle_stage2" class="toggle_stage" onclick="toggleAdam()">stage 2</div>
@@ -103,6 +106,7 @@
   </div>
 
 </div>
+-->
 
 </body>
 </html>

@@ -285,6 +285,7 @@ p {
   height: calc(58.4vw * 1.41);
   background-color: #fefefe;
   box-shadow: 0.6vw 0.83vw 1.19vw #aaaaaa;
+  border: none;
 }
 
 .project {
@@ -392,6 +393,20 @@ p {
   position: absolute;
   top: 5vw;
   left: 0;
+  width: 100vw;
+  height: 175vw;
+  display: none;
+  transition: opacity .5s;
+  background-color: #ffffff;
+  border: none;
+  overflow: hidden;
+}
+
+/*
+.project_content {
+  position: absolute;
+  top: 5vw;
+  left: 0;
   right: 0;
   display: none;
   transition: opacity .5s;
@@ -426,6 +441,7 @@ p {
   transform: translateX(-50%);
   transition: transform .5s;
   border-radius: 2vw;
+  border: none;
 }
 
 #adam2 {
@@ -437,6 +453,7 @@ p {
   transform: translateX(120%);
   transition: transform .5s;
   border-radius: 2vw;
+  border: none;
 }
 
 #toggle_container {
@@ -539,3 +556,4 @@ p {
   left: 15vw;
   width: 70vw;
 }
+*/
