@@ -23,12 +23,22 @@ body {
   height: 74vw;
 }
 
+#screen_frame {
+  position: absolute ;
+  top: 15vw;
+  left: 50%;
+  width: 70vw;
+  height: 57vw;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
 #adam1 {
   position: absolute ;
-  top: 18.5vw;
+  top: 3.5vw;
   left: 50%;
   width: 65vw;
-  height: 36.6vw;
+  height: calc((9 / 16) * 65vw);
   transform: translateX(-50%);
   transition: transform .5s;
   border: none;
@@ -36,10 +46,10 @@ body {
 
 #adam2 {
   position: absolute ;
-  top: 18.5vw;
+  top: 3.5vw;
   left: 50%;
   width: 65vw;
-  height: 36.6vw;
+  height: calc((9 / 16) * 65vw);
   transform: translateX(50%);
   transition: transform .5s;
   border: none;
@@ -47,34 +57,15 @@ body {
 
 #screen {
   position: absolute ;
-  top: 15vw;
-  left: 50%;
-  width: 70vw;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
-#screen_frame_left {
-  position: absolute ;
-  top: 15vw;
+  top: 0;
   left: 0;
-  width: 15vw;
-  height: 50vw;
-  background-color: white;
-}
-
-#screen_frame_right {
-  position: absolute ;
-  top: 15vw;
-  right: 0;
-  width: 15vw;
-  height: 50vw;
-  background-color: white;
+  width: 100%;
+  pointer-events: none;
 }
 
 #toggle_container {
   position: absolute;
-  top: 59.3vw;
+  top: 44.3vw;
   left: 50%;
   width: 22vw;
   height: 4vw;
@@ -127,12 +118,63 @@ body {
   left: 0;
   right: 0;
   background-color: #fafafa;
-  height: 27vw;
+  height: 52vw;
+}
+
+#paper_container {
+  position: absolute;
+  top: 8vw;
+  left: 20vw;
+  width: 60vw;
+  transform: rotate(-10deg) scale(.5);
+}
+
+#paper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#paper_sep {
+  position: absolute;
+  top: 11vw;
+  left: 4vw;
+  width: 80%;
+  height: 1vw;
+  background-color: #888888;
+}
+
+#background_heading {
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  font-size: 5vw;
+  color: #666666;
+  text-transform: uppercase;
+}
+
+#background_text1 {
+  position: absolute;
+  top: 14vw;
+  left: 7vw;
+  width: 33%;
+  text-align: justify;
+  margin: 0;
+}
+
+#background_text2 {
+  position: absolute;
+  top: 14vw;
+  right: 10.5vw;
+  width: 33%;
+  text-align: justify;
+  margin: 0;
 }
 
 #section2 {
   position: absolute;
-  top: 90vw;
+  top: 130vw;
   left: 0;
   right: 0;
   background-color: #ffffff;
@@ -159,7 +201,7 @@ body {
 
 #section3 {
   position: absolute;
-  top: 131vw;
+  top: 180vw;
   left: 0;
   right: 0;
   background-color: #fafafa;

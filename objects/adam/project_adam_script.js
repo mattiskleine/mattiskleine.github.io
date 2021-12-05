@@ -20,3 +20,10 @@ function toggleAdam() {
     document.getElementById('adam2').style.transform = 'translateX(50%)';
   }
 }
+
+var sec1 = document.getElementById('section1');
+window.addEventListener('scroll', handleScroll());
+
+function handleScroll() {
+
+}
