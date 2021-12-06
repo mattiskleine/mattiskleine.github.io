@@ -21,58 +21,33 @@ function toggleAdam() {
   }
 }
 
-var newspaperIn = 0;
-var feature0 = 0;
-var feature1 = 0;
-var feature2 = 0;
-window.addEventListener('scroll', handleScroll);
+var featureLength = ['26vw', '24vw', '27vw'];
+parent.window.addEventListener('scroll', handleScroll);
 
 function handleScroll() {
   var sec1 = document.getElementById('section1');
   var sec2 = document.getElementById('section2');
+  var sec2feat = document.getElementsByClassName('feature');
+  var sec2featText = document.getElementsByClassName('feature_text');
+  var sec1Pos = sec1.offsetTop - parent.window.scrollY;
+  var vw = parent.window.innerWidth / 100 * 5;
 
-  if (sec1.getBoundingClientRect().top <= (window.innerHeight / 100 * 30) && newspaperIn == 0) {
-    newspaperIn = 1;
+  if (sec1Pos < (parent.window.innerHeight / 100 * 10) - vw) {
     document.getElementById('paper_container').style.transform = 'rotate(350deg) scale(1)';
-  } else if (sec1.getBoundingClientRect().top > (window.innerHeight / 100 * 30) && newspaperIn == 1) {
-    newspaperIn = 0;
+  } else {
     document.getElementById('paper_container').style.transform = 'rotate(-10deg) scale(.2)';
   }
 
-  if (sec2.getBoundingClientRect().top < (window.innerHeight / 100 * 60) && feature0 == 0) {
-    feature0 = 1;
-    document.getElementById('feature0_text').style.transition = 'opacity .5s .5s';
-    document.getElementById('feature0_text').style.opacity = '1';
-    document.getElementById('feature0').style.width = '26vw';
-  } else if (sec2.getBoundingClientRect().top > (window.innerHeight / 100 * 60) && feature0 == 1) {
-    feature0 = 0;
-    document.getElementById('feature0_text').style.transition = 'opacity .5s 0s';
-    document.getElementById('feature0_text').style.opacity = '0';
-    document.getElementById('feature0').style.width = '0';
+  for(var i = 0; i < sec2feat.length; i++) {
+    var sec2featPos = sec2feat[i].offsetTop + sec2.offsetTop - parent.window.scrollY;
+    if (sec2featPos < (parent.window.innerHeight / 100 * 70) - vw) {
+      sec2featText[i].style.transition = 'opacity .5s .5s';
+      sec2featText[i].style.opacity = '1';
+      sec2feat[i].style.width = featureLength[i];
+    } else {
+      sec2featText[i].style.transition = 'opacity .5s 0s';
+      sec2featText[i].style.opacity = '0';
+      sec2feat[i].style.width = '0';
+    }
   }
-
-  if (sec2.getBoundingClientRect().top < (window.innerHeight / 100 * 50) && feature1 == 0) {
-    feature1 = 1;
-    document.getElementById('feature1_text').style.transition = 'opacity .5s .5s';
-    document.getElementById('feature1_text').style.opacity = '1';
-    document.getElementById('feature1').style.width = '21vw';
-  } else if (sec2.getBoundingClientRect().top > (window.innerHeight / 100 * 50) && feature1 == 1) {
-    feature1 = 0;
-    document.getElementById('feature1_text').style.transition = 'opacity .5s 0s';
-    document.getElementById('feature1_text').style.opacity = '0';
-    document.getElementById('feature1').style.width = '0';
-  }
-/*
-  if (sec2.getBoundingClientRect().top <= (window.innerHeight / 100 * 30) && feature2 == 0) {
-    feature2 = 1;
-    document.getElementById('feature2_text').style.transition = 'opacity .5s .5s';
-    document.getElementById('feature2_text').style.opacity = '1';
-    document.getElementById('feature2').style.width = '27vw';
-  } else if (sec2.getBoundingClientRect().top > (window.innerHeight / 100 * 30) && feature2 == 1) {
-    feature1 = 0;
-    document.getElementById('feature2_text').style.transition = 'opacity .5s 0s';
-    document.getElementById('feature2_text').style.opacity = '0';
-    document.getElementById('feature2').style.width = '0';
-  }
-  */
 }

@@ -201,14 +201,28 @@ body {
   width: 42vw;
 }
 
-#feature0 {
+.feature {
   position: absolute;
-  top: 8vw;
-  left: 30vw;
   width: 0;
-  height: 4vw;
   overflow: hidden;
   transition: width .5s;
+  height: 3vw;
+}
+
+.feature_text {
+  position: absolute;
+  right: 44vw;
+  font-family: FreightNeoPro;
+  font-size: 1.5vw;
+  color: #888888;text-align: right;
+  opacity: 0;
+  transition: opacity .5s .5s;
+}
+
+#feature0 {
+  top: 8vw;
+  left: 30vw;
+  height: 4vw;
 }
 
 #feature0_dot {
@@ -232,24 +246,12 @@ body {
 }
 
 #feature0_text {
-  position: absolute;
   top: 8vw;
-  right: 44vw;
-  font-family: FreightNeoPro;
-  font-size: 1.5vw;
-  color: #888888;text-align: right;
-  opacity: 0;
-  transition: opacity .5s .5s;
 }
 
 #feature1 {
-  position: absolute;
   top: 19vw;
-  left: 35vw;
-  width: 0;
-  height: 3vw;
-  overflow: hidden;
-  transition: width .5s;
+  left: 32vw;
 }
 
 #feature1_dot {
@@ -273,24 +275,13 @@ body {
 }
 
 #feature1_text {
-  position: absolute;
   top: 19.7vw;
   right: 44vw;
-  font-family: FreightNeoPro;
-  font-size: 1.5vw;
-  color: #888888;
-  opacity: 0;
-  transition: opacity .5s .5s;
 }
 
 #feature2 {
-  position: absolute;
-  top: 29.7vw;
+  top: 28.3vw;
   left: 29vw;
-  width: 0;
-  height: 3vw;
-  overflow: hidden;
-  transition: width .5s;
 }
 
 #feature2_dot {
@@ -314,14 +305,8 @@ body {
 }
 
 #feature2_text {
-  position: absolute;
   top: 29vw;
   right: 44vw;
-  font-family: FreightNeoPro;
-  font-size: 1.5vw;
-  color: #888888;
-  opacity: 0;
-  transition: opacity .5s .5s;
 }
 
 #section3 {
@@ -330,12 +315,29 @@ body {
   left: 0;
   right: 0;
   background-color: #fafafa;
-  height: 42vw;
+  height: 45vw;
 }
 
 #results {
   position: absolute;
-  top: 20vw;
+  top: 4vw;
   left: 15vw;
   width: 70vw;
+}
+
+#section3_heading {
+  position: absolute;
+  top: 20vw;
+  left: 24%;
+  right: 25%;
+  font-size: 4vw;
+  font-family: DKLemonYellowSun;
+}
+
+#section3_text {
+  position: absolute;
+  top: 30vw;
+  left: 24%;
+  right: 25%;
+  margin: 0;
 }

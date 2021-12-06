@@ -28,6 +28,11 @@
   src: url(fonts/FreightNeoPro/FreightNeoProLight.otf);
 }
 
+@font-face {
+  font-family: DKLemonYellowSun;
+  src: url(fonts/DKLemonYellowSun/DKLemonYellowSun.otf);
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -56,6 +61,14 @@ p {
   line-height: 2vw;
   text-align: center;
   margin: 0 25vw 0 25vw;
+}
+
+li {
+  font-family: FreightNeoPro;
+  font-size: 1.5vw;
+  color: #888888;
+  line-height: 2vw;
+  padding: 0 0 1vw 1vw;
 }
 
 #alerts {
@@ -394,10 +407,13 @@ p {
   top: 5vw;
   left: 0;
   width: 100vw;
-  height: 175vw;
   display: none;
   transition: opacity .5s;
   background-color: #ffffff;
   border: none;
   overflow: hidden;
+}
+
+#project0_content {
+  height: 218vw;
 }
