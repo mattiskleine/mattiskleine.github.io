@@ -127,8 +127,7 @@ function openProject(x) {
   setTimeout(() => {
     project_content[x].style.opacity = '1';
     window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+      top: 0
     });
   }, 500);
 }
