@@ -1,0 +1,9 @@
+#cane_model {
+  position: absolute;
+  top: 10vw;
+  left: 35vw;
+  background-color: #fafafa;
+  width: 30vw;
+  height: 30vw;
+  border: 0.1vw solid #888888;
+}
