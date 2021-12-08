@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <script type="text/javascript" src="project_cane_script.js"></script>
 <link rel="stylesheet" href="project_cane_style.css">
 <title>Mattis Kleine</title>
 </head>
 <body>
-  <model-viewer
-    id="cane_model" src="cane.glb" camera-controls bounds="tight" camera-orbit="0deg 90deg 100%" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 180deg auto" camera-target="0% auto auto" auto-rotate auto-rotate-delay="1000" rotation-per-second="45deg" environment-image="neutral" interaction-prompt="none"></model-viewer>
+  <div id="section0" class="section">
+    <h1>iCan(e)</h1>
+    <p>A cane providing postural feedback to assist individuals with Parkinson's disease.</p>
+    <div id="macbook_frame">
+      <model-viewer id="cane_model" src="cane.glb"
+        camera-controls auto-rotate auto-rotate-delay="1000" rotation-per-second="45deg"
+        bounds="tight" environment-image="neutral" interaction-prompt="none"
+        camera-orbit="0deg 90deg 100%" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 180deg auto" camera-target="0% auto auto">
+      </model-viewer>
+      <img id="macbook" src="macbook.svg">
+    </div>
+  </div>
+
+  <div id="section1" class="section">
+    <div id="notebook_frame">
+      <img id="notebook" src="notebook.svg">
+      <div id="notes_heading">Project Requirements</div>
+      <ul id="notes">
+        <li>Theme: bodily support</li>
+        <li>Focus: user-centered design</li>
+        <li>Emphasis: ergonomics & mechanics</li>
+      </ul>
+    </div>
+  </div>
+
 </body>
 </html>

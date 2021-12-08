@@ -33,6 +33,11 @@
   src: url(fonts/DKLemonYellowSun/DKLemonYellowSun.otf);
 }
 
+@font-face {
+  font-family: Caveat;
+  src: url(fonts/Caveat/Caveat.ttf);
+}
+
 body {
   margin: 0;
   overflow-x: hidden;

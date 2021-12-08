@@ -1,9 +1,97 @@
+@import url("../../index_style.css");
+
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding-top: 2vw;
+  overflow: hidden;
+}
+
+#section0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  height: 60vw;
+}
+
+#macbook_frame {
+  position: absolute ;
+  top: 15vw;
+  left: 50%;
+  width: 70vw;
+  height: 57vw;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+#macbook {
+  position: absolute ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
 #cane_model {
   position: absolute;
-  top: 10vw;
-  left: 35vw;
+  top: 2.7vw;
+  left: 10.7vw;
+  width: 48.6vw;
+  height: 28.7vw;
+}
+
+#section1 {
+  position: absolute;
+  top: 60vw;
+  left: 0;
+  right: 0;
   background-color: #fafafa;
-  width: 30vw;
-  height: 30vw;
-  border: 0.1vw solid #888888;
+  height: 65vw;
+}
+
+#notebook_frame {
+  position: absolute ;
+  top: 10vw;
+  left: 50%;
+  width: 50vw;
+  height: 50vw;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+#notebook {
+  position: absolute ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+#notes_heading {
+  position: absolute ;
+  top: 14vw;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 3vw;
+  font-family: Caveat;
+}
+
+#notes {
+  position: absolute ;
+  top: 20vw;
+  left: 5vw;
+  width: 60vw;
+  text-align: left;
+}
+
+li {
+  padding-bottom: 0.5vw;
+  font-family: Caveat;
+  font-size: 2vw;
 }

@@ -125,6 +125,7 @@ function openProject(x) {
   var project_content = document.getElementsByClassName('project_content');
   project_content[x].style.display = 'block';
   setTimeout(() => {
+    document.getElementById('content').style.display = 'none';
     project_content[x].style.opacity = '1';
     window.scrollTo({
       top: 0
@@ -134,6 +135,7 @@ function openProject(x) {
 
 function hideProject() {
   scrollWindowActive = 1;
+  document.getElementById('content').style.display = 'block';
   var projects = document.getElementsByClassName('project_content');
   for (var i = 0; i < projects.length; i++) {
     projects[i].style.opacity = '0';
