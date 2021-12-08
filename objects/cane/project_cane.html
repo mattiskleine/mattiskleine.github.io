@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="project_cane_style.css">
 <title>Mattis Kleine</title>
 </head>
-<body>
+<body onload="initCane()">
   <div id="section0" class="section">
     <h1>iCan(e)</h1>
     <p>A cane providing postural feedback to assist individuals with Parkinson's disease.</p>
@@ -18,6 +18,7 @@
         camera-orbit="0deg 90deg 100%" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 180deg auto" camera-target="0% auto auto">
       </model-viewer>
       <img id="macbook" src="macbook.svg">
+      <div id="loading_box">loading model...</div>
     </div>
   </div>
 

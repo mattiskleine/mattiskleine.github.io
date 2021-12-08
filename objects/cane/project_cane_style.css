@@ -1,5 +1,10 @@
 @import url("../../index_style.css");
 
+@keyframes spin {
+  from { transform: rotate(0); }
+  to{  transform: rotate(359deg); }
+}
+
 .section {
   position: absolute;
   top: 0;
@@ -16,7 +21,7 @@
   left: 0;
   right: 0;
   background-color: #ffffff;
-  height: 60vw;
+  height: 56vw;
 }
 
 #macbook_frame {
@@ -45,18 +50,32 @@
   height: 28.7vw;
 }
 
+#loading_box {
+  position: absolute;
+  top: 14vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Nunito;
+  font-size: 2vw;
+  background-color: #464e5e;
+  border-radius: 10vw;
+  padding: 1vw 3vw;
+  color: #ffffff;
+  transition: opacity 1s;
+}
+
 #section1 {
   position: absolute;
-  top: 60vw;
+  top: 58vw;
   left: 0;
   right: 0;
   background-color: #fafafa;
-  height: 65vw;
+  height: 48vw;
 }
 
 #notebook_frame {
   position: absolute ;
-  top: 10vw;
+  top: 5vw;
   left: 50%;
   width: 50vw;
   height: 50vw;
@@ -67,31 +86,33 @@
 #notebook {
   position: absolute ;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 10%;
+  width: 90%;
   pointer-events: none;
 }
 
 #notes_heading {
   position: absolute ;
-  top: 14vw;
+  top: 10.3vw;
   left: 0;
   width: 100%;
   text-align: center;
   font-size: 3vw;
   font-family: Caveat;
+  color: #555555;
 }
 
 #notes {
   position: absolute ;
-  top: 20vw;
-  left: 5vw;
+  top: 15.2vw;
+  left: 11vw;
   width: 60vw;
   text-align: left;
 }
 
 li {
-  padding-bottom: 0.5vw;
+  padding: 0 0 0.4vw 0.2vw;
   font-family: Caveat;
   font-size: 2vw;
+  color: #666666;
 }
