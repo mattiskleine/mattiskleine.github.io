@@ -24,30 +24,36 @@
   height: 56vw;
 }
 
-#macbook_frame {
+#cad_viewer {
   position: absolute ;
   top: 15vw;
   left: 50%;
   width: 70vw;
-  height: 57vw;
+  height: 35vw;
   transform: translateX(-50%);
   overflow: hidden;
-}
-
-#macbook {
-  position: absolute ;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
+  background-color: #fafafa;
+  border: 0.1vw solid #eeeeee;
+  border-radius: 2vw;
 }
 
 #cane_model {
   position: absolute;
-  top: 2.7vw;
-  left: 10.7vw;
-  width: 48.6vw;
-  height: 28.7vw;
+  top: 0;
+  left: 0;
+  width: 55vw;
+  height: 35vw;
+}
+
+#cad_options {
+  position: absolute ;
+  top: 0;
+  right: 0;
+  width: 15vw;
+  height: 35vw;
+  overflow: hidden;
+  border-left: 0.1vw solid #eeeeee;
+  background-color: #fdfdfd;
 }
 
 #loading_box {
@@ -62,6 +68,47 @@
   padding: 1vw 3vw;
   color: #ffffff;
   transition: opacity 1s;
+}
+
+.toggle_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.4vw;
+  height: 1.4vw;
+  border-radius: 10vw;
+  background-color: #5EBD9C;
+  filter: drop-shadow(.1vw .1vw .3vw rgb(0 0 0 / 0.2));
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.toggle_button {
+  position: absolute;
+  top: .1vw;
+  left: .1vw;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: transform .2s;
+}
+
+.cad_option {
+  position: absolute;
+  left: 2vw;
+  width: 11vw;
+  font-family: Nunito;
+  font-size: 1vw;
+  color: #444444;
+}
+
+#auto_rotate {
+  top: 3vw;
+}
+
+#centered {
+  top: 8vw;
 }
 
 #section1 {

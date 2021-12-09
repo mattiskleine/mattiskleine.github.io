@@ -11,13 +11,24 @@
   <div id="section0" class="section">
     <h1>iCan(e)</h1>
     <p>A cane providing postural feedback to assist individuals with Parkinson's disease.</p>
-    <div id="macbook_frame">
+    <div id="cad_viewer">
       <model-viewer id="cane_model" src="cane.glb"
-        camera-controls auto-rotate auto-rotate-delay="1000" rotation-per-second="45deg"
+        camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="45deg"
         bounds="tight" environment-image="neutral" interaction-prompt="none"
-        camera-orbit="0deg 90deg 100%" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 180deg auto" camera-target="0% auto auto">
+        camera-orbit="0deg 90deg 100%" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 180deg auto" camera-target="0% auto auto" min-field-of-view="0deg">
       </model-viewer>
-      <img id="macbook" src="macbook.svg">
+      <div id="cad_options">
+        <div id="auto_rotate" class="cad_option">auto rotate
+          <div id="toggle_auto_rotate" class="toggle_container" onclick="toggleAutoRotate()">
+            <div class="toggle_button"></div>
+          </div>
+        </div>
+        <div id="centered" class="cad_option">centered
+          <div id="toggle_centered" class="toggle_container" onclick="toggleCentered()">
+            <div class="toggle_button"></div>
+          </div>
+        </div>
+      </div>
       <div id="loading_box">loading model...</div>
     </div>
   </div>
