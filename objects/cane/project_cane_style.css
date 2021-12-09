@@ -116,3 +116,10 @@ li {
   font-size: 2vw;
   color: #666666;
 }
+
+#cane_animation_foot {
+  position: absolute ;
+  top: 20vw;
+  left: 30vw;
+  width: 40vw;
+}
