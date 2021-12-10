@@ -47,6 +47,9 @@
 #cane_model:focus {
   outline: none;
 }
+#cane_model:focus-visible {
+  outline: none;
+}
 
 #cad_options {
   position: absolute ;
@@ -111,15 +114,11 @@
 }
 
 #original_pos {
-  top: 8vw;
-}
-
-#orbit {
-  top: 13vw;
+  top: 6vw;
 }
 
 #pan {
-  top: 18vw;
+  top: 28vw;
 }
 
 #section1 {
@@ -162,8 +161,8 @@
 
 #notes {
   position: absolute ;
-  top: 15.2vw;
-  left: 11vw;
+  top: 11.8vw;
+  left: 8vw;
   width: 60vw;
   text-align: left;
 }
@@ -173,6 +172,7 @@ li {
   font-family: Caveat;
   font-size: 1.6vw;
   color: #666666;
+  line-height: 1.9vw;
 }
 
 #section1_text {
