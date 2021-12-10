@@ -1,4 +1,5 @@
 var modelViewer;
+var fieldOfViewLast;
 
 function initCane() {
   modelViewer = document.getElementById('cane_model');
@@ -8,6 +9,9 @@ function initCane() {
       document.getElementById('loading_box').style.display = 'none';
     }, 1020);
   });
+
+  fieldOfViewLast = modelViewer.getFieldOfView();
+  watchForChange();
 
   modelViewer.addEventListener('mousedown', (event) => {
     if (buttonStage[0] == 1) {
@@ -37,6 +41,7 @@ function initCane() {
   self.addEventListener('mouseup', (event) => {
     recenter(event);
   }, true);
+
 }
 
 const tapDistance = 2;
@@ -85,38 +90,65 @@ const recenter = (pointer) => {
 
 var buttonStage = [1, 1];
 
-function toggleButton(x) {
+function toggleButtonOn(x) {
   var button = document.getElementsByClassName("toggle_button");
   var container = document.getElementsByClassName("toggle_container");
+  buttonStage[x] = 1;
+  button[x].style.transform = "translateX(0)";
+  container[x].style.backgroundColor = "#5EBD9C";
+}
+
+function toggleButtonOff(x) {
+  var button = document.getElementsByClassName("toggle_button");
+  var container = document.getElementsByClassName("toggle_container");
+  buttonStage[x] = 0;
+  button[x].style.transform = "translateX(1vw)";
+  container[x].style.backgroundColor = "#aaaaaa";
+}
+
+function toggleButton(x) {
   if (buttonStage[x] == 0) {
-    buttonStage[x] = 1;
-    button[x].style.transform = "translateX(0)";
-    container[x].style.backgroundColor = "#5EBD9C";
+    toggleButtonOn(x);
   } else {
-    buttonStage[x] = 0;
-    button[x].style.transform = "translateX(1vw)";
-    container[x].style.backgroundColor = "#aaaaaa";
+    toggleButtonOff(x);
   }
 }
 
 function toggleAutoRotate() {
   if (buttonStage[0] == 1) {
     modelViewer.autoRotate = false;
+    toggleButtonOff(0);
   } else {
     modelViewer.autoRotate = true;
+    toggleButtonOn(0);
   }
-  toggleButton(0);
 }
 
-function toggleCentered() {
+function toggleOriginalPos() {
   if (buttonStage[1] == 0) {
-    toggleButton(1);
     modelViewer.cameraTarget = '0% auto auto';
     modelViewer.cameraOrbit = '0deg 90deg 100%';
     modelViewer.fieldOfView = 'auto';
+    toggleButtonOn(1);
+    setTimeout(() => {
+      watchForChange();
+    }, 1000);
   }
 }
 
+function watchForChange() {
+  var fieldOfViewCurrent = modelViewer.getFieldOfView();
+  if (fieldOfViewCurrent != fieldOfViewLast) {
+    if (buttonStage[0] == 1) {
+      toggleAutoRotate();
+    }
+    toggleButtonOff(1);
+    return;
+  }
+  setTimeout(() => {
+    watchForChange();
+  }, 100);
+}
 /*
 modelViewer.addEventListener('touchstart', (event) => {
   const {targetTouches, touches} = event;

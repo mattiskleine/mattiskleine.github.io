@@ -407,6 +407,10 @@ li {
   top: 38vw;
 }
 
+#project1_hover {
+  background-color: #222222;
+}
+
 .project_content {
   position: absolute;
   top: 5vw;

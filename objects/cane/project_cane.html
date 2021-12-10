@@ -12,7 +12,7 @@
     <h1>iCan(e)</h1>
     <p>A cane providing postural feedback to assist individuals with Parkinson's disease.</p>
     <div id="cad_viewer">
-      <model-viewer id="cane_model" src="cane.glb"
+      <model-viewer id="cane_model" src="cane.glb" oncontextmenu="return false;"
         camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="45deg"
         bounds="tight" environment-image="neutral" interaction-prompt="none"
         camera-orbit="0deg 90deg 100%" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 180deg auto" camera-target="0% auto auto" min-field-of-view="0deg">
@@ -23,11 +23,13 @@
             <div class="toggle_button"></div>
           </div>
         </div>
-        <div id="centered" class="cad_option">centered
-          <div id="toggle_centered" class="toggle_container" onclick="toggleCentered()">
+        <div id="original_pos" class="cad_option">original position
+          <div id="toggle_original_pos" class="toggle_container" onclick="toggleOriginalPos()">
             <div class="toggle_button"></div>
           </div>
         </div>
+        <div id="orbit" class="cad_option">orbit = click & drag</div>
+        <div id="pan" class="cad_option">panning = hold CTRL</div>
       </div>
       <div id="loading_box">loading model...</div>
     </div>
@@ -43,11 +45,25 @@
         <li>Emphasis: ergonomics & mechanics</li>
       </ul>
     </div>
+    <p id="section1_text">
+      The scope of this 1st semster project led me to working
+      closely together with a local Parkinson's club in order to
+      address the problematic posture Parkinson's patients
+      develop. Turns out their bodies are actually still capable
+      of a good upright posture. It is the feedback about the
+      body's current posture that goes missing, which then
+      slowly but surely leads to the typical hunch.</br></br>
+      Collaboration with various physiotherapists helped</br>
+      me to design a cane, which senses a bad posture</br>
+      and gives a gentle reminder to straighten up.
+    </p>
   </div>
 
-  <video id="cane_animation_foot" muted autoplay loop>
-    <source src="cane_animation_foot.mp4" type="video/mp4">
-  </video>
+  <div id="section2" class="section">
+    <video id="cane_animation_foot" muted autoplay loop>
+      <source src="cane_animation_foot.mp4" type="video/mp4">
+    </video>
+  </div>
 
 </body>
 </html>

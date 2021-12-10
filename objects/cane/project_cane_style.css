@@ -44,6 +44,9 @@
   width: 55vw;
   height: 35vw;
 }
+#cane_model:focus {
+  outline: none;
+}
 
 #cad_options {
   position: absolute ;
@@ -58,14 +61,14 @@
 
 #loading_box {
   position: absolute;
-  top: 14vw;
-  left: 50%;
+  top: 5vw;
+  left: 27.5vw;
   transform: translateX(-50%);
   font-family: Nunito;
-  font-size: 2vw;
+  font-size: 1.5vw;
   background-color: #464e5e;
   border-radius: 10vw;
-  padding: 1vw 3vw;
+  padding: 1vw 1.5vw;
   color: #ffffff;
   transition: opacity 1s;
 }
@@ -75,7 +78,7 @@
   top: 0;
   right: 0;
   width: 2.4vw;
-  height: 1.4vw;
+  height: 1.5vw;
   border-radius: 10vw;
   background-color: #5EBD9C;
   filter: drop-shadow(.1vw .1vw .3vw rgb(0 0 0 / 0.2));
@@ -85,7 +88,7 @@
 
 .toggle_button {
   position: absolute;
-  top: .1vw;
+  top: .15vw;
   left: .1vw;
   width: 1.2vw;
   height: 1.2vw;
@@ -96,10 +99,10 @@
 
 .cad_option {
   position: absolute;
-  left: 2vw;
-  width: 11vw;
+  left: 1vw;
+  width: 13vw;
   font-family: Nunito;
-  font-size: 1vw;
+  font-size: 1.2vw;
   color: #444444;
 }
 
@@ -107,8 +110,16 @@
   top: 3vw;
 }
 
-#centered {
+#original_pos {
   top: 8vw;
+}
+
+#orbit {
+  top: 13vw;
+}
+
+#pan {
+  top: 18vw;
 }
 
 #section1 {
@@ -117,16 +128,16 @@
   left: 0;
   right: 0;
   background-color: #fafafa;
-  height: 48vw;
+  height: 42vw;
 }
 
 #notebook_frame {
   position: absolute ;
   top: 5vw;
-  left: 50%;
-  width: 50vw;
-  height: 50vw;
-  transform: translateX(-50%);
+  left: 70vw;
+  width: 40vw;
+  height: 34vw;
+  transform: translateX(-50%) rotate(10deg);
   overflow: hidden;
 }
 
@@ -140,11 +151,11 @@
 
 #notes_heading {
   position: absolute ;
-  top: 10.3vw;
+  top: 8.1vw;
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-family: Caveat;
   color: #555555;
 }
@@ -158,10 +169,19 @@
 }
 
 li {
-  padding: 0 0 0.4vw 0.2vw;
+  padding: 0 0 0vw 0.2vw;
   font-family: Caveat;
-  font-size: 2vw;
+  font-size: 1.6vw;
   color: #666666;
+}
+
+#section1_text {
+  position: absolute ;
+  top: 10vw;
+  left: 18vw;
+  width: 34vw;
+  text-align: left;
+  margin: 0;
 }
 
 #cane_animation_foot {
