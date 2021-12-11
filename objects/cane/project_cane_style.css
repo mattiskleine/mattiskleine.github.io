@@ -203,21 +203,40 @@ li {
 
 #cane_animation_force_container {
   position: absolute ;
-  top: 5vw;
-  right: 57vw;
+  top: 0;
+  right: 60vw;
   width: 40vw;
   height: 40vw;
-  border: 1px solid black;
+}
+
+#cane_static {
+  position: absolute ;
+  top: 21vw;
+  left: 16.72vw;
+  width: 20.73vw;
+}
+
+#cane_dynamic {
+  position: absolute ;
+  top: 0;
+  left: 11.67vw;
+  width: 30.5vw;
+  transform: translateY(-1vw);
+}
+
+@keyframes spring {
+  0%   {transform: translateY(-1vw);}
+  50%   {transform: translateY(0vw);}
+  100%   {transform: translateY(-1vw);}
 }
 
 #cane_animation_force_boundingbox {
   position: absolute ;
-  top: 5vw;
-  left: 10vw;
-  width: 15vw;
-  height: 15vw;
+  top: 5.15vw;
+  left: 17.35vw;
+  width: 19.5vw;
+  height: 19.5vw;
   border-radius: 50%;
-  border: 2px solid #666666;
   overflow: hidden;
 }
 
@@ -231,7 +250,7 @@ li {
 
 #magnifying_glass {
   position: absolute ;
-  top: 0;
+  top: 2vw;
   left: 0;
   width: 100%;
 }

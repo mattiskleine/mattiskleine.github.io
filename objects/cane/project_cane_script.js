@@ -149,6 +149,10 @@ function watchForChange() {
     watchForChange();
   }, 100);
 }
+
+function caneForceAnimation() {
+  document.getElementById('cane_dynamic').style.animation = 'spring 1.98s linear infinite 1.53s';
+}
 /*
 modelViewer.addEventListener('touchstart', (event) => {
   const {targetTouches, touches} = event;
