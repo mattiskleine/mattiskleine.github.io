@@ -17,10 +17,6 @@
 
 #section0 {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #ffffff;
   height: 56vw;
 }
 
@@ -124,8 +120,6 @@
 #section1 {
   position: absolute;
   top: 58vw;
-  left: 0;
-  right: 0;
   background-color: #fafafa;
   height: 42vw;
 }
@@ -182,6 +176,64 @@ li {
   width: 34vw;
   text-align: left;
   margin: 0;
+}
+
+#section2 {
+  position: absolute ;
+  top: 102vw;
+  height: 40vw;
+}
+
+#section2_text {
+  position: absolute ;
+  top: 5vw;
+  left: 45vw;
+  width: 37vw;
+  text-align: left;
+}
+
+#section2_h2 {
+  text-align: left;
+}
+
+#section2_p {
+  text-align: left;
+  margin: 0;
+}
+
+#cane_animation_force_container {
+  position: absolute ;
+  top: 5vw;
+  right: 57vw;
+  width: 40vw;
+  height: 40vw;
+  border: 1px solid black;
+}
+
+#cane_animation_force_boundingbox {
+  position: absolute ;
+  top: 5vw;
+  left: 10vw;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  border: 2px solid #666666;
+  overflow: hidden;
+}
+
+#cane_animation_force {
+  position: absolute ;
+  top: 10%;
+  left: -25%;
+  width: 150%;
+  transform: rotate(90deg);
+}
+
+#magnifying_glass {
+  position: absolute ;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 #cane_animation_foot {

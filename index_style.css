@@ -351,7 +351,7 @@ li {
 
 .project_subheading_even {
   position: absolute;
-  font-family: MontserratLight;
+  font-family: Montserrat;
   font-size: 1vw;
   color: #888888;
   right: 12.5vw;
@@ -391,7 +391,7 @@ li {
 
 .project_subheading_uneven {
   position: absolute;
-  font-family: MontserratLight;
+  font-family: Montserrat;
   font-size: 1vw;
   color: #888888;
   left: 12.5vw;
