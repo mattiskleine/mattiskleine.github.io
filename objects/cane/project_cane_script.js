@@ -2,6 +2,7 @@ var modelViewer;
 var fieldOfViewLast;
 
 function initCane() {
+  toggleAnimationForce();
   modelViewer = document.getElementById('cane_model');
   modelViewer.addEventListener('load', () => {
     document.getElementById('loading_box').style.opacity = '0';
@@ -88,7 +89,7 @@ const recenter = (pointer) => {
   modelViewer.cameraTarget = hit == null ? '0% auto auto' : hit.position.toString();
 };
 
-var buttonStage = [1, 1];
+var buttonStage = [1, 1, 1];
 
 function toggleButtonOn(x) {
   var button = document.getElementsByClassName("toggle_button");
@@ -150,9 +151,53 @@ function watchForChange() {
   }, 100);
 }
 
-function caneForceAnimation() {
-  document.getElementById('cane_dynamic').style.animation = 'spring 1.98s linear infinite 1.53s';
+function toggleAnimationForce() {
+  if (buttonStage[2] == 1) {
+    document.getElementById('cane_animation_force').pause();
+    document.getElementById('cane_dynamic').style.animation = 'spring 2s linear infinite paused';
+    toggleButtonOff(2);
+  } else {
+    document.getElementById('cane_animation_force').play();
+    document.getElementById('cane_dynamic').style.animation = 'spring 2s linear infinite running';
+    toggleButtonOn(2);
+  }
 }
+
+parent.window.addEventListener('scroll', handleScrollCane);
+
+function handleScrollCane() {
+  var base = document.getElementById('canvas_base');
+  var sec3 = document.getElementById('section3');
+  var basePos = base.offsetTop + sec3.offsetTop - parent.window.scrollY;
+  var vw = parent.window.innerWidth / 100 * 5;
+
+  if (basePos < (parent.window.innerHeight / 100 * 80) - vw) {
+    document.getElementById('canvas_top').style.transform = 'translateY(-18.3vw)';
+    document.getElementById('canvas_screen').style.transform = 'scaleY(1)';
+    document.getElementById('cane_animation_foot').style.transform = 'scaleY(1)';
+    document.getElementById('scroll_arrow').style.display = 'none';
+    setTimeout(() => {
+      document.getElementById('cane_animation_foot').play();
+    }, 1000);
+  } else {
+    document.getElementById('canvas_top').style.transform = 'translateY(0)';
+    document.getElementById('canvas_screen').style.transform = 'scaleY(0.06)';
+    document.getElementById('cane_animation_foot').style.transform = 'scaleY(0)';
+    document.getElementById('cane_animation_foot').pause();
+  }
+}
+
+function stopArrowAni() {
+  document.getElementById('scroll_arrow').style.animationPlayState = 'paused';
+}
+
+function scrollDownAni() {
+  window.scrollTo({
+    top: 3000,
+    behavior: 'smooth'
+  });
+}
+
 /*
 modelViewer.addEventListener('touchstart', (event) => {
   const {targetTouches, touches} = event;

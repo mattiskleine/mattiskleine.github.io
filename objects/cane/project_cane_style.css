@@ -204,22 +204,22 @@ li {
 #cane_animation_force_container {
   position: absolute ;
   top: 0;
-  right: 60vw;
-  width: 40vw;
-  height: 40vw;
+  left: 15vw;
+  width: 30vw;
+  height: 35vw;
 }
 
 #cane_static {
   position: absolute ;
-  top: 21vw;
-  left: 16.72vw;
+  top: 24vw;
+  left: 2.53vw;
   width: 20.73vw;
 }
 
 #cane_dynamic {
   position: absolute ;
   top: 0;
-  left: 11.67vw;
+  left: -2.53vw;
   width: 30.5vw;
   transform: translateY(-1vw);
 }
@@ -232,8 +232,8 @@ li {
 
 #cane_animation_force_boundingbox {
   position: absolute ;
-  top: 5.15vw;
-  left: 17.35vw;
+  top: 8.15vw;
+  left: 3.16vw;
   width: 19.5vw;
   height: 19.5vw;
   border-radius: 50%;
@@ -242,22 +242,92 @@ li {
 
 #cane_animation_force {
   position: absolute ;
-  top: 10%;
-  left: -25%;
-  width: 150%;
-  transform: rotate(90deg);
+  top: -36%;
+  left: -107%;
+  width: 314%;
 }
 
 #magnifying_glass {
   position: absolute ;
-  top: 2vw;
-  left: 0;
-  width: 100%;
+  top: 5vw;
+  right: 4.25vw;
+  width: 157%;
+}
+
+#animation_force_play_state {
+  position: absolute ;
+  top: 36vw;
+  left: 6vw;
+  width: 12vw;
+  font-family: Nunito;
+  font-size: 1.2vw;
+  color: #666666;
+}
+
+#section3 {
+  position: absolute;
+  top: 144vw;
+  height: 65vw;
+  background-color: #fafafa;
+}
+
+#section3_text {
+  position: absolute;
+  top: 5vw;
+}
+
+#scroll_arrow {
+  position: absolute;
+  top: 25vw;
+  width: 3.5vw;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: top .2s;
+  animation: bounce 1s infinite;
+}
+#scroll_arrow:hover {
+  top: 25.2vw;
+}
+
+@keyframes bounce {
+  0%   {transform: translateY(0vw);}
+  30%   {transform: translateY(-1vw);}
+  60%   {transform: translateY(-0.2vw);}
+  100%   {transform: translateY(0vw);}
 }
 
 #cane_animation_foot {
   position: absolute ;
-  top: 115vw;
+  bottom: 16.8vw;
+  left: 32vw;
+  width: 36vw;
+  transform-origin: bottom center;
+  transform: scaleY(0);
+  transition: transform 1s;
+}
+
+#canvas_base {
+  position: absolute;
+  bottom: 4vw;
   left: 30vw;
   width: 40vw;
+}
+
+#canvas_top {
+  position: absolute;
+  bottom: 18vw;
+  left: 30vw;
+  width: 40vw;
+  transition: transform 1s;
+}
+
+#canvas_screen {
+  position: absolute;
+  bottom: 17vw;
+  left: 32vw;
+  width: 36vw;
+  transform-origin: bottom center;
+  transform: scaleY(0.06);
+  transition: transform 1s;
 }
