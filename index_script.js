@@ -3,6 +3,14 @@ window.onload = function() {
     top: 0,
     behavior: 'smooth'
   });
+  setTimeout(() => {
+    document.getElementById('notice').style.opacity = '0';
+    document.getElementById('notice_text').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('notice').style.display = 'none';
+      document.getElementById('notice_text').style.display = 'none';
+    }, 1000);
+  }, 1000);
 }
 
 function showAlert(x,t) {

@@ -448,3 +448,30 @@ li {
 #project1_content {
   height: 211vw;
 }
+
+#notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vw;
+  background-color: #222222;
+  z-index: 5;
+  opacity: .95;
+  transition: opacity .9s;
+}
+
+#notice_text {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  background-color: #eeeeee;
+  color: #444444;
+  font-family: FreightNeoPro;
+  font-size: 2vw;
+  padding: 1vw 2vw;
+  border-radius: 10vw;
+  z-index: 5;
+  transition: opacity .9s;
+}
