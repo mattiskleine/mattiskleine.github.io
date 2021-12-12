@@ -306,6 +306,23 @@ li {
   border: none;
 }
 
+#cv_pdf {
+  position: absolute;
+  top: 93vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: MontserratMedium;
+  font-size: 2vw;
+  color: #666666;
+}
+
+#cv_pdf_img {
+  position: absolute;
+  top: 92vw;
+  left: 33vw;
+  width: 3vw;
+}
+
 .project {
   position: absolute;
   left: 10vw;
