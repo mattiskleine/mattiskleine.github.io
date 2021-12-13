@@ -1,36 +1,37 @@
 <!DOCTYPE HTML><html>
 <head>
-<link rel="stylesheet" href="group2_prototype_stylesheet.css">
+<script src="ar_prototype_script.js"></script>
+<link rel="stylesheet" href="ar_prototype_style.css">
 </head>
 <body>
 	<div id="app">
 		<img src="iphone.png" alt="iphoneX" id="iphone">
-		<div id="menu_bar_background"></div>
-		<div id="menu_bar">
+		<div id="ar_menu_bar_background"></div>
+		<div id="ar_menu_bar">
 			<img src="back_arrow.png" alt="arrow left" id="back_arrow" onclick="setStateBack()">
-			<p id="back">back</p>
+			<div id="back">back</div>
 			<img src="settings.png" alt="setting wheel" id="settings" onclick="setStateStart()">
 		</div>
 		<div class="bt" id="bt_explore" onclick="setStateExplore()">explore
-			<p class="bt_sub">optional parts for your car</p>
+			<div class="bt_sub">optional parts for your car</div>
 		</div>
 		<div class="bt" id="bt_modify" onclick="setStateModify()">modify
-			<p class="bt_sub" >optional parts of your car</p>
+			<div class="bt_sub" >optional parts of your car</div>
 		</div>
 		<div class="car_part" id="seats">
-			<p class="car_part_text">seats</p>
+			<div class="car_part_text">seats</div>
 		</div>
 		<div class="car_part" id="ac">
-			<p class="car_part_text">AC</p>
+			<div class="car_part_text">AC</div>
 		</div>
 		<div class="car_part" id="armrest">
-			<p class="car_part_text" id="armrest_text">armrest</p>
+			<div class="car_part_text" id="armrest_text">armrest</div>
 		</div>
 		<div class="car_part" id="head_unit" onclick="setStateHeadUnit()">
-			<p class="car_part_text" id="head_unit_text">head unit</p>
+			<div class="car_part_text" id="head_unit_text">head unit</div>
 		</div>
 		<div class="car_part" id="glove_compartment">
-			<p class="car_part_text" id="glove_compartment_text">glove compartment</p>
+			<div class="car_part_text" id="glove_compartment_text">glove compartment</div>
 		</div>
 		<img src="ar_background.png" alt="car interior" id="ar_background">
 		<img src="modern_big.png" alt="modern head unit" id="modern_big">
@@ -40,7 +41,7 @@
 		<div id="ar_menu"></div>
 		<img src="back_arrow.png" alt="arrow left" id="left_arrow" onclick="swipeLeft()">
 		<img src="back_arrow.png" alt="arrow right" id="right_arrow" onclick="swipeRight()">
-		<p id="part_name">10.1'' touch screen</p>
+		<div id="part_name">10.1'' touch screen</div>
 		<div id="button_details">Details</div>
 		<div id="button_buy">Buy</div>
 		<div id="mask"></div>
@@ -52,5 +53,4 @@
 		<div id="released">released</div>
 	</div>
 </body>
-<script src="group2_prototype_script.js"></script>
 </html>

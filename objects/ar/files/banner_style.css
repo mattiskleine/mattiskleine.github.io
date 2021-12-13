@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+}
+
+#banner_container {
+  --bannerWidth: 100vw;
+  --sliderWidth: 73.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--bannerWidth);
+  height: calc(var(--bannerWidth) / 2.4);
+  overflow: hidden;
+}
+
+#new_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--bannerWidth);
+  opacity: .2;
+  user-select: none;
+  pointer-events: none;
+}
+
+#slider_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--sliderWidth);
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+
+#old_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--bannerWidth);
+  user-select: none;
+  pointer-events: none;
+}
+
+#slider {
+  position: absolute;
+  top: 0;
+  left: var(--sliderWidth);
+  width: 0.3vw;
+  height: 100%;
+  background-color: #444444;
+  cursor: col-resize;
+}
