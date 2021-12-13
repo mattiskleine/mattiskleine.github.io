@@ -172,7 +172,7 @@ function handleScrollCane() {
     var basePos = base.offsetTop + sec3.offsetTop - parent.window.scrollY;
     var vw = parent.window.innerWidth / 100 * 5;
 
-    if (basePos < (parent.window.innerHeight / 100 * 80) - vw) {
+    if (basePos < (parent.window.innerHeight / 100 * 85) - vw) {
       document.getElementById('canvas_top').style.transform = 'translateY(-18.3vw)';
       document.getElementById('canvas_screen').style.transform = 'scaleY(1)';
       document.getElementById('cane_animation_foot').style.transform = 'scaleY(1)';
@@ -195,7 +195,7 @@ function stopArrowAni() {
 
 function scrollDownAni() {
   parent.window.scrollTo({
-    top: 3000,
+    top: 10000,
     behavior: 'smooth'
   });
 }
