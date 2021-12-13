@@ -280,8 +280,7 @@ li {
   position: absolute;
   top: 25vw;
   width: 3.5vw;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 48.25vw;
   cursor: pointer;
   transition: top .2s;
   animation: bounce 1s infinite;

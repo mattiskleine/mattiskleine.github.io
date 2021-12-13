@@ -166,24 +166,26 @@ function toggleAnimationForce() {
 parent.window.addEventListener('scroll', handleScrollCane);
 
 function handleScrollCane() {
-  var base = document.getElementById('canvas_base');
-  var sec3 = document.getElementById('section3');
-  var basePos = base.offsetTop + sec3.offsetTop - parent.window.scrollY;
-  var vw = parent.window.innerWidth / 100 * 5;
+  if (window.getComputedStyle(parent.document.getElementById('project1_content')).getPropertyValue('display') == 'block') {
+    var base = document.getElementById('canvas_base');
+    var sec3 = document.getElementById('section3');
+    var basePos = base.offsetTop + sec3.offsetTop - parent.window.scrollY;
+    var vw = parent.window.innerWidth / 100 * 5;
 
-  if (basePos < (parent.window.innerHeight / 100 * 80) - vw) {
-    document.getElementById('canvas_top').style.transform = 'translateY(-18.3vw)';
-    document.getElementById('canvas_screen').style.transform = 'scaleY(1)';
-    document.getElementById('cane_animation_foot').style.transform = 'scaleY(1)';
-    document.getElementById('scroll_arrow').style.display = 'none';
-    setTimeout(() => {
-      document.getElementById('cane_animation_foot').play();
-    }, 1000);
-  } else {
-    document.getElementById('canvas_top').style.transform = 'translateY(0)';
-    document.getElementById('canvas_screen').style.transform = 'scaleY(0.06)';
-    document.getElementById('cane_animation_foot').style.transform = 'scaleY(0)';
-    document.getElementById('cane_animation_foot').pause();
+    if (basePos < (parent.window.innerHeight / 100 * 80) - vw) {
+      document.getElementById('canvas_top').style.transform = 'translateY(-18.3vw)';
+      document.getElementById('canvas_screen').style.transform = 'scaleY(1)';
+      document.getElementById('cane_animation_foot').style.transform = 'scaleY(1)';
+      document.getElementById('scroll_arrow').style.display = 'none';
+      setTimeout(() => {
+        document.getElementById('cane_animation_foot').play();
+      }, 1000);
+    } else {
+      document.getElementById('canvas_top').style.transform = 'translateY(0)';
+      document.getElementById('canvas_screen').style.transform = 'scaleY(0.06)';
+      document.getElementById('cane_animation_foot').style.transform = 'scaleY(0)';
+      document.getElementById('cane_animation_foot').pause();
+    }
   }
 }
 
@@ -192,7 +194,7 @@ function stopArrowAni() {
 }
 
 function scrollDownAni() {
-  window.scrollTo({
+  parent.window.scrollTo({
     top: 3000,
     behavior: 'smooth'
   });

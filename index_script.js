@@ -1,8 +1,5 @@
 window.onload = function() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  /*
   setTimeout(() => {
     document.getElementById('notice').style.opacity = '0';
     document.getElementById('notice_text').style.opacity = '0';
@@ -11,7 +8,12 @@ window.onload = function() {
       document.getElementById('notice_text').style.display = 'none';
     }, 1000);
   }, 1000);
+  */
 }
+
+window.addEventListener('unload', (e) => {
+  window.scrollTo(0, 0)
+});
 
 function showAlert(x,t) {
   document.getElementById('alerts').style.display = 'block';
@@ -33,32 +35,52 @@ function openPageProjects() {
   if(projectActive == 1) {
     hideProject();
   }
+
   document.getElementById('menu_bar_line').style.left = "4.8vw";
   setTimeout(() => {
     document.getElementById('menu_bar_line').style.right = "90.3vw";
+    showProjectPreviews();
   }, 200);
   document.getElementById('menu_bar_about').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_projects').classList.add('menu_bar_item_active');
-  document.getElementById('cv').style.transform = 'translateX(100%)';
+
   document.getElementById('scroll_header_text_subsub').innerHTML = 'Scroll down to see my projects!';
-  showProjectPreviews();
-  document.getElementById('scroll_header').style.height = '38vw';
+
+  document.getElementById('cv').style.opacity = '0';
+  document.getElementById('cv_pdf').style.opacity = '0';
+  document.getElementById('cv_pdf_img').style.opacity = '0';
+  document.getElementById('competence_profile').style.opacity = '0';
+  setTimeout(function(){
+    document.getElementById('cv').style.display = 'none';
+    document.getElementById('cv_pdf').style.display = 'none';
+    document.getElementById('cv_pdf_img').style.display = 'none';
+    document.getElementById('competence_profile').style.display = 'none';
+  }, 320);
 }
 
 function openPageAbout() {
   if(projectActive == 1) {
     hideProject();
   }
+
   document.getElementById('menu_bar_line').style.right = "84.4vw";
+  document.getElementById('cv').style.display = 'block';
+  document.getElementById('cv_pdf').style.display = 'block';
+  document.getElementById('cv_pdf_img').style.display = 'block';
+  document.getElementById('competence_profile').style.display = 'block';
   setTimeout(function(){
     document.getElementById('menu_bar_line').style.left = "11.8vw";
+    document.getElementById('cv').style.opacity = '1';
+    document.getElementById('cv_pdf').style.opacity = '1';
+    document.getElementById('cv_pdf_img').style.opacity = '1';
+    document.getElementById('competence_profile').style.opacity = '1';
   }, 200);
   document.getElementById('menu_bar_projects').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_about').classList.add('menu_bar_item_active');
-  document.getElementById('cv').style.transform = 'translateX(-50%)';
+
   document.getElementById('scroll_header_text_subsub').innerHTML = 'Scroll down to see my CV!';
+
   hideProjectPreviews();
-  document.getElementById('scroll_header').style.height = '38vw';
 }
 
 window.addEventListener('scroll', menuBarColor);
@@ -163,14 +185,13 @@ function hideProject() {
 function hideProjectPreviews() {
   var projects = document.getElementsByClassName('project');
   for(var i = 0; i < projects.length; i++) {
-    projects[i].style.transform = 'translateX(-100vw)';
+    projects[i].style.opacity = '0';
   }
-  document.getElementById('scroll_header').style.height = '0';
   setTimeout(() => {
     for (var i = 0; i < projects.length; i++) {
       projects[i].style.display = 'none';
     }
-  }, 500);
+  }, 320);
 }
 
 function showProjectPreviews() {
@@ -181,7 +202,6 @@ function showProjectPreviews() {
   setTimeout(() => {
     for (var i = 0; i < projects.length; i++) {
       projects[i].style.opacity = '1';
-      projects[i].style.transform = 'translatex(0)';
     }
   }, 20);
 }

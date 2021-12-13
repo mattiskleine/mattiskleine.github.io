@@ -41,7 +41,6 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  height: 100vw;
 }
 
 h1 {
@@ -289,7 +288,7 @@ li {
   top: 38vw;
   left: 0;
   right: 0;
-  height: 100vw;
+  height: 178vw;
   background-color: #ffffff;
 }
 
@@ -298,7 +297,7 @@ li {
   top: 5vw;
   left: 50%;
   transform: translateX(-50%);
-  transition: transform .5s;
+  transition: opacity .3s;
   width: 58.4vw;
   height: calc(58.4vw * 1.41);
   background-color: #fefefe;
@@ -312,27 +311,62 @@ li {
   left: 50%;
   transform: translateX(-50%);
   font-family: MontserratMedium;
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: #666666;
 }
 
 #cv_pdf_img {
   position: absolute;
   top: 92vw;
-  left: 33vw;
+  left: 36vw;
   width: 3vw;
+}
+
+#competence_profile {
+  position: absolute;
+  top: 100vw;
+  padding: 5vw 20vw;
+  width: 60vw;
+  background-color: #fafafa;
+  transition: opacity .3s;
+}
+
+#competence_heading {
+  font-family: MontserratMedium;
+  font-size: 2vw;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+.competence_h {
+  font-family: MontserratMedium;
+  font-size: 1.2vw;
+  color: #444444;
+  text-align: left;
+  margin-top: 2vw;
+}
+
+.competence_li {
+  font-family: MontserratLight;
+  font-size: 1.2vw;
+  color: #444444;
+  text-align: left;
+  line-height: normal;
 }
 
 .project {
   position: absolute;
-  left: 10vw;
+  left: 50%;
   width: 80vw;
-  transform: translateX(-100vw);
-  transition: transform .3s, background-color .3s;
+  transform: translateX(-50%);
+  transition: opacity .3s, background-color .3s;
   height: 30vw;
   background-color: #eeeeee;
   cursor: pointer;
   overflow: hidden;
+  opacity: 0;
+  display: none;
 }
 
 .project_img_even {
@@ -459,6 +493,7 @@ li {
   z-index: 5;
   opacity: .95;
   transition: opacity .9s;
+  display: none;
 }
 
 #notice_text {
@@ -474,4 +509,5 @@ li {
   border-radius: 10vw;
   z-index: 5;
   transition: opacity .9s;
+  display: none;
 }
