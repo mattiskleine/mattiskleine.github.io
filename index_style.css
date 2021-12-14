@@ -462,6 +462,10 @@ li {
   background-color: #222222;
 }
 
+#project2 {
+  top: 109vw;
+}
+
 .project_content {
   position: absolute;
   top: 5vw;
@@ -481,6 +485,10 @@ li {
 
 #project1_content {
   height: 211vw;
+}
+
+#project2_content {
+  height: 239vw;
 }
 
 #notice {
