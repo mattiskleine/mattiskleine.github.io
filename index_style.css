@@ -501,7 +501,7 @@ li {
   z-index: 5;
   opacity: .95;
   transition: opacity .9s;
-  display: none;
+  //display: none;
 }
 
 #notice_text {
@@ -517,5 +517,5 @@ li {
   border-radius: 10vw;
   z-index: 5;
   transition: opacity .9s;
-  display: none;
+  //display: none;
 }

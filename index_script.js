@@ -1,5 +1,4 @@
 window.onload = function() {
-  /*
   setTimeout(() => {
     document.getElementById('notice').style.opacity = '0';
     document.getElementById('notice_text').style.opacity = '0';
@@ -8,7 +7,6 @@ window.onload = function() {
       document.getElementById('notice_text').style.display = 'none';
     }, 1000);
   }, 1000);
-  */
 }
 
 window.addEventListener('unload', (e) => {
