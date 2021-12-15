@@ -16,7 +16,27 @@ body {
 
 #section0 {
   position: absolute;
-  height: 70vw;
+  height: 50vw;
+}
+
+#section1 {
+  position: absolute;
+  top: 52vw;
+  height: 50vw;
+  background-color: #fafafa;
+}
+
+#section2 {
+  position: absolute;
+  top: 104vw;
+  height: 50vw;
+}
+
+#section3 {
+  position: absolute;
+  top: 156vw;
+  height: 50vw;
+  background-color: #fafafa;
 }
 
 #macbook {
