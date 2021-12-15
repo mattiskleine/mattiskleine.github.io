@@ -1,12 +1,5 @@
 window.onload = function() {
-  setTimeout(() => {
-    document.getElementById('notice').style.opacity = '0';
-    document.getElementById('notice_text').style.opacity = '0';
-    setTimeout(() => {
-      document.getElementById('notice').style.display = 'none';
-      document.getElementById('notice_text').style.display = 'none';
-    }, 1000);
-  }, 1000);
+  showAlert('this site is still in development. please excuse any glitches :)', 4000);
 }
 
 window.addEventListener('unload', (e) => {
