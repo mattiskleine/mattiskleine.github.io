@@ -1,0 +1,27 @@
+@import url("../../index_style.css");
+
+body {
+  margin: 0;
+}
+
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding-top: 2vw;
+  overflow: hidden;
+}
+
+#section0 {
+  position: absolute;
+  height: 70vw;
+}
+
+#macbook {
+  position: absolute;
+  top: 17vw;
+  left: 10vw;
+  width: 80vw;
+}
