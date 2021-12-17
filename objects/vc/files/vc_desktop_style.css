@@ -1,0 +1,60 @@
+@import url("../../../index_style.css");
+
+body {
+  margin: 0;
+  width: 50vw;
+}
+
+#vol {
+  position: absolute;
+  top: 2vw;
+  left: 10vw;
+  width: 80vw;
+  height: 42vw;
+}
+
+#macbook {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+#desktop {
+  position: absolute;
+  top: 7.5%;
+  left: 15.3%;
+  width: 69.4%;
+  height: 78%;
+  background-color: #ffffff;
+}
+
+#toolbar_visible {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40%;
+  height: 15%;
+  background-color: #cccccc;
+  border-radius: 1vw 1vw 0 0;
+}
+
+#toolbar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40%;
+  height: 15%;
+  transform: translateX(-50%);
+}
+
+.toolbar_button {
+  position: absolute;
+  height: 70%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom center;
+  cursor: pointer;
+}
