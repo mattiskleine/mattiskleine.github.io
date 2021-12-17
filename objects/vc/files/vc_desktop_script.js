@@ -1,9 +1,9 @@
 var tBW = [];
+var tBH = [];
 
 function initDesktop() {
   rearrange();
-  document.getElementById('toolbar').addEventListener('mousemove', toolbarMoveEvent);
-  document.getElementById('toolbar').addEventListener('mouseleave', toolbarLeaveEvent);
+  window.addEventListener('mousemove', toolbarMoveEvent);
 }
 
 function rearrange() {
@@ -25,21 +25,27 @@ function rearrange() {
 
 function toolbarMoveEvent() {
   var tB = document.getElementsByClassName('toolbar_button');
+  var distX = [];
+  var distY = [];
   var dist = [];
   var scale = [];
-  var tBW = [];
+  var scaleX = [];
   var bottom = [];
+  var bottomX = [];
   for(var i = 0; i < tB.length; i++) {
     tBW[i] = tB[i].getBoundingClientRect().width;
-    dist[i] = Math.abs((tB[i].getBoundingClientRect().left + tBW[i]/2) - event.clientX);
-    scale[i] = map(dist[i], tBW[i] * 3, tBW[i]/8, 1, 1.5);
-    bottom[i] = map(dist[i], tBW[i] * 3, tBW[i]/8, 10, 20);
-    if (dist[i] < tBW[i]/8) {
-      tB[i].style.transform = "translateX(-50%) scale(1.5)";
-      tB[i].style.bottom = "20%";
-    } else if (dist[i] > tBW[i]*3) {
+    tBH[i] = tB[i].getBoundingClientRect().height;
+    distX[i] = Math.abs((tB[i].getBoundingClientRect().left + tBW[i]/2) - event.clientX);
+    distY[i] = Math.abs((tB[i].getBoundingClientRect().top + tBH[i]/2) - event.clientY);
+    dist[i] = distX[i] + distY[i];
+    scale[i] = map(dist[i], tBW[i] * 2, tBW[i]/8, 1, 1.5);
+    bottom[i] = map(dist[i], tBW[i] * 2, tBW[i]/8, 10, 20);
+    if (dist[i] > tBW[i]*2) {
       tB[i].style.transform = "translateX(-50%) scale(1)";
       tB[i].style.bottom = "10%";
+    } else if (dist[i] < tBW[i]/8) {
+      tB[i].style.transform = "translateX(-50%) scale(1.5)";
+      tB[i].style.bottom = "20%";
     } else {
       tB[i].style.transform = "translateX(-50%) scale(" + scale[i] + ")";
       tB[i].style.bottom = bottom[i] + "%";
@@ -48,16 +54,16 @@ function toolbarMoveEvent() {
   rearrange();
 }
 
-function toolbarLeaveEvent() {
-  var tB = document.getElementsByClassName('toolbar_button');
-  for(var i = 0; i < tB.length; i++) {
-    tB[i].style.transform = "translateX(-50%) scale(1)";
-    tB[i].style.bottom = "10%";
-  }
-  document.getElementById("toolbar_visible").style.width = "40%";
-  rearrange();
-}
-
 function map(number, inMin, inMax, outMin, outMax) {
     return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+}
+
+function showName(x) {
+  var name = document.getElementsByClassName('user_name');
+  name[x].style.opacity = 1;
+}
+
+function hideName(x) {
+  var name = document.getElementsByClassName('user_name');
+  name[x].style.opacity = 0;
 }

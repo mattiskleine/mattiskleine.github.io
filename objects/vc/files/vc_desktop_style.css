@@ -58,3 +58,55 @@ body {
   transform-origin: bottom center;
   cursor: pointer;
 }
+
+.user {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 12%;
+  background-color: #aaaaaa;
+  border-radius: 1vw;
+  cursor: pointer;
+  user-select: none;
+}
+
+#user_0 {
+  transform: translateX(-290%);
+}
+
+#user_1 {
+  transform: translateX(-170%);
+}
+
+#user_3 {
+  transform: translateX(70%);
+}
+
+#user_4 {
+  transform: translateX(190%);
+}
+
+.user_name {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  background-color: #666666;
+  font-family: Montserrat;
+  font-size: .8vw;
+  text-align: center;
+  padding: .5vw 0;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.user_img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
