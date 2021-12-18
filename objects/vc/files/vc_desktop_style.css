@@ -28,6 +28,7 @@ body {
   width: 69.4%;
   height: 78%;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 #toolbar_visible {
@@ -59,13 +60,40 @@ body {
   cursor: pointer;
 }
 
+.toolbar_button_text {
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #aaaaaa;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: .8vw;
+  padding: .5vw;
+  border-radius: .5vw;
+  display: none;
+}
+.toolbar_button_text:after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: .5vw solid transparent;
+	border-top-color: #aaaaaa;
+	border-bottom: 0;
+	margin-left: -.5vw;
+	margin-bottom: -.5vw;
+}
+
 .user {
   position: absolute;
   top: 2%;
   left: 50%;
   transform: translateX(-50%);
-  width: 10%;
-  height: 12%;
+  width: 11%;
+  height: 14%;
   background-color: #aaaaaa;
   border-radius: 1vw;
   cursor: pointer;
@@ -109,4 +137,231 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 70%;
+}
+
+#chat_window {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 25%;
+  height: 80%;
+  background-color: #666666;
+  border-radius: 1vw 0 0 1vw;
+  overflow: hidden;
+  transform: translateX(90%);
+  transition: transform .5s;
+}
+
+#chat_toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #666666;
+  font-family: Montserrat;
+  font-size: 1vw;
+  border-bottom: .2vw solid #aaaaaa;
+  color: #ffffff;
+  padding: 3% 0 3% 33%;
+}
+
+.toggle_container {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 14%;
+  background-color: #cccccc;
+  border-radius: 10vw;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.toggle_button {
+  position: absolute;
+  left: 0.1vw;
+  top: 0.05vw;
+  height: 1.1vw;
+  width: 1.1vw;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform .5s;
+}
+
+.chat_text {
+  position: absolute;
+  left: 10%;
+  background-color: #ffffff;
+  border-radius: 1vw;
+  padding: .5vw;
+  color: #444444;
+}
+.chat_text h1 {
+  font-family: MontserratMedium;
+  font-weight: bold;
+  font-size: .8vw;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0.3vw;
+}
+.chat_text p {
+  font-family: Montserrat;
+  font-size: .8vw;
+  text-align: left;
+  margin: 0;
+  line-height: 1vw;
+}
+
+#chat_text0 {
+  top: 12%;
+  width: 55%;
+}
+
+#chat_text1 {
+  top: 31%;
+  width: 60%;
+}
+
+#chat_text2 {
+  top: 50%;
+  width: 40%;
+}
+
+#chat_text3 {
+  top: 65%;
+  width: 53%;
+  left: 34%;
+  background-color: #41C38E;
+  color: #ffffff;
+}
+#chat_text3 h1 {
+  color: #ffffff;
+}
+#chat_text3 p {
+  color: #ffffff;
+}
+
+#textbox {
+  position: absolute;
+  left: 10%;
+  width: 85%;
+  background-color: #ffffff;
+  border-radius: 20vw;
+  bottom: 4%;
+  height: 8%;
+  cursor: text;
+}
+
+#send{
+  position: absolute;
+  right: 2%;
+  background-color: #41C38E;
+  border-radius: 20vw;
+  top: 8%;
+  height: 40%;
+  padding: .5vw;
+  padding-top: .4vw;
+  font-family: MontserratMedium;
+  font-size: .8vw;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+#chat_header {
+  position: absolute;
+  left: -4%;
+  top: 50%;
+  transform: rotate(-90deg);
+  font-family: MontserratMedium;
+  font-size: 1vw;
+  color: #ffffff;
+  user-select: none;
+  transition: opacity .5s;
+}
+
+#screens_window {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 25%;
+  height: 80%;
+  background-color: #666666;
+  border-radius: 0 1vw 1vw 0;
+  overflow: hidden;
+  transform: translateX(-90%);
+  transition: transform .5s;
+}
+
+#screen_toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #666666;
+  font-family: Montserrat;
+  font-size: 1vw;
+  border-bottom: .2vw solid #aaaaaa;
+  color: #ffffff;
+  padding: 3% 3% 3% 32%;
+}
+
+#toggle_screen_con {
+  right: auto;
+  left: 8%;
+}
+
+#screens_header {
+  position: absolute;
+  right: -9%;
+  top: 50%;
+  transform: rotate(-90deg);
+  font-family: MontserratMedium;
+  font-size: 1vw;
+  color: #ffffff;
+  user-select: none;
+  transition: opacity .5s;
+}
+
+.shared_screen {
+  position: absolute;
+  left: 14%;
+  width: 72%;
+  height: 24%;
+  background-color: #cccccc;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#screen_odysseus {
+  top: 12%;
+}
+
+#screen_helen {
+  top: 42%;
+}
+
+#screen_new {
+  top: 72%;
+}
+#screen_new img {
+  position: absolute;
+  top: 17%;
+  left: 30%;
+  width: 40%;
+}
+
+.screen_owner {
+  position: absolute;
+  font-family: MontserratMedium;
+  font-size: 1vw;
+  background-color: #aaaaaa;
+  color: #ffffff;
+  padding: .5vw 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  user-select: none;
 }

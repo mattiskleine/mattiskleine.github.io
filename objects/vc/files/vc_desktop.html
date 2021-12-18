@@ -12,11 +12,16 @@
 
     <div id="toolbar_visible"></div>
     <div id="toolbar">
-      <img id="button_camera" class="toolbar_button" src="icon_camera.png">
-      <img id="button_mic" class="toolbar_button" src="icon_mic.png">
-      <img id="button_chat" class="toolbar_button" src="icon_chat.png">
-      <img id="button_whiteboard" class="toolbar_button" src="icon_whiteboard.png">
-      <img id="button_settings" class="toolbar_button" src="icon_settings.png">
+      <img class="toolbar_button" src="icon_camera.png" onmouseover="showText(0)" onmouseout="hideText(0)" onclick="toggleCam()">
+      <img class="toolbar_button" src="icon_mic.png" onmouseover="showText(1)" onmouseout="hideText(1)" onclick="toggleMic()">
+      <img class="toolbar_button" src="icon_actions.png" onmouseover="showText(2)" onmouseout="hideText(2)">
+      <img class="toolbar_button" src="icon_whiteboard.png" onmouseover="showText(3)" onmouseout="hideText(3)">
+      <img class="toolbar_button" src="icon_settings.png" onmouseover="showText(4)" onmouseout="hideText(4)">
+      <div class="toolbar_button_text">Camera</div>
+      <div class="toolbar_button_text">Microphone</div>
+      <div class="toolbar_button_text">Actions</div>
+      <div class="toolbar_button_text">Whiteboard</div>
+      <div class="toolbar_button_text">Settings</div>
     </div>
 
     <div id="user_0" class="user" onmouseover="showName(0)" onmouseout="hideName(0)">
@@ -38,6 +43,42 @@
     <div id="user_4" class="user" onmouseover="showName(4)" onmouseout="hideName(4)">
       <img class="user_img" src="user.png">
       <div class="user_name">Hector</div>
+    </div>
+
+    <div id="chat_window" onmouseover="showChatWindow()" onmouseout="hideChatWindow()">
+      <div id="chat_header">chat</div>
+      <div id="chat_toggle">keep open
+        <div id="toggle_chat_con" class="toggle_container" onclick="toggleChatWindow()">
+          <div id="toggle_chat_button" class="toggle_button"></div>
+        </div>
+      </div>
+      <div id="chat_text0" class="chat_text"><h1>Achilles</h1><p>Troy is like the best movie EVER!</p></div>
+      <div id="chat_text1" class="chat_text"><h1>Hector</h1><p>You just love seeing yourself shirtless...</p></div>
+      <div id="chat_text2" class="chat_text"><h1>Andromache</h1><p>I do too</p></div>
+      <div id="chat_text3" class="chat_text"><h1>You</h1><p>It's like the most boring movie ever</p></div>
+      <div id="textbox">
+        <div id="send">send</div>
+      </div>
+    </div>
+
+    <div id="screens_window" onmouseover="showScreensWindow()" onmouseout="hideScreensWindow()">
+      <div id="screens_header">screens</div>
+      <div id="screen_toggle">keep open
+        <div id="toggle_screen_con" class="toggle_container" onclick="toggleScreenWindow()">
+          <div id="toggle_screen_button" class="toggle_button"></div>
+        </div>
+      </div>
+
+      <div id="screen_odysseus" class="shared_screen" onmouseover="showScreenOwner(0)" onmouseout="hideScreenOwner(0)">
+        <div class="screen_owner">Ody's screen</div>
+      </div>
+      <div id="screen_helen" class="shared_screen" onmouseover="showScreenOwner(0)" onmouseout="hideScreenOwner(0)">
+        <div class="screen_owner">Helen's screen</div>
+      </div>
+      <div id="screen_new" class="shared_screen">
+        <img src="add.png">
+      </div>
+
     </div>
 
   </div>

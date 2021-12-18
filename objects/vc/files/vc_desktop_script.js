@@ -8,6 +8,7 @@ function initDesktop() {
 
 function rearrange() {
   var tB = document.getElementsByClassName('toolbar_button');
+  var tBT = document.getElementsByClassName('toolbar_button_text');
   var toolbar = document.getElementById('toolbar');
   var tW = document.getElementById('toolbar').getBoundingClientRect().width;
   for (var i = 0; i < tB.length; i++) {
@@ -17,6 +18,12 @@ function rearrange() {
   tB[1].style.left = tW/2 - tBW[2]/2 - tBW[1]/2 - tW/30 + 'px';
   tB[3].style.left = tW/2 + tBW[2]/2 + tBW[3]/2 + tW/30 + 'px';
   tB[4].style.left = tW/2 + tBW[2]/2 + tBW[3] + tBW[4]/2 + tW/30*2 + 'px';
+
+  tBT[0].style.left = tW/2 - tBW[2]/2 - tBW[1] - tBW[0]/2 - tW/30*2 + 'px';
+  tBT[1].style.left = tW/2 - tBW[2]/2 - tBW[1]/2 - tW/30 + 'px';
+  tBT[3].style.left = tW/2 + tBW[2]/2 + tBW[3]/2 + tW/30 + 'px';
+  tBT[4].style.left = tW/2 + tBW[2]/2 + tBW[3] + tBW[4]/2 + tW/30*2 + 'px';
+
   var tVis = document.getElementById("toolbar_visible");
   var dW = document.getElementById("desktop").getBoundingClientRect().width;
   tVis.style.width = tBW[0] + tBW[1] + tBW[2] + tBW[3] + tBW[4] + tW/30*6 + 'px';
@@ -66,4 +73,88 @@ function showName(x) {
 function hideName(x) {
   var name = document.getElementsByClassName('user_name');
   name[x].style.opacity = 0;
+}
+
+function showText(x) {
+  var name = document.getElementsByClassName('toolbar_button_text');
+  name[x].style.display = 'block';
+}
+
+function hideText(x) {
+  var name = document.getElementsByClassName('toolbar_button_text');
+  name[x].style.display = 'none';
+}
+
+function showChatWindow() {
+  document.getElementById('chat_window').style.transform = 'translateX(0)';
+  document.getElementById('chat_header').style.opacity = '0';
+}
+
+function hideChatWindow() {
+  if(chatWindowActive == 0) {
+    document.getElementById('chat_window').style.transform = 'translateX(90%)';
+    document.getElementById('chat_header').style.opacity = '1';
+  }
+}
+
+var chatWindowActive = 0;
+function toggleChatWindow() {
+  if(chatWindowActive == 0) {
+    chatWindowActive = 1;
+    document.getElementById('toggle_chat_button').style.transform = 'translateX(62%)';
+    document.getElementById('toggle_chat_con').style.backgroundColor = '#41C38E';
+  } else {
+    chatWindowActive = 0;
+    document.getElementById('toggle_chat_button').style.transform = 'translateX(0)';
+    document.getElementById('toggle_chat_con').style.backgroundColor = '#cccccc';
+  }
+}
+
+function showScreensWindow() {
+  document.getElementById('screens_window').style.transform = 'translateX(0)';
+  document.getElementById('screens_header').style.opacity = '0';
+}
+
+function hideScreensWindow() {
+  if(screensWindowActive == 0) {
+    document.getElementById('screens_window').style.transform = 'translateX(-90%)';
+    document.getElementById('screens_header').style.opacity = '1';
+  }
+}
+
+var screensWindowActive = 0;
+function toggleScreenWindow() {
+  if(screensWindowActive == 0) {
+    screensWindowActive = 1;
+    document.getElementById('toggle_screen_button').style.transform = 'translateX(62%)';
+    document.getElementById('toggle_screen_con').style.backgroundColor = '#41C38E';
+  } else {
+    screensWindowActive = 0;
+    document.getElementById('toggle_screen_button').style.transform = 'translateX(0)';
+    document.getElementById('toggle_screen_con').style.backgroundColor = '#cccccc';
+  }
+}
+
+var cam = 1;
+function toggleCam() {
+  buttons = document.getElementsByClassName("toolbar_button");
+  if(cam == 1) {
+    cam = 0;
+    buttons[0].src = "icon_cameraoff.png";
+  } else {
+    cam = 1;
+    buttons[0].src = "icon_camera.png";
+  }
+}
+
+var mic = 1;
+function toggleMic() {
+  buttons = document.getElementsByClassName("toolbar_button");
+  if(mic == 1) {
+    mic = 0;
+    buttons[1].src = "icon_micoff.png";
+  } else {
+    mic = 1;
+    buttons[1].src = "icon_mic.png";
+  }
 }
