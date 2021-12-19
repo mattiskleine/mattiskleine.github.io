@@ -3,6 +3,7 @@ var tBH = [];
 
 function initDesktop() {
   rearrange();
+  rearrangeUsers();
   window.addEventListener('mousemove', toolbarMoveEvent);
 }
 
@@ -88,12 +89,14 @@ function hideText(x) {
 function showChatWindow() {
   document.getElementById('chat_window').style.transform = 'translateX(0)';
   document.getElementById('chat_header').style.opacity = '0';
+  document.getElementById('chat_toggle').style.opacity = '1';
 }
 
 function hideChatWindow() {
   if(chatWindowActive == 0) {
     document.getElementById('chat_window').style.transform = 'translateX(90%)';
     document.getElementById('chat_header').style.opacity = '1';
+    document.getElementById('chat_toggle').style.opacity = '0';
   }
 }
 
@@ -113,12 +116,14 @@ function toggleChatWindow() {
 function showScreensWindow() {
   document.getElementById('screens_window').style.transform = 'translateX(0)';
   document.getElementById('screens_header').style.opacity = '0';
+  document.getElementById('screen_toggle').style.opacity = '1';
 }
 
 function hideScreensWindow() {
   if(screensWindowActive == 0) {
     document.getElementById('screens_window').style.transform = 'translateX(-90%)';
     document.getElementById('screens_header').style.opacity = '1';
+    document.getElementById('screen_toggle').style.opacity = '0';
   }
 }
 
@@ -156,5 +161,54 @@ function toggleMic() {
   } else {
     mic = 1;
     buttons[1].src = "icon_mic.png";
+  }
+}
+
+var clickPos = [];
+var elPos = [];
+var draggedEl;
+
+function initDrag(x) {
+  clickPos[0] = event.clientX;
+  clickPos[1] = event.clientY;
+  draggedEl = x;
+  var el = document.getElementsByClassName('user');
+  elPos[0] = el[x].offsetLeft;
+  elPos[1] = el[x].offsetTop;
+  document.getElementById('desktop').addEventListener('mousemove', drag);
+  document.getElementById('desktop').addEventListener('mouseup', stopDrag);
+}
+
+function drag() {
+  var el = document.getElementsByClassName('user');
+  var x = event.clientX - clickPos[0];
+  var y = event.clientY - clickPos[1];
+  el[draggedEl].style.left = elPos[0] + x + 'px';
+  el[draggedEl].style.top = elPos[1] + y + 'px';
+}
+
+function stopDrag() {
+  document.getElementById('desktop').removeEventListener('mousemove', drag);
+  document.getElementById('desktop').removeEventListener('mouseup', stopDrag);
+  var users = document.getElementsByClassName('user');
+  for (var i = 0; i < users.length; i++) {
+    users[i].style.transition = 'top .3s, left .3s';
+  }
+  rearrangeUsers();
+  setTimeout(() => {
+    for (var i = 0; i < users.length; i++) {
+      users[i].style.transition = 'top 0s, left 0s';
+    }
+  }, 320);
+}
+
+var userPosition = ['16%', '30%', '44%', '58%', '72%'];
+var userOrder = {user_0: 0, user_1: 1, user_2: 2, user_3: 3, user_4: 4};
+
+
+function rearrangeUsers() {
+  for(var i = 0; i < 5; i++) {
+    document.getElementById('user_'+i).style.left = userPosition[userOrder['user_'+i]];
+    document.getElementById('user_'+i).style.top = '2%';
   }
 }

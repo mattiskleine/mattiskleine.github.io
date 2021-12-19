@@ -91,29 +91,12 @@ body {
   position: absolute;
   top: 2%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 11%;
+  width: 12%;
   height: 14%;
   background-color: #aaaaaa;
-  border-radius: 1vw;
+  border-radius: .5vw;
   cursor: pointer;
   user-select: none;
-}
-
-#user_0 {
-  transform: translateX(-290%);
-}
-
-#user_1 {
-  transform: translateX(-170%);
-}
-
-#user_3 {
-  transform: translateX(70%);
-}
-
-#user_4 {
-  transform: translateX(190%);
 }
 
 .user_name {
@@ -137,6 +120,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 70%;
+  user-select: none;
+  pointer-events: none;
 }
 
 #chat_window {
@@ -163,6 +148,8 @@ body {
   border-bottom: .2vw solid #aaaaaa;
   color: #ffffff;
   padding: 3% 0 3% 33%;
+  transition: opacity .5s;
+  opacity: 0;
 }
 
 .toggle_container {
@@ -305,6 +292,8 @@ body {
   border-bottom: .2vw solid #aaaaaa;
   color: #ffffff;
   padding: 3% 3% 3% 32%;
+  transition: opacity .5s;
+  opacity: 0;
 }
 
 #toggle_screen_con {
