@@ -45,6 +45,21 @@
       <div class="user_name">Hector</div>
     </div>
 
+    <div id="main_window_user" class="main_window">
+      <img id="main_user" src="user.png">
+      <div id="main_window_user_name" class="main_window_header">Hector</div>
+      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
+        <img class="close_button_img" src="close.png">
+      </div>
+    </div>
+
+    <div id="main_window_screen" class="main_window">
+      <div id="main_window_screen_name" class="main_window_header">Ody's Screen</div>
+      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
+        <img class="close_button_img" src="close.png">
+      </div>
+    </div>
+
     <div id="chat_window" onmouseover="showChatWindow()" onmouseout="hideChatWindow()">
       <div id="chat_header">chat</div>
       <div id="chat_toggle">keep open
@@ -68,22 +83,14 @@
           <div id="toggle_screen_button" class="toggle_button"></div>
         </div>
       </div>
-      <div id="screen_odysseus" class="shared_screen">
-        <div class="screen_owner">Ody's screen</div>
+      <div id="screen_odysseus" class="shared_screen" onclick="screenToMain('Screen Odysseus')">
+        <div class="screen_owner">Screen Odysseus</div>
       </div>
-      <div id="screen_helen" class="shared_screen">
-        <div class="screen_owner">Helen's screen</div>
+      <div id="screen_helen" class="shared_screen" onclick="screenToMain('Screen Helen')">
+        <div class="screen_owner">Screen Helen</div>
       </div>
       <div id="screen_new" class="shared_screen">
         <img src="add.png">
-      </div>
-    </div>
-
-    <div id="main_window_user" class="main_window">
-      <img id="main_user" src="user.png">
-      <div id="main_window_user_name">Hector</div>
-      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
-        <img id="close_button_img" src="close.png">
       </div>
     </div>
 

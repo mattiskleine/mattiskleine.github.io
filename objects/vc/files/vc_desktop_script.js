@@ -237,12 +237,23 @@ function userToMain(x) {
   document.getElementById('main_window_user_name').innerHTML = x;
 }
 
+function screenToMain(x) {
+  document.getElementById('main_window_screen').style.display = 'block';
+  document.getElementById('main_window_screen_name').innerHTML = x;
+}
+
 function hoverCloseButton() {
-  document.getElementById('close_button_img').style.display = 'block';
+  var cbi = document.getElementsByClassName('close_button_img');
+  for (var i = 0; i < cbi.length; i++) {
+    cbi[i].style.display = 'block';
+  }
 }
 
 function unhoverCloseButton() {
-  document.getElementById('close_button_img').style.display = 'none';
+  var cbi = document.getElementsByClassName('close_button_img');
+  for (var i = 0; i < cbi.length; i++) {
+    cbi[i].style.display = 'none';
+  }
 }
 
 function closeMain() {
