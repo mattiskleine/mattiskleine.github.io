@@ -187,13 +187,17 @@ function drag() {
   el[draggedEl].style.top = elPos[1] + y + 'px';
 }
 
+var uX = [];
+
 function stopDrag() {
   document.getElementById('desktop').removeEventListener('mousemove', drag);
   document.getElementById('desktop').removeEventListener('mouseup', stopDrag);
   var users = document.getElementsByClassName('user');
   for (var i = 0; i < users.length; i++) {
     users[i].style.transition = 'top .3s, left .3s';
+    uX[i] = users[i].getBoundingClientRect().left;
   }
+  rearrangeUserOrder();
   rearrangeUsers();
   setTimeout(() => {
     for (var i = 0; i < users.length; i++) {
@@ -210,5 +214,40 @@ function rearrangeUsers() {
   for(var i = 0; i < 5; i++) {
     document.getElementById('user_'+i).style.left = userPosition[userOrder['user_'+i]];
     document.getElementById('user_'+i).style.top = '2%';
+  }
+}
+
+function rearrangeUserOrder() {
+  var desk = document.getElementById('desktop').getBoundingClientRect().width;
+  var size = [0,0,0,0,0];
+  for(var i = 0; i < uX.length; i++) {
+    for(var j = 0; j < uX.length; j++) {
+      if(uX[i] > uX[j]) {
+        size[i]++;
+      }
+    }
+  }
+  for(var i = 0; i < 5; i++) {
+    userOrder['user_'+i] = size[i];
+  }
+}
+
+function userToMain(x) {
+  document.getElementById('main_window_user').style.display = 'block';
+  document.getElementById('main_window_user_name').innerHTML = x;
+}
+
+function hoverCloseButton() {
+  document.getElementById('close_button_img').style.display = 'block';
+}
+
+function unhoverCloseButton() {
+  document.getElementById('close_button_img').style.display = 'none';
+}
+
+function closeMain() {
+  var mainCon = document.getElementsByClassName('main_window');
+  for(var i = 0; i < mainCon.length; i++) {
+    mainCon[i].style.display = 'none';
   }
 }
