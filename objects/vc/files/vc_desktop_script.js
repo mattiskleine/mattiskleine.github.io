@@ -5,6 +5,8 @@ function initDesktop() {
   rearrange();
   rearrangeUsers();
   window.addEventListener('mousemove', toolbarMoveEvent);
+  userToMain(1);
+  document.getElementById('vol').addEventListener('mouseleave', toolbarReset);
 }
 
 function rearrange() {
@@ -26,7 +28,7 @@ function rearrange() {
   tBT[4].style.left = tW/2 + tBW[2]/2 + tBW[3] + tBW[4]/2 + tW/30*2 + 'px';
 
   var tVis = document.getElementById("toolbar_visible");
-  var dW = document.getElementById("desktop").getBoundingClientRect().width;
+  var dW = document.getElementById("vol").getBoundingClientRect().width;
   tVis.style.width = tBW[0] + tBW[1] + tBW[2] + tBW[3] + tBW[4] + tW/30*6 + 'px';
   tVis.style.left = dW/2 - tBW[2]/2 - tBW[1] - tBW[0] - tW/30*3 + 'px';
 }
@@ -66,6 +68,14 @@ function map(number, inMin, inMax, outMin, outMax) {
     return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
+function toolbarReset() {
+  var tB = document.getElementsByClassName('toolbar_button');
+  for(var i = 0; i < tB.length; i++) {
+    tB[i].style.transform = "translateX(-50%) scale(1)";
+    tB[i].style.bottom = "10%";
+  }
+}
+
 function showName(x) {
   var name = document.getElementsByClassName('user_name');
   name[x].style.opacity = 1;
@@ -94,7 +104,7 @@ function showChatWindow() {
 
 function hideChatWindow() {
   if(chatWindowActive == 0) {
-    document.getElementById('chat_window').style.transform = 'translateX(90%)';
+    document.getElementById('chat_window').style.transform = 'translateX(23vw)';
     document.getElementById('chat_header').style.opacity = '1';
     document.getElementById('chat_toggle').style.opacity = '0';
   }
@@ -104,7 +114,7 @@ var chatWindowActive = 0;
 function toggleChatWindow() {
   if(chatWindowActive == 0) {
     chatWindowActive = 1;
-    document.getElementById('toggle_chat_button').style.transform = 'translateX(62%)';
+    document.getElementById('toggle_chat_button').style.transform = 'translateX(1.2vw)';
     document.getElementById('toggle_chat_con').style.backgroundColor = '#41C38E';
   } else {
     chatWindowActive = 0;
@@ -121,7 +131,7 @@ function showScreensWindow() {
 
 function hideScreensWindow() {
   if(screensWindowActive == 0) {
-    document.getElementById('screens_window').style.transform = 'translateX(-90%)';
+    document.getElementById('screens_window').style.transform = 'translateX(-23vw)';
     document.getElementById('screens_header').style.opacity = '1';
     document.getElementById('screen_toggle').style.opacity = '0';
   }
@@ -131,7 +141,7 @@ var screensWindowActive = 0;
 function toggleScreenWindow() {
   if(screensWindowActive == 0) {
     screensWindowActive = 1;
-    document.getElementById('toggle_screen_button').style.transform = 'translateX(62%)';
+    document.getElementById('toggle_screen_button').style.transform = 'translateX(1.2vw)';
     document.getElementById('toggle_screen_con').style.backgroundColor = '#41C38E';
   } else {
     screensWindowActive = 0;
@@ -175,11 +185,12 @@ function initDrag(x) {
   var el = document.getElementsByClassName('user');
   elPos[0] = el[x].offsetLeft;
   elPos[1] = el[x].offsetTop;
-  document.getElementById('desktop').addEventListener('mousemove', drag);
-  document.getElementById('desktop').addEventListener('mouseup', stopDrag);
+  document.getElementById('vol').addEventListener('mousemove', drag);
+  document.getElementById('vol').addEventListener('mouseup', stopDrag);
 }
 
 function drag() {
+  draggy = 1;
   var el = document.getElementsByClassName('user');
   var x = event.clientX - clickPos[0];
   var y = event.clientY - clickPos[1];
@@ -190,8 +201,8 @@ function drag() {
 var uX = [];
 
 function stopDrag() {
-  document.getElementById('desktop').removeEventListener('mousemove', drag);
-  document.getElementById('desktop').removeEventListener('mouseup', stopDrag);
+  document.getElementById('vol').removeEventListener('mousemove', drag);
+  document.getElementById('vol').removeEventListener('mouseup', stopDrag);
   var users = document.getElementsByClassName('user');
   for (var i = 0; i < users.length; i++) {
     users[i].style.transition = 'top .3s, left .3s';
@@ -203,11 +214,13 @@ function stopDrag() {
     for (var i = 0; i < users.length; i++) {
       users[i].style.transition = 'top 0s, left 0s';
     }
+    draggy = 0;
   }, 320);
 }
 
 var userPosition = ['16%', '30%', '44%', '58%', '72%'];
 var userOrder = {user_0: 0, user_1: 1, user_2: 2, user_3: 3, user_4: 4};
+var userNames = ['Odysseus', 'Achilles', 'Andromache', 'Helen', 'Hector'];
 
 
 function rearrangeUsers() {
@@ -218,7 +231,7 @@ function rearrangeUsers() {
 }
 
 function rearrangeUserOrder() {
-  var desk = document.getElementById('desktop').getBoundingClientRect().width;
+  var desk = document.getElementById('vol').getBoundingClientRect().width;
   var size = [0,0,0,0,0];
   for(var i = 0; i < uX.length; i++) {
     for(var j = 0; j < uX.length; j++) {
@@ -232,12 +245,17 @@ function rearrangeUserOrder() {
   }
 }
 
+var draggy = 0;
 function userToMain(x) {
-  document.getElementById('main_window_user').style.display = 'block';
-  document.getElementById('main_window_user_name').innerHTML = x;
+  if(draggy == 0) {
+    closeMain();
+    document.getElementById('main_window_user').style.display = 'block';
+    document.getElementById('main_window_user_name').innerHTML = userNames[x];
+  }
 }
 
 function screenToMain(x) {
+  closeMain();
   document.getElementById('main_window_screen').style.display = 'block';
   document.getElementById('main_window_screen_name').innerHTML = x;
 }
@@ -261,4 +279,9 @@ function closeMain() {
   for(var i = 0; i < mainCon.length; i++) {
     mainCon[i].style.display = 'none';
   }
+}
+
+function whiteboardToMain() {
+  closeMain();
+  document.getElementById('main_window_wb').style.display = 'block';
 }

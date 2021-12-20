@@ -16,12 +16,30 @@ body {
 
 #section0 {
   position: absolute;
-  height: 50vw;
+  height: 60vw;
+}
+
+#vc_desk {
+  position: absolute;
+  left: 22.2vw;
+  width: 55.6vw;
+  height: 32.9vw;
+  top: 18.1vw;
+  border: none;
+}
+
+#macbook {
+  position: absolute;
+  top: 15vw;
+  left: 10vw;
+  width: 80vw;
+  user-select: none;
+  pointer-events: none;
 }
 
 #section1 {
   position: absolute;
-  top: 52vw;
+  top: 62vw;
   height: 50vw;
   background-color: #fafafa;
 }
@@ -37,11 +55,4 @@ body {
   top: 156vw;
   height: 50vw;
   background-color: #fafafa;
-}
-
-#macbook {
-  position: absolute;
-  top: 17vw;
-  left: 10vw;
-  width: 80vw;
 }

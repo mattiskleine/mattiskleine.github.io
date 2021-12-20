@@ -8,14 +8,33 @@
 <body onload="initDesktop()">
 
 <div id="vol">
-  <div id="desktop">
+
+    <div id="main_window_user" class="main_window">
+      <img id="main_user" src="user.png">
+      <div id="main_window_user_name" class="main_window_header"></div>
+      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
+        <img class="close_button_img" src="close.png">
+      </div>
+    </div>
+    <div id="main_window_screen" class="main_window">
+      <div id="main_window_screen_name" class="main_window_header"></div>
+      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
+        <img class="close_button_img" src="close.png">
+      </div>
+    </div>
+    <div id="main_window_wb" class="main_window">
+      <div id="main_window_wb_header" class="main_window_header">Whiteboard</div>
+      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
+        <img class="close_button_img" src="close.png">
+      </div>
+    </div>
 
     <div id="toolbar_visible"></div>
     <div id="toolbar">
       <img class="toolbar_button" src="icon_camera.png" onmouseover="showText(0)" onmouseout="hideText(0)" onclick="toggleCam()">
       <img class="toolbar_button" src="icon_mic.png" onmouseover="showText(1)" onmouseout="hideText(1)" onclick="toggleMic()">
       <img class="toolbar_button" src="icon_actions.png" onmouseover="showText(2)" onmouseout="hideText(2)">
-      <img class="toolbar_button" src="icon_whiteboard.png" onmouseover="showText(3)" onmouseout="hideText(3)">
+      <img class="toolbar_button" src="icon_whiteboard.png" onmouseover="showText(3)" onmouseout="hideText(3)" onclick="whiteboardToMain()">
       <img class="toolbar_button" src="icon_settings.png" onmouseover="showText(4)" onmouseout="hideText(4)">
       <div class="toolbar_button_text">Camera</div>
       <div class="toolbar_button_text">Microphone</div>
@@ -24,45 +43,30 @@
       <div class="toolbar_button_text">Settings</div>
     </div>
 
-    <div id="user_0" class="user" onmouseover="showName(0)" onmouseout="hideName(0)" onmousedown="initDrag(0)" onclick="userToMain('Odysseus')">
+    <div id="user_0" class="user" onmouseover="showName(0)" onmouseout="hideName(0)" onmousedown="initDrag(0)" onclick="userToMain(0)">
       <img class="user_img" src="user.png">
       <div class="user_name">Odysseus</div>
     </div>
-    <div id="user_1" class="user" onmouseover="showName(1)" onmouseout="hideName(1)" onmousedown="initDrag(1)" onclick="userToMain('Helen')">
-      <img class="user_img" src="user.png">
-      <div class="user_name">Helen</div>
-    </div>
-    <div id="user_2" class="user" onmouseover="showName(2)" onmouseout="hideName(2)" onmousedown="initDrag(2)" onclick="userToMain('Andromache')">
-      <img class="user_img" src="user.png">
-      <div class="user_name">Andromache</div>
-    </div>
-    <div id="user_3" class="user" onmouseover="showName(3)" onmouseout="hideName(3)" onmousedown="initDrag(3)" onclick="userToMain('Achilles')">
+    <div id="user_1" class="user" onmouseover="showName(1)" onmouseout="hideName(1)" onmousedown="initDrag(1)" onclick="userToMain(1)">
       <img class="user_img" src="user.png">
       <div class="user_name">Achilles</div>
     </div>
-    <div id="user_4" class="user" onmouseover="showName(4)" onmouseout="hideName(4)" onmousedown="initDrag(4)" onclick="userToMain('Hector')">
+    <div id="user_2" class="user" onmouseover="showName(2)" onmouseout="hideName(2)" onmousedown="initDrag(2)" onclick="userToMain(2)">
+      <img class="user_img" src="user.png">
+      <div class="user_name">Andromache</div>
+    </div>
+    <div id="user_3" class="user" onmouseover="showName(3)" onmouseout="hideName(3)" onmousedown="initDrag(3)" onclick="userToMain(3)">
+      <img class="user_img" src="user.png">
+      <div class="user_name">Helen</div>
+    </div>
+    <div id="user_4" class="user" onmouseover="showName(4)" onmouseout="hideName(4)" onmousedown="initDrag(4)" onclick="userToMain(4)">
       <img class="user_img" src="user.png">
       <div class="user_name">Hector</div>
     </div>
 
-    <div id="main_window_user" class="main_window">
-      <img id="main_user" src="user.png">
-      <div id="main_window_user_name" class="main_window_header">Hector</div>
-      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
-        <img class="close_button_img" src="close.png">
-      </div>
-    </div>
-
-    <div id="main_window_screen" class="main_window">
-      <div id="main_window_screen_name" class="main_window_header">Ody's Screen</div>
-      <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
-        <img class="close_button_img" src="close.png">
-      </div>
-    </div>
-
     <div id="chat_window" onmouseover="showChatWindow()" onmouseout="hideChatWindow()">
       <div id="chat_header">chat</div>
-      <div id="chat_toggle">keep open
+      <div id="chat_toggle">keep chat open
         <div id="toggle_chat_con" class="toggle_container" onclick="toggleChatWindow()">
           <div id="toggle_chat_button" class="toggle_button"></div>
         </div>
@@ -78,15 +82,15 @@
 
     <div id="screens_window" onmouseover="showScreensWindow()" onmouseout="hideScreensWindow()">
       <div id="screens_header">screens</div>
-      <div id="screen_toggle">keep open
+      <div id="screen_toggle">keep screens open
         <div id="toggle_screen_con" class="toggle_container" onclick="toggleScreenWindow()">
           <div id="toggle_screen_button" class="toggle_button"></div>
         </div>
       </div>
-      <div id="screen_odysseus" class="shared_screen" onclick="screenToMain('Screen Odysseus')">
+      <div id="screen_odysseus" class="shared_screen" onclick="screenToMain('Odysseus\' shared screen')">
         <div class="screen_owner">Screen Odysseus</div>
       </div>
-      <div id="screen_helen" class="shared_screen" onclick="screenToMain('Screen Helen')">
+      <div id="screen_helen" class="shared_screen" onclick="screenToMain('Helen\'s shared screen')">
         <div class="screen_owner">Screen Helen</div>
       </div>
       <div id="screen_new" class="shared_screen">
@@ -94,9 +98,6 @@
       </div>
     </div>
 
-  </div>
-
-  <img id="macbook" src="macbook.svg">
 </div>
 
 </body>
