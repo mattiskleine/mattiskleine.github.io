@@ -439,6 +439,7 @@ li {
   top: 12vw;
   transform: translateX(-50%);
   transition: color .3s;
+  text-align: center;
 }
 
 .project_subheading_uneven {

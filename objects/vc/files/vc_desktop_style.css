@@ -81,6 +81,7 @@ body {
   border-radius: 1vw;
   cursor: pointer;
   user-select: none;
+  overflow: hidden;
 }
 
 .user_name {
@@ -100,12 +101,45 @@ body {
 
 .user_img {
   position: absolute;
-  bottom: 0;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
   user-select: none;
   pointer-events: none;
+}
+
+#user_0 {
+  background-color: #CAAA9A;
+}
+
+#user_1 {
+  background-color: #9BD2C0;
+}
+
+#user_2 {
+  background-color: #9FBDD5;
+}
+
+#user_3 {
+  background-color: #F95266;
+}
+
+#user_4 {
+  background-color: #FDE382;
+}
+
+#user_ody {
+  left: 60%;
+  width: 70%;
+}
+
+#user_ach {
+  width: 105%;
+}
+
+#user_hec {
+  width: 105%;
 }
 
 #chat_window {
@@ -373,10 +407,11 @@ body {
 #main_window_user {
   background-color: #dddddd;
 }
+
 #main_user {
   position: absolute;
-  bottom: 0;
-  width: 50%;
+  bottom: 1%;
+  height: 90%;
   left: 50%;
   transform: translateX(-50%);
 }

@@ -245,11 +245,14 @@ function rearrangeUserOrder() {
   }
 }
 
+var bgc = ['#CAAA9A', '#9BD2C0', '#9FBDD5', '#F95266', '#FDE382'];
 var draggy = 0;
 function userToMain(x) {
   if(draggy == 0) {
     closeMain();
     document.getElementById('main_window_user').style.display = 'block';
+    document.getElementById('main_window_user').style.backgroundColor = bgc[x];
+    document.getElementById('main_user').src = 'user_img'+x+'.png';
     document.getElementById('main_window_user_name').innerHTML = userNames[x];
   }
 }
