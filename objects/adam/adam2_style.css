@@ -3,6 +3,7 @@
 body {
   height: auto;
   background-color: white;
+  overflow: hidden;
 }
 
 #background {

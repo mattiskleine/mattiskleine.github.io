@@ -25,6 +25,8 @@ var projectActive = 0;
 function openPageProjects() {
   if(projectActive == 1) {
     hideProject();
+  } else {
+    scrollDown();
   }
 
   document.getElementById('menu_bar_line').style.left = "4.8vw";
@@ -52,6 +54,8 @@ function openPageProjects() {
 function openPageAbout() {
   if(projectActive == 1) {
     hideProject();
+  } else {
+    window.scrollTo(0, 0);
   }
 
   document.getElementById('menu_bar_line').style.right = "84.4vw";
@@ -165,10 +169,7 @@ function hideProject() {
     for (var i = 0; i < projects.length; i++) {
       projects[i].style.display = 'none';
     }
-    window.scrollTo({
-      top: window.innerWidth / 100 * 33,
-      behavior: 'smooth'
-    });
+    scrollDown();
     projectActive = 0;
   }, 500);
 }
