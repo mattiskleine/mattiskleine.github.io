@@ -173,7 +173,7 @@ function handleScrollCane() {
     var vw = parent.window.innerWidth / 100 * 5;
 
     if (basePos < (parent.window.innerHeight / 100 * 85) - vw) {
-      document.getElementById('canvas_top').style.transform = 'translateY(-18.3vw)';
+      document.getElementById('canvas_top').style.transform = 'translateY(-18.2vw)';
       document.getElementById('canvas_screen').style.transform = 'scaleY(1)';
       document.getElementById('cane_animation_foot').style.transform = 'scaleY(1)';
       document.getElementById('scroll_arrow').style.display = 'none';

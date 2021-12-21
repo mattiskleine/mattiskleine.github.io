@@ -323,7 +323,7 @@ li {
 
 #canvas_screen {
   position: absolute;
-  bottom: 17vw;
+  bottom: 16.9vw;
   left: 32vw;
   width: 36vw;
   transform-origin: bottom center;
