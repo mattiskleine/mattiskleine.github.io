@@ -46,10 +46,10 @@ function setStateStart() {
 		document.getElementById("glove_compartment").style.transform = "scale(0)";
 	}, 250);
 	setTimeout(() => {
-		document.getElementById("bt_modify").style.transform = "scale(1)";
+		document.getElementById("ar_bt_modify").style.transform = "scale(1)";
 	}, 300);
 	setTimeout(() => {
-		document.getElementById("bt_explore").style.transform = "scale(1)";
+		document.getElementById("ar_bt_explore").style.transform = "scale(1)";
 	}, 350);
 	setTimeout(() => {
 		document.getElementById("instructions").style.display = "none";
@@ -73,7 +73,7 @@ function setStateBack() {
 
 function setStateExplore() {
 	state = "explore";
-	document.getElementById("bt_explore").style.animation = "bounce 5s linear 2s 0";
+	document.getElementById("ar_bt_explore").style.animation = "bounce 5s linear 2s 0";
 
 	document.getElementById("left_arrow").style.display = "none";
 	document.getElementById("right_arrow").style.display = "none";
@@ -92,7 +92,7 @@ function setStateExplore() {
 	document.getElementById("button_buy").style.opacity = "0";
 	document.getElementById("ar_menu").style.opacity = "0";
 	setTimeout(() => {
-		document.getElementById("bt_explore").style.transform = "scale(0)";
+		document.getElementById("ar_bt_explore").style.transform = "scale(0)";
 	}, 50);
 	setTimeout(() => {
 		document.getElementById("bt_modify").style.transform = "scale(0)";
@@ -126,10 +126,10 @@ function setStateModify() {
 	document.getElementById("released").style.opacity = "0";
 	state = "modify";
 	setTimeout(() => {
-		document.getElementById("bt_modify").style.transform = "scale(0)";
+		document.getElementById("ar_bt_modify").style.transform = "scale(0)";
 	}, 50);
 	setTimeout(() => {
-		document.getElementById("bt_explore").style.transform = "scale(0)";
+		document.getElementById("ar_bt_explore").style.transform = "scale(0)";
 	}, 100);
 
 	setTimeout(() => {

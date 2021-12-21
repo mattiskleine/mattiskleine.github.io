@@ -11,6 +11,7 @@ html {
 	margin: 0px auto;
 	text-align: center;
 	-webkit-user-select: none;
+	overflow: hidden;
 }
 #app {
 	--width: 100vw;
@@ -24,7 +25,7 @@ html {
 	top: 0px;
 	left: 0px;
 }
-.bt {
+.ar_bt {
 	width: 70%;
 	height: 13%;
 	position: absolute;
@@ -37,14 +38,14 @@ html {
 	transition: all .2s;
 	transform: scale(0);
 }
-.bt:hover {
+.ar_bt:hover {
 	cursor: pointer;
 }
-.bt:active {
+.ar_bt:active {
 	transform: scale(0.95);
 }
 
-#bt_explore {
+#ar_bt_explore {
 	top: 30%;
 	background-color: #3b809b;
 	animation: bounce 5s linear 2s infinite;
@@ -77,12 +78,12 @@ html {
 	}
 }
 
-.bt_sub {
+.ar_bt_sub {
 	font-size: calc(var(--width) / 25);
 	color: white;
 	margin-top: -2%;
 }
-#bt_modify {
+#ar_bt_modify {
 	top: 58%;
 	background-color: #458969;
 }
@@ -120,7 +121,7 @@ html {
 	transform: translateX(-8px) scale(0.8);
 	padding-right: calc(var(--width) / 20);
 }
-#back {
+#ar_back {
 	position: absolute;
 	margin-top: calc(var(--width) / 10);
 	left: calc(var(--width) / 6);
