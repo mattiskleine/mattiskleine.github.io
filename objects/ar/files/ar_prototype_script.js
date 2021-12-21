@@ -95,7 +95,7 @@ function setStateExplore() {
 		document.getElementById("ar_bt_explore").style.transform = "scale(0)";
 	}, 50);
 	setTimeout(() => {
-		document.getElementById("bt_modify").style.transform = "scale(0)";
+		document.getElementById("ar_bt_modify").style.transform = "scale(0)";
 	}, 100);
 	setTimeout(() => {
 		document.getElementById("seats").style.transform = "scale(1)";
