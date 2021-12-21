@@ -77,8 +77,8 @@ body {
   left: 50%;
   width: 12%;
   height: 14%;
-  background-color: #aaaaaa;
-  border-radius: .5vw;
+  background-color: #cccccc;
+  border-radius: 1vw;
   cursor: pointer;
   user-select: none;
 }
@@ -89,7 +89,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   color: #ffffff;
-  background-color: #666666;
+  background-color: #888888;
   font-family: Montserrat;
   font-size: 1.5vw;
   text-align: center;
@@ -158,6 +158,7 @@ body {
   background-color: #ffffff;
   border-radius: 50%;
   transition: transform .5s;
+  box-shadow: .2vw .2vw 1vw #aaaaaa;
 }
 
 .chat_text {
@@ -300,9 +301,10 @@ body {
   left: 3vw;
   width: 19vw;;
   height: 12vw;
-  background-color: #cccccc;
+  background-color: #ffffff;
   cursor: pointer;
   overflow: hidden;
+  border-radius: 1vw;
 }
 
 #screen_odysseus {
@@ -344,7 +346,7 @@ body {
   right: 16%;
   bottom: 17%;
   overflow: hidden;
-  border-radius: .5vw;
+  border-radius: 1vw;
   display: none;
 }
 
@@ -369,7 +371,7 @@ body {
 }
 
 #main_window_user {
-  background-color: #aaaaaa;
+  background-color: #dddddd;
 }
 #main_user {
   position: absolute;
@@ -393,7 +395,7 @@ body {
 }
 
 #main_window_screen {
-  background-color: #cccccc;
+  background-color: #dddddd;
 }
 
 #main_window_wb {
