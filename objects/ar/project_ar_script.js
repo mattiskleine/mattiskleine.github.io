@@ -15,6 +15,7 @@ function handleScrollAR() {
       document.getElementById('canvas_top_bottom').style.transform = 'translate(-50%, -26vw)';
       document.getElementById('canvas_top_middle').style.transform = 'translateX(-50%) scaleY(0.06)';
       document.getElementById('video_frame').style.transform = 'translateX(-50%) scaleY(0)';
+      document.getElementById('video_frame').pause();
     }
   }
 }

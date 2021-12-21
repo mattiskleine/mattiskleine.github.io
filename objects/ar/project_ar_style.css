@@ -116,21 +116,12 @@ body {
   position: absolute;
   top: 66.7vw;
   width: 49.7vw;
-  height: 27.6vw;
+  height: 28vw;
   left: 50%;
   transform: translateX(-50%) scaleY(0);
   overflow: hidden;
   transform-origin: top center;
   transition: transform 1s;
-}
-
-#plugnplay_vid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 101%;
-  border: none;
 }
 
 #canvas_top_top {
