@@ -245,7 +245,8 @@ function rearrangeUserOrder() {
   }
 }
 
-var bgc = ['#CAAA9A', '#9BD2C0', '#9FBDD5', '#F95266', '#FDE382'];
+var bgc = ['#CAAA9A', '#9BD2C0', '#9FBDD5', '#F95266', '#F7B63B'];
+
 var draggy = 0;
 function userToMain(x) {
   if(draggy == 0) {

@@ -436,3 +436,11 @@ body {
 #main_window_wb {
   box-shadow: .2vw .2vw 1vw #aaaaaa;
 }
+
+#main_wb_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
