@@ -10,6 +10,8 @@ body {
   width: var(--bannerWidth);
   height: 56vw;
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #new_img {
@@ -20,6 +22,7 @@ body {
   opacity: .2;
   user-select: none;
   pointer-events: none;
+  -webkit-user-select: none;
 }
 
 #slider_img {
@@ -32,6 +35,7 @@ body {
   user-select: none;
   pointer-events: none;
   animation: sliderInteractionImg 5s infinite;
+  -webkit-user-select: none;
 }
 
 #old_img {

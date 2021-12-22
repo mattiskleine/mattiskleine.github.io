@@ -153,14 +153,21 @@ function watchForChange() {
 
 function toggleAnimationForce() {
   if (buttonStage[2] == 1) {
-    document.getElementById('cane_animation_force').pause();
-    document.getElementById('cane_dynamic').style.animation = 'spring 2s linear infinite paused';
+    document.getElementById('cane_animation_force').removeEventListener('ended',videoPlay);
     toggleButtonOff(2);
   } else {
-    document.getElementById('cane_animation_force').play();
-    document.getElementById('cane_dynamic').style.animation = 'spring 2s linear infinite running';
+    document.getElementById('cane_animation_force').addEventListener('ended',videoPlay);
+    videoPlay();
     toggleButtonOn(2);
   }
+}
+
+function videoPlay() {
+  document.getElementById('cane_animation_force').play();
+  document.getElementById('cane_dynamic').style.transform = 'translateY(0vw)';
+  setTimeout(() => {
+    document.getElementById('cane_dynamic').style.transform = 'translateY(-1vw)';
+  }, 1000);
 }
 
 parent.window.addEventListener('scroll', handleScrollCane);

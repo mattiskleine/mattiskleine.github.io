@@ -218,16 +218,16 @@ li {
 
 #cane_dynamic {
   position: absolute ;
-  top: 0;
+  top: 0vw;
   left: -2.53vw;
   width: 30.5vw;
   transform: translateY(-1vw);
+  transition: 1s linear;
 }
 
 @keyframes spring {
-  0%   {transform: translateY(-1vw);}
-  50%   {transform: translateY(0vw);}
-  100%   {transform: translateY(-1vw);}
+  from {transform: translateY(-1vw);}
+  to {transform: translateY(0vw);}
 }
 
 #cane_animation_force_boundingbox {
@@ -238,6 +238,7 @@ li {
   height: 19.5vw;
   border-radius: 50%;
   overflow: hidden;
+  transform: translateZ(0);
 }
 
 #cane_animation_force {

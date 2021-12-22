@@ -72,10 +72,10 @@ body {
   font-size: 3vw;
   border-radius: 1.5vw;
   border: .3vw solid #444444;
-  filter: drop-shadow(.3vw .5vw .5vw rgb(0 0 0 / 0.4));
   cursor: pointer;
   transition: all .5s;
   user-select: none;
+  box-shadow: .1vw .1vw .5vw rgb(0 0 0 / 0.4);
 }
 
 #bit4 {
