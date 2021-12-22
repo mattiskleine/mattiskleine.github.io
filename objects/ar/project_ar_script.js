@@ -19,3 +19,14 @@ function handleScrollAR() {
     }
   }
 }
+
+var videoPlayState = 0;
+function toggleVideoPlayState() {
+  if(videoPlayState == 0) {
+    videoPlayState = 1;
+    document.getElementById('video_frame').play();
+  } else {
+    videoPlayState = 0;
+    document.getElementById('video_frame').pause();
+  }
+}

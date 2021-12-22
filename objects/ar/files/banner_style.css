@@ -60,16 +60,16 @@ body {
 
 @keyframes sliderInteraction {
   0% {left: 73.5%;}
-  10% {left: 70%;}
-  30% {left: 77%;}
-  40% {left: 73.5%;}
+  6% {left: 71.5%;}
+  18% {left: 75.5%;}
+  24% {left: 73.5%;}
   100% {left: 73.5%;}
 }
 
 @keyframes sliderInteractionImg {
   0% {width: 73.5%;}
-  10% {width: 70%;}
-  30% {width: 77%;}
-  40% {width: 73.5%;}
+  6% {width: 71.5%;}
+  18% {width: 75.5%;}
+  24% {width: 73.5%;}
   100% {width: 73.5%;}
 }

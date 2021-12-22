@@ -258,10 +258,11 @@ function userToMain(x) {
   }
 }
 
-function screenToMain(x) {
+function screenToMain(x,y) {
   closeMain();
   document.getElementById('main_window_screen').style.display = 'block';
   document.getElementById('main_window_screen_name').innerHTML = x;
+  document.getElementById('main_window_screen_img').src = 'main_window_screen'+y+'.svg';
 }
 
 function hoverCloseButton() {

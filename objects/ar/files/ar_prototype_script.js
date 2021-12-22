@@ -74,6 +74,7 @@ function setStateBack() {
 function setStateExplore() {
 	state = "explore";
 	document.getElementById("ar_bt_explore").style.animation = "bounce 5s linear 2s 0";
+	document.getElementById("head_unit").style.animation = "attention 2s 1s forwards infinite";
 
 	document.getElementById("left_arrow").style.display = "none";
 	document.getElementById("right_arrow").style.display = "none";
@@ -115,6 +116,9 @@ function setStateExplore() {
 }
 
 function setStateModify() {
+	document.getElementById("ar_bt_explore").style.animation = "bounce 5s linear 2s 0";
+	document.getElementById("head_unit").style.animation = "attention 2s 1s forwards infinite";
+	
 	document.getElementById("head_unit").style.top = "42%";
 	document.getElementById("head_unit").style.left = "52%";
 	document.getElementById("head_unit").style.width = "calc(var(--width) / 3)";

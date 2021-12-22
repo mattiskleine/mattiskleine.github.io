@@ -82,6 +82,7 @@ body {
   cursor: pointer;
   user-select: none;
   overflow: hidden;
+  -webkit-user-select: none;
 }
 
 .user_name {
@@ -97,6 +98,8 @@ body {
   padding: .5vw 0;
   opacity: 0;
   transition: opacity .5s;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .user_img {
@@ -107,6 +110,7 @@ body {
   width: 60%;
   user-select: none;
   pointer-events: none;
+  -webkit-user-select: none;
 }
 
 #user_0 {
@@ -443,4 +447,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
+}
+
+#main_window_screen_img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 90%;
+  transform: translateX(-50%);
 }

@@ -2,7 +2,7 @@
 
 @keyframes attention {
 	0% {box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);}
-	100% {box-shadow: 0 0 0 calc(var(--width) / 8) rgba(0, 0, 0, 0);}
+	100% {box-shadow: 0 0 0 12.5vw rgba(0, 0, 0, 0);}
   }
 
 html {
@@ -199,7 +199,6 @@ html {
 	position: absolute;
 	top: 42%;
 	left: 52%;
-	animation: attention 2s forwards infinite;
 }
 #head_unit:hover {
 	animation: attention 2s forwards 2;

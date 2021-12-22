@@ -17,6 +17,7 @@
       </div>
     </div>
     <div id="main_window_screen" class="main_window">
+      <img id="main_window_screen_img" src="main_window_screen0.svg">
       <div id="main_window_screen_name" class="main_window_header"></div>
       <div class="close_button" onclick="closeMain()" onmouseover="hoverCloseButton()" onmouseout="unhoverCloseButton()">
         <img class="close_button_img" src="close.png">
@@ -88,10 +89,10 @@
           <div id="toggle_screen_button" class="toggle_button"></div>
         </div>
       </div>
-      <div id="screen_odysseus" class="shared_screen" onclick="screenToMain('Odysseus\' shared screen')">
+      <div id="screen_odysseus" class="shared_screen" onclick="screenToMain('Odysseus\' shared screen',0)">
         <div class="screen_owner">Odysseus' Screen</div>
       </div>
-      <div id="screen_helen" class="shared_screen" onclick="screenToMain('Helen\'s shared screen')">
+      <div id="screen_helen" class="shared_screen" onclick="screenToMain('Helen\'s shared screen',1)">
         <div class="screen_owner">Helen's Screen</div>
       </div>
       <div id="screen_new" class="shared_screen">
