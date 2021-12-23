@@ -15,8 +15,8 @@
   <div id="menu_bar_projects" class="menu_bar_item" onclick="openPageProjects()">projects</div>
   <div id="menu_bar_about" class="menu_bar_item menu_bar_item_active" onclick="openPageAbout()">about</div>
   <div id="menu_bar_line"></div>
-  <img id="menu_bar_facebook" class="menu_bar_icon" src="images/facebook.svg">
-  <img id="menu_bar_linkedin" class="menu_bar_icon" src="images/linkedin.svg">
+  <a href="https://www.facebook.com/mattis.kleine" target="_blank"><img id="menu_bar_facebook" class="menu_bar_icon" src="images/facebook.svg"></a>
+  <a href="https://no.linkedin.com/in/mattis-kleine-ab3522181" target="_blank"><img id="menu_bar_linkedin" class="menu_bar_icon" src="images/linkedin.svg">
 </div>
 <div id="scroll_header">
   <img id="scroll_header_img" src="images/scroll_background.jpg">
@@ -26,12 +26,12 @@
   <div id="scroll_header_text_subsub" class="scroll_header_text">Scroll down to see my CV!</div>
   <img id="scroll_header_arrow" class="scroll_header_text" src="images/arrow.svg" onclick="scrollDown()">
   <div id="scroll_header_bg">
-    <img id="scroll_header_bg_static" class="scroll_header_bg_element" src="images/bg/bg_parts_static.svg">
-    <img id="scroll_header_bg_move1" class="scroll_header_bg_element" src="images/bg/bg_parts_move1.svg">
-    <img id="scroll_header_bg_move2" class="scroll_header_bg_element" src="images/bg/bg_parts_move2.svg">
-    <img id="scroll_header_bg_move3" class="scroll_header_bg_element" src="images/bg/bg_parts_move3.svg">
-    <img id="scroll_header_bg_move4" class="scroll_header_bg_element" src="images/bg/bg_parts_move4.svg">
-    <img id="scroll_header_bg_move5" class="scroll_header_bg_element" src="images/bg/bg_parts_move5.svg">
+    <img id="scroll_header_bg_static" class="scroll_header_bg_element" src="images/bg/bg_parts_static.png">
+    <img id="scroll_header_bg_move1" class="scroll_header_bg_element" src="images/bg/bg_parts_move1.png">
+    <img id="scroll_header_bg_move2" class="scroll_header_bg_element" src="images/bg/bg_parts_move2.png">
+    <img id="scroll_header_bg_move3" class="scroll_header_bg_element" src="images/bg/bg_parts_move3.png">
+    <img id="scroll_header_bg_move4" class="scroll_header_bg_element" src="images/bg/bg_parts_move4.png">
+    <img id="scroll_header_bg_move5" class="scroll_header_bg_element" src="images/bg/bg_parts_move5.png">
   </div>
 </div>
 
@@ -76,6 +76,7 @@
     <img id="project0_img" class="project_img_even" src="images/preview_adam.png">
     <div id="project0_heading" class="project_heading_even">Binary Bamse</div>
     <div id="project0_subheading" class="project_subheading_even">B. Eng. Semester 2</div>
+    <div id="project0_keywords" class="project_keywords_even">UX &#183; UI &#183; edugame &#183; HCI</div>
     <div id="project0_hover" class="project_hover_even"></div>
   </div>
 
@@ -83,6 +84,7 @@
     <img id="project1_img" class="project_img_uneven" src="images/preview_cane.png">
     <div id="project1_heading" class="project_heading_uneven">iCan(e)</div>
     <div id="project1_subheading" class="project_subheading_uneven">B. Eng. Semester 1</div>
+    <div id="project1_keywords" class="project_keywords_uneven">healthcare &#183; user-centered design</div>
     <div id="project1_hover" class="project_hover_uneven"></div>
   </div>
 </div>
@@ -91,6 +93,7 @@
   <img id="project2_img" class="project_img_even" src="images/preview_ar.jpg">
   <div id="project2_heading" class="project_heading_even">Plug 'n' Play Car Parts</div>
   <div id="project2_subheading" class="project_subheading_even">M. Sc. Semester 2</div>
+  <div id="project2_keywords" class="project_keywords_even">AR &#183; IoT &#183; innovation</div>
   <div id="project2_hover" class="project_hover_even"></div>
 </div>
 
@@ -98,7 +101,18 @@
   <img id="project3_img" class="project_img_uneven" src="images/preview_vc.jpg">
   <div id="project3_heading" class="project_heading_uneven">Virtual Conferencing Revised</div>
   <div id="project3_subheading" class="project_subheading_uneven">M. Sc. Thesis</div>
+  <div id="project3_keywords" class="project_keywords_uneven">UX &#183; UI &#183; webDev &#183; frontend &#183; backend</div>
   <div id="project3_hover" class="project_hover_uneven"></div>
+</div>
+
+<div id="project4" class="project">
+  <div id="project4_heading">more projects to come soon...</div>
+  <ul id="to_come_ul">
+    <li class="to_come_li">autonomous on-shore e-ferry charger (mechanics & electronics)</li>
+    <li class="to_come_li">voice UI et al. for adjustable beds (AWS, alexa & app development)</li>
+    <li class="to_come_li">music through dance (IoT, wearbale tech, social exergame)</li>
+    <li class="to_come_li">café occupancy monitor (deep learning, visual recognition, IoT)</li>
+  </ul>
 </div>
 
 <iframe id="project0_content" class="project_content" src="objects/adam/project_adam.html"></iframe>

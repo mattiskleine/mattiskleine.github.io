@@ -118,3 +118,9 @@ body {
   padding: 0;
   line-height: 1.2vw;
 }
+
+#section2 {
+  position: absolute;
+  top: 125vw;
+  height: 20vw;
+}

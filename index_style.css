@@ -411,6 +411,18 @@ li {
   transform: translateX(50%);
 }
 
+.project_keywords_even {
+  position: absolute;
+  font-family: MontserratMedium;
+  font-size: 1vw;
+  color: #ffffff;
+  right: 12.5vw;
+  top: 20vw;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
 .project_img_uneven {
   position: absolute;
   right: 0;
@@ -452,6 +464,18 @@ li {
   transform: translateX(-50%);
 }
 
+.project_keywords_uneven {
+  position: absolute;
+  font-family: MontserratMedium;
+  font-size: 1vw;
+  color: #ffffff;
+  left: 12.5vw;
+  top: 20vw;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
 #project0 {
   top: 5vw;
 }
@@ -470,6 +494,35 @@ li {
 
 #project3 {
   top: 142vw;
+}
+
+#project4 {
+  top: 175vw;
+  cursor: auto;
+}
+
+#project4_heading {
+  position: absolute;
+  font-family: MontserratMedium;
+  font-size: 2vw;
+  color: #666666;
+  left: 50%;
+  top: 5vw;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#to_come_ul {
+  position: absolute;
+  top: 11vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+}
+
+.to_come_li {
+  font-family: Montserrat;
+  font-size: 1.4vw;
 }
 
 .project_content {
