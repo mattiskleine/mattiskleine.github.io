@@ -90,9 +90,12 @@ var scrollWindowActive = 1;
 function menuBarColor() {
   var item = document.getElementsByClassName('menu_bar_item');
   var icon = document.getElementsByClassName('menu_bar_icon');
+  var mobileBar = document.getElementsByClassName('menu_bar_mobile_bar');
   if (window.scrollY > 0) {
     document.getElementById('menu_bar').style.boxShadow = '0 .7vw .9vw -1.2vw #666666';
     document.getElementById('menu_bar').style.backgroundColor = '#ffffff';
+    mobileBar[0].style.backgroundColor = '#666666';
+    mobileBar[1].style.backgroundColor = '#666666';
     document.getElementById('menu_bar_line').style.backgroundColor = '#666666';
     document.getElementById('menu_bar_logo').style.filter = 'none';
     for(var i = 0; i < icon.length; i++) {
@@ -104,6 +107,8 @@ function menuBarColor() {
   } else {
     document.getElementById('menu_bar').style.boxShadow = 'none';
     document.getElementById('menu_bar').style.backgroundColor = '#1C1F22';
+    mobileBar[0].style.backgroundColor = '#ffffff';
+    mobileBar[1].style.backgroundColor = '#ffffff';
     document.getElementById('menu_bar_line').style.backgroundColor = '#eeeeee';
     document.getElementById('menu_bar_logo').style.filter = 'brightness(100)';
     for(var i = 0; i < icon.length; i++) {

@@ -113,6 +113,14 @@ li {
   filter: brightness(100);
 }
 
+#menu_bar_mobile {
+  display: none;
+}
+
+#menu_bar_mobile_header {
+  display: none;
+}
+
 .menu_bar_item {
   position: absolute;
   top: 50%;
@@ -125,11 +133,9 @@ li {
   transition: transform .2s, color .4s;
 }
 .menu_bar_item:hover {
-  color: #ffffff;
   transform: scale(1.1) translateY(-50%);
 }
 .menu_bar_item_active {
-  color: #ffffff;
   transform: scale(1.1) translateY(-50%);
   font-weight: bold;
 }
@@ -551,5 +557,100 @@ li {
 }
 
 #project3_content {
-  height: 125vw;
+  height: 147vw;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  #menu_bar {
+    height: 60px;
+    background-color: #444444;
+  }
+
+  #menu_bar_mobile_header {
+    display: block;
+    position: absolute;
+    top: 60px;
+    height: 40px;
+    left: 0;
+    right: 0;
+    background-color: #666666;
+  }
+
+  #menu_bar_logo {
+    height: 30px;
+  }
+
+  .menu_bar_item {
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform .2s, color .4s;
+    top: 80px;
+  }
+  .menu_bar_item:hover {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  .menu_bar_item_active {
+    transform: scale(1) translate(-50%, -50%);
+    font-weight: bold;
+  }
+
+  #menu_bar_projects {
+    left: calc(50% - 44px);
+  }
+
+  #menu_bar_about {
+    left: calc(50% + 50px);
+  }
+
+  #menu_bar_line {
+    display: none;
+  }
+
+  .menu_bar_icon {
+    bottom: 18px;
+    height: 14px;
+  }
+
+  #menu_bar_facebook {
+    right: 20px;
+  }
+
+  #menu_bar_linkedin {
+    right: 40px;
+  }
+
+  #menu_bar_mobile {
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    width: 30px;
+    height: 16px;
+  }
+
+  .menu_bar_mobile_bar {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    transition: background-color .3s;
+    left: 0;
+  }
+
+  #menu_bar_mobile_top {
+    top: 0;
+  }
+
+  #menu_bar_mobile_bottom {
+    position: absolute;
+    top: 12px;
+  }
 }
