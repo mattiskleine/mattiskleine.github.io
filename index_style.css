@@ -181,7 +181,7 @@ li {
   top: 5vw;
   left: 0;
   width: 100vw;
-  height: 38vw;
+  height: 33vw;
   overflow: hidden;
 }
 
@@ -189,7 +189,8 @@ li {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 100vw;
+  min-width: 100vw;
+  min-height: 100%;
   transform: translateY(-50%);
 }
 
@@ -222,7 +223,7 @@ li {
   font-family: MontserratMedium;
   font-size: 2vw;
   top: 11vw;
-  width: 42vw;
+  width: 44vw;
   line-height: 3vw;
 }
 
@@ -495,15 +496,15 @@ li {
 }
 
 #project2 {
-  top: 109vw;
+  top: 71vw;
 }
 
 #project3 {
-  top: 142vw;
+  top: 104vw;
 }
 
 #project4 {
-  top: 175vw;
+  top: 137vw;
   cursor: auto;
 }
 
@@ -565,80 +566,96 @@ li {
 
 
 @media only screen and (max-width: 800px) {
+
+  #alerts {
+    top: 20px;
+    font-size: 2.5vw;
+    text-align: center;
+    padding: 20px;
+  }
+
   #menu_bar {
-    height: 60px;
-    background-color: #444444;
+    height: calc(50px + 2vw);
   }
 
   #menu_bar_mobile_header {
     display: block;
     position: absolute;
-    top: 60px;
-    height: 40px;
+    top: calc(50px + 2vw);
     left: 0;
+    height: calc(50px + 2vw);
     right: 0;
-    background-color: #666666;
+    background-color: #434E59;
+    transform-origin: top center;
+    transform: scaleY(0);
+    transition: transform .3s;
   }
 
   #menu_bar_logo {
-    height: 30px;
+    height: calc(30px + 1vw);
+    left: 20vw;
   }
 
   .menu_bar_item {
-    transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 3vw;
     color: #ffffff;
     cursor: pointer;
-    transform: scale(1) translate(-50%, -50%);
     transition: transform .2s, color .4s;
-    top: 80px;
-  }
-  .menu_bar_item:hover {
-    transform: scale(1) translate(-50%, -50%);
-  }
-  .menu_bar_item_active {
-    transform: scale(1) translate(-50%, -50%);
-    font-weight: bold;
+    top: 45%;
+    transform: scale(1) translate(0, -50%);
+    display: none;
   }
 
   #menu_bar_projects {
-    left: calc(50% - 44px);
+    left: 15%;
+  }
+  #menu_bar_projects:hover {
+    transform: scale(1) translate(0, -50%);
+  }
+  #menu_bar_projects:active {
+    transform: scale(1) translate(0, -50%);
   }
 
   #menu_bar_about {
-    left: calc(50% + 50px);
+    transform: scale(1) translate(0, -50%);
+    left: 65%;
+  }
+  #menu_bar_about:hover {
+    transform: scale(1) translate(0, -50%);
+  }
+  #menu_bar_about:active {
+    transform: scale(1) translate(0, -50%);
   }
 
   #menu_bar_line {
+    top: calc(50% + 2vw);
+    left: 65.4vw;
+    right: 26vw;
+    height: 0.4vw;
+    transform: translateY(-50%);
     display: none;
   }
 
   .menu_bar_icon {
-    bottom: 18px;
-    height: 14px;
-  }
-
-  #menu_bar_facebook {
-    right: 20px;
-  }
-
-  #menu_bar_linkedin {
-    right: 40px;
+    display: none;
   }
 
   #menu_bar_mobile {
     display: block;
     position: absolute;
-    top: 24px;
-    left: 20px;
-    width: 30px;
-    height: 16px;
+    bottom: calc(50% - 6px);
+    right: 5vw;
+    width: calc(20px + 2vw);
+    height: calc(15px + 1vw);
+    transform: translateY(50%);
+    z-index: 1;
+    cursor: pointer;
   }
 
   .menu_bar_mobile_bar {
     position: absolute;
-    width: 30px;
-    height: 4px;
+    width: 100%;
+    height: calc(2px + 0.5vw);
     border-radius: 100px;
     background-color: #ffffff;
     transition: background-color .3s;
@@ -646,11 +663,145 @@ li {
   }
 
   #menu_bar_mobile_top {
-    top: 0;
+    top: 0px;
   }
 
   #menu_bar_mobile_bottom {
     position: absolute;
-    top: 12px;
+    bottom: 0;
   }
+
+  #scroll_header {
+    height: 95vh;
+  }
+
+  #content {
+    top: 100vh;
+  }
+
+  #scroll_header_text_header {
+    top: 26vh;
+    font-size: 7vw;
+  }
+
+  #scroll_header_text_sub {
+    top: 43vh;
+    line-height: 5vw;
+    font-size: 3.5vw;
+    width: 84vw;
+  }
+
+  #scroll_header_text_subsub {
+    top: 69vh;
+    font-size: 2.5vw;
+  }
+
+  #scroll_header_arrow {
+    top: 79vh;
+    width: 5vw;
+  }
+  #scroll_header_arrow:hover {
+    top: 79vh;
+  }
+
+  #scroll_header_bg {
+    top: 10vh;
+    width: 80vh;
+    height: 80vh;
+    left: -33vh;
+  }
+
+  #cv {
+    top: 20px;
+    left: 50%;
+    transition: opacity .3s;
+    width: calc(100vw - 40px);
+    height: calc((100vw - 40px) * 1.41);
+    box-shadow: 0.6vw 0.83vw 1.19vw #aaaaaa;
+    border: none;
+  }
+
+  #cv_pdf {
+    position: absolute;
+    top: 142vw;
+    left: 58%;
+    width: 52%;
+    transform: translateX(-50%);
+    font-family: MontserratMedium;
+    font-size: 4vw;
+    color: #666666;
+  }
+
+  #cv_pdf_img {
+    position: absolute;
+    top: 138vw;
+    left: 20vw;
+    width: 10vw;
+  }
+
+  #competence_profile {
+    position: absolute;
+    top: 156vw;
+    padding: 5vw 20vw;
+    width: 60vw;
+    background-color: #fafafa;
+    transition: opacity .3s;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  #alerts {
+    font-size: 4vw;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #menu_bar_logo {
+    left: 30vw;
+  }
+
+  .menu_bar_item {
+    font-size: 5vw;
+  }
+
+  #menu_bar_line {
+    top: calc(50% + 3vw);
+    left: 65.4vw;
+    right: 20vw;
+    height: 0.5vw;
+  }
+
+  #scroll_header_text_header {
+    top: 23vh;
+    font-size: 10vw;
+    width: 100vw;
+  }
+
+  #scroll_header_text_sub {
+    top: 35vh;
+    line-height: 7vw;
+    font-size: 5vw;
+    width: 90vw;
+  }
+
+  #scroll_header_text_subsub {
+    top: 58vh;
+    font-size: 5vw;
+    width: 100vw;
+  }
+
+  #scroll_header_arrow {
+    top: 68vh;
+    width: 10vw;
+  }
+  #scroll_header_arrow:hover {
+    top: 68vh;
+  }
+
+  #scroll_header_bg {
+    display: none;
+  }
+
 }

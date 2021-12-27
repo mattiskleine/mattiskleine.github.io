@@ -120,24 +120,22 @@ body {
   color: #dddddd;
   font-family: MontserratLight;
   letter-spacing: 0.079vw;
+  text-decoration: none;
 }
 
 #header_information_phone {
   position: absolute;
-  text-decoration: none;
   cursor: pointer;
 }
 
 #header_information_email {
   position: absolute;
   top: 3.1vw;
-  text-decoration: none;
 }
 
 #header_information_website {
   position: absolute;
   top: 6.2vw;
-  text-decoration: none;
 }
 
 .heading {

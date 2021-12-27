@@ -1,5 +1,13 @@
 window.onload = function() {
-  showAlert('this site is still in development. please excuse any glitches :)', 4000);
+  if(window.innerWidth <= 800) {
+    showAlert('use a bigger screen for a more immersive experience :)', 5000);
+    document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_projects'));
+    document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_about'));
+    document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_line'));
+    document.getElementById('menu_bar_projects').style.display = 'block';
+    document.getElementById('menu_bar_about').style.display = 'block';
+    document.getElementById('menu_bar_line').style.display = 'block';
+  }
 }
 
 window.addEventListener('unload', (e) => {
@@ -20,6 +28,25 @@ function showAlert(x,t) {
   }, 20);
 }
 
+var mobileMenu = 0;
+function toggleMobileMenu() {
+  if(mobileMenu == 0) {
+    mobileMenu = 1;
+    document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(1)';
+    window.addEventListener('scroll', closeMobileMenu);
+  } else if(mobileMenu == 1) {
+    mobileMenu = 0;
+    document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(0)';
+    window.removeEventListener('scroll', closeMobileMenu);
+  }
+}
+
+function closeMobileMenu() {
+  mobileMenu = 0;
+  document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(0)';
+  window.removeEventListener('scroll', closeMobileMenu);
+}
+
 var projectActive = 0;
 var latestScrollPos = 0;
 var scrollPosBefore = 0;
@@ -38,6 +65,17 @@ function openPageProjects() {
     document.getElementById('menu_bar_line').style.right = "90.3vw";
     showProjectPreviews();
   }, 200);
+  if(window.innerWidth <= 800) {
+    document.getElementById('menu_bar_line').style.left = "15vw";
+    setTimeout(() => {
+      document.getElementById('menu_bar_line').style.right = "72.5vw";
+    }, 200);
+  }
+  if(window.innerWidth <= 500) {
+    setTimeout(() => {
+      document.getElementById('menu_bar_line').style.right = "64.5vw";
+    }, 200);
+  }
   document.getElementById('menu_bar_about').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_projects').classList.add('menu_bar_item_active');
 
@@ -47,7 +85,7 @@ function openPageProjects() {
   document.getElementById('cv_pdf').style.opacity = '0';
   document.getElementById('cv_pdf_img').style.opacity = '0';
   document.getElementById('competence_profile').style.opacity = '0';
-  setTimeout(function(){
+  setTimeout(() => {
     document.getElementById('cv').style.display = 'none';
     document.getElementById('cv_pdf').style.display = 'none';
     document.getElementById('cv_pdf_img').style.display = 'none';
@@ -64,12 +102,21 @@ function openPageAbout() {
   }
 
   document.getElementById('menu_bar_line').style.right = "84.4vw";
+  if(window.innerWidth <= 800) {
+    document.getElementById('menu_bar_line').style.right = "26vw";
+  }
+  if(window.innerWidth <= 500) {
+    document.getElementById('menu_bar_line').style.right = "20vw";
+  }
   document.getElementById('cv').style.display = 'block';
   document.getElementById('cv_pdf').style.display = 'block';
   document.getElementById('cv_pdf_img').style.display = 'block';
   document.getElementById('competence_profile').style.display = 'block';
   setTimeout(function(){
     document.getElementById('menu_bar_line').style.left = "11.8vw";
+    if(window.innerWidth <= 800) {
+      document.getElementById('menu_bar_line').style.left = "65vw";
+    }
     document.getElementById('cv').style.opacity = '1';
     document.getElementById('cv_pdf').style.opacity = '1';
     document.getElementById('cv_pdf_img').style.opacity = '1';
@@ -92,8 +139,10 @@ function menuBarColor() {
   var icon = document.getElementsByClassName('menu_bar_icon');
   var mobileBar = document.getElementsByClassName('menu_bar_mobile_bar');
   if (window.scrollY > 0) {
-    document.getElementById('menu_bar').style.boxShadow = '0 .7vw .9vw -1.2vw #666666';
+    document.getElementById('menu_bar').style.boxShadow = '0 5px 10px -8px #666666';
     document.getElementById('menu_bar').style.backgroundColor = '#ffffff';
+    document.getElementById('menu_bar_mobile_header').style.boxShadow = '0 5px 10px -8px #666666';
+    document.getElementById('menu_bar_mobile_header').style.backgroundColor = '#eeeeee';
     mobileBar[0].style.backgroundColor = '#666666';
     mobileBar[1].style.backgroundColor = '#666666';
     document.getElementById('menu_bar_line').style.backgroundColor = '#666666';
@@ -107,6 +156,8 @@ function menuBarColor() {
   } else {
     document.getElementById('menu_bar').style.boxShadow = 'none';
     document.getElementById('menu_bar').style.backgroundColor = '#1C1F22';
+    document.getElementById('menu_bar_mobile_header').style.boxShadow = 'none';
+    document.getElementById('menu_bar_mobile_header').style.backgroundColor = '#434E59';
     mobileBar[0].style.backgroundColor = '#ffffff';
     mobileBar[1].style.backgroundColor = '#ffffff';
     document.getElementById('menu_bar_line').style.backgroundColor = '#eeeeee';
@@ -132,13 +183,37 @@ function menuBarColor() {
   } else {
     document.getElementById('scroll_header').style.display = 'none';
   }
+
+  if(window.innerWidth <= 800) {
+    scrollHeightDesired = window.innerHeight / 100 * 50;
+    opacity = 1 - (1 / scrollHeightDesired * window.scrollY);
+    if(window.scrollY <= scrollHeightDesired) {
+      for(var i = 0; i < texts.length; i++) {
+        texts[i].style.opacity = opacity;
+        document.getElementById('scroll_header_bg').style.opacity = opacity / 2;
+      }
+    }
+    if(window.scrollY < window.innerHeight && scrollWindowActive == 1) {
+      document.getElementById('scroll_header').style.display = 'block';
+    } else {
+      document.getElementById('scroll_header').style.display = 'none';
+    }
+  }
+
 }
 
 function scrollDown() {
-  window.scrollTo({
-    top: window.innerWidth / 100 * 33,
-    behavior: 'smooth'
-  });
+  if(window.innerWidth <= 800) {
+    window.scrollTo({
+      top: window.innerHeight - 50 - window.innerWidth/100*2,
+      behavior: 'smooth'
+    });
+  } else {
+    window.scrollTo({
+      top: window.innerWidth / 100 * 33,
+      behavior: 'smooth'
+    });
+  }
 }
 
 function hoverProject(x) {
