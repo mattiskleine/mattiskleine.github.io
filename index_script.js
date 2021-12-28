@@ -49,16 +49,20 @@ function showAlert(x,t) {
 var mobileMenu = 0;
 function toggleMobileMenu() {
   if(mobileMenu == 0) {
-    mobileMenu = 1;
-    document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(1)';
-    document.getElementById('menu_bar_mobile_top').style.transform = 'rotate(35deg)';
-    document.getElementById('menu_bar_mobile_top').style.top = 'calc(50% - 1px - 0.25vw)';
-    document.getElementById('menu_bar_mobile_bottom').style.transform = 'rotate(-35deg)';
-    document.getElementById('menu_bar_mobile_bottom').style.bottom = 'calc(50% - 1px - 0.25vw)';
-    document.getElementById('menu_bar_mobile').style.bottom = '50%';
+    openMobileMenu();
   } else if(mobileMenu == 1) {
     closeMobileMenu();
   }
+}
+
+function openMobileMenu() {
+  mobileMenu = 1;
+  document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(1)';
+  document.getElementById('menu_bar_mobile_top').style.transform = 'rotate(35deg)';
+  document.getElementById('menu_bar_mobile_top').style.top = 'calc(50% - 1px - 0.25vw)';
+  document.getElementById('menu_bar_mobile_bottom').style.transform = 'rotate(-35deg)';
+  document.getElementById('menu_bar_mobile_bottom').style.bottom = 'calc(50% - 1px - 0.25vw)';
+  document.getElementById('menu_bar_mobile').style.bottom = '50%';
 }
 
 function closeMobileMenu() {
@@ -220,8 +224,8 @@ function menuBarColor() {
     } else {
       document.getElementById('scroll_header').style.display = 'none';
     }
+    closeMobileMenu();
   }
-
 }
 
 function scrollDown() {
