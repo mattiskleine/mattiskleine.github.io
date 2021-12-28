@@ -1,12 +1,30 @@
 window.onload = function() {
   if(window.innerWidth <= 800) {
-    showAlert('use a bigger screen for a more immersive experience :)', 5000);
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_projects'));
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_about'));
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_line'));
     document.getElementById('menu_bar_projects').style.display = 'block';
     document.getElementById('menu_bar_about').style.display = 'block';
     document.getElementById('menu_bar_line').style.display = 'block';
+    var compList = document.getElementsByClassName('competence_li');
+    compList[0].innerHTML = 'Innovative view on product and concept design';
+    compList[1].innerHTML = 'Analysis of user interaction with concept/product';
+    compList[2].innerHTML = 'Focus on user involvment (initial surveys & final tests)';
+    compList[3].innerHTML = 'Centered on mechatronical products';
+    compList[4].innerHTML = 'Assessment & application of research results';
+
+    compList[5].innerHTML = 'Detailed knowledge of IT-related disciplines';
+    compList[6].innerHTML = 'Planning, managing and implementing of projects';
+    compList[7].innerHTML = 'Systematical familiarization with new subject areas';
+    compList[8].innerHTML = 'Communication of IT concepts to audiences';
+    compList[9].innerHTML = 'Link between IT and other subject areas, such as:';
+    compList[10].innerHTML = 'Sustainability, healthcare, education, industry, etc.';
+
+    compList[11].innerHTML = 'Frontend: HTML5, CSS, JavaScript + frameworks';
+    //compList[12].innerHTML = 'Backend: Node.js, C, C++';
+    compList[13].innerHTML = '2D Design: Illustrator, Photoshop, DaVinci Resolve';
+    compList[14].innerHTML = '3D Design: Fusion360, Inventor, NX, Blender';
+    compList[15].innerHTML = 'Prototyping: hardware workshop and electronics';
   }
 }
 
@@ -33,18 +51,24 @@ function toggleMobileMenu() {
   if(mobileMenu == 0) {
     mobileMenu = 1;
     document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(1)';
-    window.addEventListener('scroll', closeMobileMenu);
+    document.getElementById('menu_bar_mobile_top').style.transform = 'rotate(35deg)';
+    document.getElementById('menu_bar_mobile_top').style.top = 'calc(50% - 1px - 0.25vw)';
+    document.getElementById('menu_bar_mobile_bottom').style.transform = 'rotate(-35deg)';
+    document.getElementById('menu_bar_mobile_bottom').style.bottom = 'calc(50% - 1px - 0.25vw)';
+    document.getElementById('menu_bar_mobile').style.bottom = '50%';
   } else if(mobileMenu == 1) {
-    mobileMenu = 0;
-    document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(0)';
-    window.removeEventListener('scroll', closeMobileMenu);
+    closeMobileMenu();
   }
 }
 
 function closeMobileMenu() {
   mobileMenu = 0;
   document.getElementById('menu_bar_mobile_header').style.transform = 'scaleY(0)';
-  window.removeEventListener('scroll', closeMobileMenu);
+  document.getElementById('menu_bar_mobile_top').style.transform = 'rotate(0deg)';
+  document.getElementById('menu_bar_mobile_top').style.top = '0';
+  document.getElementById('menu_bar_mobile_bottom').style.transform = 'rotate(0deg)';
+  document.getElementById('menu_bar_mobile_bottom').style.bottom = '0';
+  document.getElementById('menu_bar_mobile').style.bottom = 'calc(50% - 6px)';
 }
 
 var projectActive = 0;
@@ -66,14 +90,14 @@ function openPageProjects() {
     showProjectPreviews();
   }, 200);
   if(window.innerWidth <= 800) {
-    document.getElementById('menu_bar_line').style.left = "15vw";
+    document.getElementById('menu_bar_line').style.left = "20.3vw";
     setTimeout(() => {
-      document.getElementById('menu_bar_line').style.right = "72.5vw";
+      document.getElementById('menu_bar_line').style.right = "67.5vw";
     }, 200);
   }
   if(window.innerWidth <= 500) {
     setTimeout(() => {
-      document.getElementById('menu_bar_line').style.right = "64.5vw";
+      document.getElementById('menu_bar_line').style.right = "59.5vw";
     }, 200);
   }
   document.getElementById('menu_bar_about').classList.remove('menu_bar_item_active');
@@ -103,10 +127,10 @@ function openPageAbout() {
 
   document.getElementById('menu_bar_line').style.right = "84.4vw";
   if(window.innerWidth <= 800) {
-    document.getElementById('menu_bar_line').style.right = "26vw";
+    document.getElementById('menu_bar_line').style.right = "41vw";
   }
   if(window.innerWidth <= 500) {
-    document.getElementById('menu_bar_line').style.right = "20vw";
+    document.getElementById('menu_bar_line').style.right = "35vw";
   }
   document.getElementById('cv').style.display = 'block';
   document.getElementById('cv_pdf').style.display = 'block';
@@ -115,7 +139,7 @@ function openPageAbout() {
   setTimeout(function(){
     document.getElementById('menu_bar_line').style.left = "11.8vw";
     if(window.innerWidth <= 800) {
-      document.getElementById('menu_bar_line').style.left = "65vw";
+      document.getElementById('menu_bar_line').style.left = "50vw";
     }
     document.getElementById('cv').style.opacity = '1';
     document.getElementById('cv_pdf').style.opacity = '1';
@@ -141,7 +165,6 @@ function menuBarColor() {
   if (window.scrollY > 0) {
     document.getElementById('menu_bar').style.boxShadow = '0 5px 10px -8px #666666';
     document.getElementById('menu_bar').style.backgroundColor = '#ffffff';
-    document.getElementById('menu_bar_mobile_header').style.boxShadow = '0 5px 10px -8px #666666';
     document.getElementById('menu_bar_mobile_header').style.backgroundColor = '#eeeeee';
     mobileBar[0].style.backgroundColor = '#666666';
     mobileBar[1].style.backgroundColor = '#666666';
@@ -156,7 +179,6 @@ function menuBarColor() {
   } else {
     document.getElementById('menu_bar').style.boxShadow = 'none';
     document.getElementById('menu_bar').style.backgroundColor = '#1C1F22';
-    document.getElementById('menu_bar_mobile_header').style.boxShadow = 'none';
     document.getElementById('menu_bar_mobile_header').style.backgroundColor = '#434E59';
     mobileBar[0].style.backgroundColor = '#ffffff';
     mobileBar[1].style.backgroundColor = '#ffffff';

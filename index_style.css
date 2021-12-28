@@ -363,6 +363,15 @@ li {
   line-height: normal;
 }
 
+.dot {
+  width: .45vw;
+  height: .45vw;
+  background-color: #444444;
+  display: inline-block;
+  margin: 0 1.5vw .1vw 1.5vw;
+  border-radius: 10vw;
+}
+
 .project {
   position: absolute;
   left: 50%;
@@ -581,14 +590,14 @@ li {
   #menu_bar_mobile_header {
     display: block;
     position: absolute;
-    top: calc(50px + 2vw);
+    top: 0;
     left: 0;
     height: calc(50px + 2vw);
     right: 0;
     background-color: #434E59;
     transform-origin: top center;
     transform: scaleY(0);
-    transition: transform .3s;
+    transition: transform .5s;
   }
 
   #menu_bar_logo {
@@ -607,7 +616,7 @@ li {
   }
 
   #menu_bar_projects {
-    left: 15%;
+    left: 20vw;
   }
   #menu_bar_projects:hover {
     transform: scale(1) translate(0, -50%);
@@ -618,7 +627,7 @@ li {
 
   #menu_bar_about {
     transform: scale(1) translate(0, -50%);
-    left: 65%;
+    left: 50vw;
   }
   #menu_bar_about:hover {
     transform: scale(1) translate(0, -50%);
@@ -629,8 +638,8 @@ li {
 
   #menu_bar_line {
     top: calc(50% + 2vw);
-    left: 65.4vw;
-    right: 26vw;
+    left: 50vw;
+    right: 41vw;
     height: 0.4vw;
     transform: translateY(-50%);
     display: none;
@@ -650,6 +659,7 @@ li {
     transform: translateY(50%);
     z-index: 1;
     cursor: pointer;
+    transition: bottom .5s;
   }
 
   .menu_bar_mobile_bar {
@@ -658,12 +668,12 @@ li {
     height: calc(2px + 0.5vw);
     border-radius: 100px;
     background-color: #ffffff;
-    transition: background-color .3s;
+    transition: background-color .3s, transform .5s, top .5s, bottom .5s;
     left: 0;
   }
 
   #menu_bar_mobile_top {
-    top: 0px;
+    top: 0;
   }
 
   #menu_bar_mobile_bottom {
@@ -672,7 +682,8 @@ li {
   }
 
   #scroll_header {
-    height: 95vh;
+    top: calc(50px + 2vw);
+    height: calc(100vh - 50px - 2vw);
   }
 
   #content {
@@ -740,13 +751,32 @@ li {
   }
 
   #competence_profile {
-    position: absolute;
-    top: 156vw;
-    padding: 5vw 20vw;
-    width: 60vw;
-    background-color: #fafafa;
-    transition: opacity .3s;
+    top: 160vw;
+    padding: 10vw 0;
+    width: 100vw;
   }
+
+  #competence_heading {
+    font-size: 8vw;
+    margin-bottom: 10vw;
+  }
+
+  .competence_h {
+    font-size: 6vw;
+    margin: 15vw 10vw 2vw 10vw;
+  }
+
+  .competence_ul {
+    margin: 5vw 10vw;
+    padding-left: 5vw;
+  }
+
+  .competence_li {
+    font-size: 5vw;
+    line-height: normal;
+    padding: 2vw;
+  }
+
 
 }
 
@@ -768,8 +798,8 @@ li {
 
   #menu_bar_line {
     top: calc(50% + 3vw);
-    left: 65.4vw;
-    right: 20vw;
+    left: 50vw;
+    right: 35vw;
     height: 0.5vw;
   }
 
