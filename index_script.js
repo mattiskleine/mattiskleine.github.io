@@ -94,6 +94,7 @@ function openPageProjects() {
     showProjectPreviews();
   }, 200);
   if(window.innerWidth <= 800) {
+    document.getElementById('content').style.height = "400vw";
     document.getElementById('menu_bar_line').style.left = "20.3vw";
     setTimeout(() => {
       document.getElementById('menu_bar_line').style.right = "67.5vw";
@@ -131,6 +132,7 @@ function openPageAbout() {
 
   document.getElementById('menu_bar_line').style.right = "84.4vw";
   if(window.innerWidth <= 800) {
+    document.getElementById('content').style.height = "559vw";
     document.getElementById('menu_bar_line').style.right = "41vw";
   }
   if(window.innerWidth <= 500) {
@@ -247,6 +249,7 @@ function hoverProject(x) {
   document.getElementById('project' + x).style.backgroundColor = '#222222';
   document.getElementById('project' + x + '_heading').style.color = '#eeeeee';
   document.getElementById('project' + x + '_keywords').style.opacity = '1';
+  document.getElementById('project' + x + '_keywords').style.color = '#eeeeee';
 }
 
 function unhoverProject(x) {
@@ -254,6 +257,10 @@ function unhoverProject(x) {
   document.getElementById('project' + x).style.backgroundColor = '#eeeeee';
   document.getElementById('project' + x + '_heading').style.color = '#444444';
   document.getElementById('project' + x + '_keywords').style.opacity = '0';
+  document.getElementById('project' + x + '_keywords').style.color = '#444444';
+  if(window.innerWidth <= 800) {
+    document.getElementById('project' + x + '_keywords').style.opacity = '1';
+  }
 }
 
 function openProject(x) {
