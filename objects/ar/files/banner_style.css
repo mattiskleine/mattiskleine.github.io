@@ -51,11 +51,19 @@ body {
   position: absolute;
   top: 0;
   left: 73.5%;
+  width: 0;
+  height: 100%;
+  cursor: col-resize;
+  animation: sliderInteraction 5s infinite;
+}
+
+#slider_line {
+  position: absolute;
+  top: 0;
+  left: -0.15vw;
   width: 0.3vw;
   height: 100%;
   background-color: #444444;
-  cursor: col-resize;
-  animation: sliderInteraction 5s infinite;
 }
 
 @keyframes sliderInteraction {
@@ -72,4 +80,17 @@ body {
   18% {width: 75.5%;}
   24% {width: 73.5%;}
   100% {width: 73.5%;}
+}
+
+@media only screen and (max-width: 800px) {
+
+  #slider {
+    width: 3vw;
+    transform: translateX(-50%);
+  }
+
+  #slider_line {
+    left: 1.35vw;
+  }
+
 }

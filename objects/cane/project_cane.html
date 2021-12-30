@@ -83,7 +83,7 @@
       </div>
       <img id="magnifying_glass" src="magnifying_glass.svg">
       <div id="animation_force_play_state">play animation
-        <div class="toggle_container" onclick="toggleAnimationForce()" style="width: 2.5vw;">
+        <div id="force_ani_toggle" class="toggle_container" onclick="toggleAnimationForce()">
           <div class="toggle_button"></div>
         </div>
       </div>
@@ -102,7 +102,7 @@
       </p>
     </div>
     <img id="scroll_arrow" src="arrow.svg" onclick="scrollDownAni()" onmouseover="stopArrowAni()">
-    <video id="cane_animation_foot" muted loop>
+    <video id="cane_animation_foot" muted loop playsinline>
       <source src="cane_animation_foot.mp4" type="video/mp4">
     </video>
     <img id="canvas_screen" src="canvas_screen.png">

@@ -28,12 +28,21 @@ body {
   overflow: hidden;
 }
 
-#sliding_banner {
+#sliding_banner_container {
   position: absolute;
   top: 6.8%;
-  left: -16%;
-  width: 112%;
-  height: 87%;
+  left: 5%;
+  right: 5%;
+  bottom: 6.8%;
+  overflow: hidden;
+}
+
+#sliding_banner {
+  position: absolute;
+  top: 0;
+  left: -23.2%;
+  width: 124.3%;
+  height: 100%;
   border: none;
 }
 
@@ -152,4 +161,123 @@ body {
   transform: translate(-50%, -26vw);
   pointer-events: none;
   transition: transform 1s;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .section {
+    padding-top: 4vw;
+  }
+
+  #section0 {
+    height: 110vw;
+  }
+
+  #sliding_banner_con {
+    top: 40vw;
+    left: 5vw;
+    width: 90vw;
+    height: 65.3vw;
+  }
+
+  #section1 {
+    top: 114vw;
+    height: 290vw;
+  }
+
+  #iphone_proto {
+    top: 120vw;
+    left: 10vw;
+    width: 80vw;
+    height: 160vw;
+  }
+
+  #section1_text {
+    position: absolute;
+    top: 8vw;
+    left: 8vw;
+    width: 84vw;
+  }
+
+  #section1_text h2 {
+    text-align: center;
+    margin: 0 0 2vw 0;
+  }
+
+  #section1_text p {
+    margin: 0;
+    text-align: center;
+  }
+
+  #section1_text ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 10vw -6vw 6vw -6vw;
+  }
+
+  #parts_list {
+    display: none;
+  }
+
+  #section1_text li {
+    padding: 0 0 5vw 0;
+    font-size: 4.5vw;
+    line-height: 4vw;
+  }
+
+  .parts_list {
+    padding-bottom: 0;
+  }
+
+  #section2 {
+    top: 408vw;
+    height: 110vw;
+  }
+
+  #section2_text {
+    position: absolute;
+    top: 5vw;
+    left: 12vw;
+    width: 76vw;
+  }
+
+  #section2_text p {
+    margin: 0;
+  }
+
+  #section2_text h2 {
+    margin-bottom: 2vw;
+  }
+
+  #mechanism {
+    display: none;
+  }
+
+  #circuit {
+    display: none;
+  }
+
+  #video_frame {
+    top: 59.7vw;
+    width: 74.7vw;
+    height: 42vw;
+  }
+
+  #canvas_top_top {
+    top: 50vw;
+    width: 90vw;
+    left: 50%;
+  }
+
+  #canvas_top_middle {
+    top: 59.7vw;
+    width: 83vw;
+  }
+
+  #canvas_top_bottom {
+    top: 100.1vw;
+    width: 87vw;
+  }
+
 }

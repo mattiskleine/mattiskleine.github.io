@@ -6,13 +6,15 @@
 <link rel="stylesheet" href="project_ar_style.css">
 <title></title>
 </head>
-<body>
+<body onload="initAR()">
 
   <div id="section0" class="section">
     <h1>Plug 'n' Play Car Parts</h1>
     <p>View optional interior car parts in AR and switch them with the press of a button!</p>
     <div id="sliding_banner_con">
-      <iframe id="sliding_banner" src="files/banner.html"></iframe>
+      <div id="sliding_banner_container">
+        <iframe id="sliding_banner" src="files/banner.html"></iframe>
+      </div>
       <img id="ipad" src="files/ipad.svg">
     </div>
   </div>
@@ -26,10 +28,10 @@
         Ethnographic studies showed the urge for and pride in DIY and customized products. This concept proposes:
       </p>
       <ul>
-        <li>Interior part design that allows easy exchangeability through electromagnetic mechanisms</li>
-        <li>Augmented reality enabled app that allows viewing of optional parts and purchase</li>
-        <li>Interior parts store with optional parts such as:</li>
-        <ul>
+        <li>interior part design that allows easy exchangeability through electromagnetic mechanisms</li>
+        <li>augmented reality enabled app that allows viewing of optional parts and purchase</li>
+        <li class="vp_changed">interior parts store with optional parts, such as.:</li>
+        <ul id="parts_list">
           <li class="parts_list">dashboard</li>
           <li class="parts_list">head unit</li>
           <li class="parts_list">steering wheel</li>
@@ -38,7 +40,7 @@
           <li class="parts_list">headrest</li>
         </ul>
       </ul>
-      <p>
+      <p class="vp_changed">
         The interactive mockup to the left conveys the general idea.</br>
         Check it out!
       </p>
@@ -49,7 +51,7 @@
   <div id="section2" class="section">
     <div id="section2_text">
       <h2>Prototype</h2>
-      <p>
+      <p class="vp_changed">
         A functional prototype was built to test the AR and electromagnetic mechanism.</br>
         See the schematics and in-action video below!
       </p>

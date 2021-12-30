@@ -10,7 +10,9 @@
 		<div id="slider_img" draggable="false">
 			<img id="old_img" src="unit_old.png" draggable="false">
 		</div>
-		<div id="slider" onmousedown="slide()"></div>
+		<div id="slider" onmousedown="slide()" ontouchstart="slideTouch()">
+			<div id="slider_line"></div>
+		</div>
 	</div>
 </body>
 </html>

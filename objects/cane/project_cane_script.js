@@ -2,6 +2,10 @@ var modelViewer;
 var fieldOfViewLast;
 
 function initCane() {
+  if(parent.window.innerWidth <= 800) {
+    document.getElementById('pan').innerHTML = 'Swipe left/right before up/down. For better interaction, use a mouse!';
+    document.getElementById('section1_text').innerHTML = 'The scope of this 1st semster project led me to working closely together with a local Parkinson\'s club in order to address the problematic posture Parkinson\'s patients develop. Turns out their bodies are actually still capable of a good upright posture. It is the feedback about the body\'s current posture that goes missing, which then slowly but surely leads to the typical hunch.</br></br>Collaboration with various physiotherapists helped me to design a cane, which senses a bad posture and gives a gentle reminder to straighten up.';
+  }
   toggleAnimationForce();
   modelViewer = document.getElementById('cane_model');
   modelViewer.addEventListener('load', () => {
@@ -103,7 +107,11 @@ function toggleButtonOff(x) {
   var button = document.getElementsByClassName("toggle_button");
   var container = document.getElementsByClassName("toggle_container");
   buttonStage[x] = 0;
-  button[x].style.transform = "translateX(1vw)";
+  if(parent.window.innerWidth <= 800) {
+    button[x].style.transform = "translateX(4vw)";
+  } else {
+    button[x].style.transform = "translateX(1vw)";
+  }
   container[x].style.backgroundColor = "#aaaaaa";
 }
 
@@ -180,7 +188,11 @@ function handleScrollCane() {
     var vw = parent.window.innerWidth / 100 * 5;
 
     if (basePos < (parent.window.innerHeight / 100 * 85) - vw) {
-      document.getElementById('canvas_top').style.transform = 'translateY(-18.2vw)';
+      if(parent.window.innerWidth <= 800) {
+        document.getElementById('canvas_top').style.transform = 'translateY(-40.3vw)';
+      } else {
+        document.getElementById('canvas_top').style.transform = 'translateY(-18.2vw)';
+      }
       document.getElementById('canvas_screen').style.transform = 'scaleY(1)';
       document.getElementById('cane_animation_foot').style.transform = 'scaleY(1)';
       document.getElementById('scroll_arrow').style.display = 'none';
@@ -206,35 +218,3 @@ function scrollDownAni() {
     behavior: 'smooth'
   });
 }
-
-/*
-modelViewer.addEventListener('touchstart', (event) => {
-  const {targetTouches, touches} = event;
-  startX = targetTouches[0].clientX;
-  startY = targetTouches[0].clientY;
-  panning = targetTouches.length === 2 && targetTouches.length === touches.length;
-  if (!panning)
-    return;
-  lastX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
-  lastY = 0.5 * (targetTouches[0].clientY + targetTouches[1].clientY);
-  startPan();
-}, true);
-
-modelViewer.addEventListener('touchmove', (event) => {
-  if (!panning || event.targetTouches.length !== 2)
-    return;
-  const {targetTouches} = event;
-  const thisX = 0.5 * (targetTouches[0].clientX + targetTouches[1].clientX);
-  const thisY = 0.5 * (targetTouches[0].clientY + targetTouches[1].clientY);
-  movePan(thisX, thisY);
-}, true);
-
-modelViewer.addEventListener('touchend', (event) => {
-  if (event.targetTouches.length === 0) {
-    recenter(event.changedTouches[0]);
-    if (event.cancelable) {
-      event.preventDefault();
-    }
-  }
-}, true);
-*/
