@@ -99,9 +99,12 @@ body {
   color: #888888;
 }
 
+.inno_pad_ul_ul {
+  padding-left: 2vw;
+}
+
 .innopad_li {
   position: relative;
-  top: 11vw;
   left: 0;
   width: 88%;
   font-size: 1vw;
@@ -111,7 +114,6 @@ body {
 
 .innopad_li2 {
   position: relative;
-  top: 11vw;
   left: 0;
   width: 88%;
   font-size: 1vw;
@@ -119,8 +121,113 @@ body {
   line-height: 1.2vw;
 }
 
+.innopad_ul {
+  position: relative;
+  top: 11vw;
+}
+
+.innopad_ul_ul {
+  position: relative;
+  padding-left: 10%;
+}
+
 #section2 {
   position: absolute;
   top: 125vw;
   height: 20vw;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .section {
+    padding-top: 4vw;
+    overflow: hidden;
+  }
+
+  #section0 {
+    height: 120vw;
+  }
+
+  #vc_desk {
+    left: 17vw;
+    width: 66.1vw;
+    height: 39.1vw;
+    top: 63.6vw;
+  }
+
+  #macbook {
+    top: 60vw;
+    left: 2.5vw;
+    width: 95vw;
+  }
+
+  #section1 {
+    top: 124vw;
+    height: 383vw;
+  }
+
+  #section1 p {
+    margin-top: 320vw;
+  }
+
+  .inno_pad {
+    top: 0;
+    width: 80vw;
+  }
+
+  #inno_pad_0 {
+    top: 27vw;
+    left: 10vw;
+    transform: rotate(0deg);
+  }
+
+  #inno_pad_1 {
+    top: 128vw;
+    left: 10vw;
+    transform: rotate(0deg);
+    height: 28vw;
+  }
+
+  #inno_pad_2 {
+    top: 229vw;
+    left: 10vw;
+    transform: rotate(0deg);
+  }
+
+  .inno_pad_heading {
+    font-size: 6vw;
+    top: 16vw;
+  }
+
+  .inno_pad_text {
+    font-size: 4.3vw;
+    top: 24vw;
+    line-height: 4.3vw;
+  }
+
+  .innopad_li {
+    font-size: 3.7vw;
+    padding: 0 0 1.5vw 0;
+    line-height: 4vw;
+  }
+
+  .innopad_li2 {
+    font-size: 3.7vw;
+    line-height: 4vw;
+  }
+
+  .innopad_ul {
+    top: 31vw;
+  }
+
+  .innopad_ul_ul {
+    padding-left: 10%;
+  }
+
+  #section2 {
+    position: absolute;
+    top: 511vw;
+    height: 100vw;
+  }
+
 }
