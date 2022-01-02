@@ -1,10 +1,12 @@
 
 function initAR() {
   parent.window.addEventListener('scroll', handleScrollAR);
-  var vpChanged = document.getElementsByClassName('vp_changed');
-  vpChanged[0].innerHTML = 'Interior parts store with optional parts';
-  vpChanged[1].innerHTML = 'The interactive mockup below conveys the general idea. Check it out!';
-  vpChanged[2].innerHTML = 'A functional prototype was built to test the AR and electromagnetic mechanism.</br>See the video below!';
+  if(parent.window.innerWidth <= 800) {
+    var vpChanged = document.getElementsByClassName('vp_changed');
+    vpChanged[0].innerHTML = 'Interior parts store with optional parts';
+    vpChanged[1].innerHTML = 'The interactive mockup below conveys the general idea. Check it out!';
+    vpChanged[2].innerHTML = 'A functional prototype was built to test the AR and electromagnetic mechanism.</br>See the video below!';
+  }
 }
 
 function handleScrollAR() {

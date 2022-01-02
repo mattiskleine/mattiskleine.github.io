@@ -28,6 +28,8 @@ function showTextBox(x) {
     document.getElementById('skills_description_' + x).style.left = "50%";
     window.addEventListener('click', startCloseListener);
     parent.window.addEventListener('click', startCloseListener);
+    window.addEventListener('touchend', startCloseListener);
+    parent.window.addEventListener('touchend', startCloseListener);
   }
 }
 
@@ -40,6 +42,8 @@ function startCloseListener(e) {
     } else {
       window.removeEventListener('click', startCloseListener);
       parent.window.removeEventListener('click', startCloseListener);
+      window.removeEventListener('touchend', startCloseListener);
+      parent.window.removeEventListener('touchend', startCloseListener);
       document.getElementById('skills_description_' + textBoxElement.name).style.opacity = "0";
       document.getElementById('skills_description_' + textBoxElement.name).style.transform = "translateX(-50%) scale(0)";
       document.getElementById('skills_description_' + textBoxElement.name).style.top = textBoxElement.top;

@@ -26,7 +26,6 @@ window.onload = function() {
     compList[10].innerHTML = 'Sustainability, healthcare, education, industry, etc.';
 
     compList[11].innerHTML = 'Frontend: HTML5, CSS, JavaScript + frameworks';
-    //compList[12].innerHTML = 'Backend: Node.js, C, C++';
     compList[13].innerHTML = '2D Design: Illustrator, Photoshop, DaVinci Resolve';
     compList[14].innerHTML = '3D Design: Fusion360, Inventor, NX, Blender';
     compList[15].innerHTML = 'Prototyping: hardware workshop and electronics';
