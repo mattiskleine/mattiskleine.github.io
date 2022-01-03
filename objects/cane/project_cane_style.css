@@ -336,7 +336,7 @@
   transition: transform 1s;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 
   .section {
     padding-top: 4vw;

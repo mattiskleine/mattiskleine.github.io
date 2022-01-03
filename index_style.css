@@ -560,7 +560,14 @@ li {
 
 
 
-@media only screen and (max-width: 800px) {
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
 
   h1 {
     font-size: 10vw;
@@ -743,7 +750,7 @@ li {
 
   #cv_pdf {
     position: absolute;
-    top: 142vw;
+    top: 144vw;
     left: 58%;
     width: 52%;
     transform: translateX(-50%);
@@ -754,7 +761,7 @@ li {
 
   #cv_pdf_img {
     position: absolute;
-    top: 138vw;
+    top: 140vw;
     left: 20vw;
     width: 10vw;
   }

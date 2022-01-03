@@ -1,10 +1,11 @@
+var initVP = window.innerWidth;
 window.onload = function() {
   var proCon = document.getElementsByClassName('project_content');
   for(var i = 0; i < proCon.length; i++) {
     proCon[i].style.opacity = '0';
     proCon[i].style.display = 'none';
   }
-  if(window.innerWidth <= 800) {
+  if(window.innerWidth <= 1000) {
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_projects'));
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_about'));
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_line'));
@@ -29,6 +30,18 @@ window.onload = function() {
     compList[13].innerHTML = '2D Design: Illustrator, Photoshop, DaVinci Resolve';
     compList[14].innerHTML = '3D Design: Fusion360, Inventor, NX, Blender';
     compList[15].innerHTML = 'Prototyping: hardware workshop and electronics';
+  }
+}
+
+window.onresize = function() {
+  if(initVP <= 1000) {
+    if(window.innerWidth > 1000) {
+      location.reload();
+    }
+  } else {
+    if(window.innerWidth <= 1000) {
+      location.reload();
+    }
   }
 }
 
@@ -98,7 +111,7 @@ function openPageProjects() {
     document.getElementById('menu_bar_line').style.right = "90.3vw";
     showProjectPreviews();
   }, 200);
-  if(window.innerWidth <= 800) {
+  if(window.innerWidth <= 1000) {
     document.getElementById('content').style.height = "400vw";
     document.getElementById('menu_bar_line').style.left = "20.3vw";
     setTimeout(() => {
@@ -137,7 +150,7 @@ function openPageAbout() {
   }
 
   document.getElementById('menu_bar_line').style.right = "84.4vw";
-  if(window.innerWidth <= 800) {
+  if(window.innerWidth <= 1000) {
     document.getElementById('content').style.height = "559vw";
     document.getElementById('menu_bar_line').style.right = "41vw";
   }
@@ -150,7 +163,7 @@ function openPageAbout() {
   document.getElementById('competence_profile').style.display = 'block';
   setTimeout(function(){
     document.getElementById('menu_bar_line').style.left = "11.8vw";
-    if(window.innerWidth <= 800) {
+    if(window.innerWidth <= 1000) {
       document.getElementById('menu_bar_line').style.left = "50vw";
     }
     document.getElementById('cv').style.opacity = '1';
@@ -220,7 +233,7 @@ function menuBarColor() {
     document.getElementById('scroll_header').style.display = 'sc';
   }
 
-  if(window.innerWidth <= 800) {
+  if(window.innerWidth <= 1000) {
     scrollHeightDesired = window.innerHeight / 100 * 50;
     opacity = 1 - (1 / scrollHeightDesired * window.scrollY);
     if(window.scrollY <= scrollHeightDesired) {
@@ -248,7 +261,7 @@ function menuBarColor() {
 }
 
 function scrollDown() {
-  if(window.innerWidth <= 800) {
+  if(window.innerWidth <= 1000) {
     window.scrollTo({
       top: window.innerHeight - 50 - window.innerWidth/100*2,
       behavior: 'smooth'
@@ -275,7 +288,7 @@ function unhoverProject(x) {
   document.getElementById('project' + x + '_heading').style.color = '#444444';
   document.getElementById('project' + x + '_keywords').style.opacity = '0';
   document.getElementById('project' + x + '_keywords').style.color = '#444444';
-  if(window.innerWidth <= 800) {
+  if(window.innerWidth <= 1000) {
     document.getElementById('project' + x + '_keywords').style.opacity = '1';
   }
 }

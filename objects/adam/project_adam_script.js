@@ -7,7 +7,7 @@ function toggleAdam() {
     document.getElementById('toggle_button').innerHTML = 'stage 2';
     document.getElementById('adam2').style.transform = 'translateX(-50%)';
     document.getElementById('adam1').style.transform = 'translateX(-150%)';
-    if(window.innerWidth <= 800) {
+    if(window.innerWidth <= 1000) {
       document.getElementById('toggle_button').style.transform = 'translateX(16.6vw)';
     }
   } else {
@@ -30,7 +30,7 @@ function handleScroll() {
   var paper = document.getElementById('paper_container');
   var paperPos = paper.getBoundingClientRect().top +  paper.getBoundingClientRect().height/2 - parent.window.scrollY;
   var vw = parent.window.innerWidth / 100 * 5;
-  if(parent.window.innerWidth <= 800) {
+  if(parent.window.innerWidth <= 1000) {
     vw = 50 + parent.window.innerWidth / 100 * 2;
     featureLength = ['18vw', '35vw', '37vw'];
   }
@@ -57,7 +57,7 @@ function handleScroll() {
 
 function initVP() {
   var resLi = document.getElementsByClassName('results_li');
-  if(parent.window.innerWidth <= 800) {
+  if(parent.window.innerWidth <= 1000) {
     resLi[0].innerHTML = '4-bit binary to decimal number conversion success rate: 100%';
     resLi[1].innerHTML = '6-bit binary to decimal number conversion success rate: 92%';
     resLi[2].innerHTML = 'higher retention using paw joystick compared to regular mouse';

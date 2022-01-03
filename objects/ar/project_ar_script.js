@@ -1,7 +1,7 @@
 
 function initAR() {
   parent.window.addEventListener('scroll', handleScrollAR);
-  if(parent.window.innerWidth <= 800) {
+  if(parent.window.innerWidth <= 1000) {
     var vpChanged = document.getElementsByClassName('vp_changed');
     vpChanged[0].innerHTML = 'Interior parts store with optional parts';
     vpChanged[1].innerHTML = 'The interactive mockup below conveys the general idea. Check it out!';
@@ -15,7 +15,7 @@ function handleScrollAR() {
     var sec2 = document.getElementById('section2');
     var topPos = top.offsetTop + sec2.offsetTop - parent.window.scrollY;
     var vw = parent.window.innerWidth / 100 * 5;
-    if(parent.window.innerWidth <= 800) {
+    if(parent.window.innerWidth <= 1000) {
       vw = 50 + parent.window.innerWidth / 100 * 2;
     }
 
@@ -24,7 +24,7 @@ function handleScrollAR() {
       document.getElementById('canvas_top_middle').style.transform = 'translateX(-50%) scaleY(1)';
       document.getElementById('video_frame').style.transform = 'translateX(-50%) scaleY(1)';
     } else {
-      if(parent.window.innerWidth <= 800) {
+      if(parent.window.innerWidth <= 1000) {
         document.getElementById('canvas_top_bottom').style.transform = 'translate(-50%, -38vw)';
       } else {
         document.getElementById('canvas_top_bottom').style.transform = 'translate(-50%, -26vw)';

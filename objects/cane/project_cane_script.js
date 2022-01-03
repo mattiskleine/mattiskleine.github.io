@@ -2,7 +2,7 @@ var modelViewer;
 var fieldOfViewLast;
 
 function initCane() {
-  if(parent.window.innerWidth <= 800) {
+  if(parent.window.innerWidth <= 1000) {
     document.getElementById('pan').innerHTML = 'Swipe left/right before up/down. For better interaction, use a mouse!';
     document.getElementById('section1_text').innerHTML = 'The scope of this 1st semster project led me to working closely together with a local Parkinson\'s club in order to address the problematic posture Parkinson\'s patients develop. Turns out their bodies are actually still capable of a good upright posture. It is the feedback about the body\'s current posture that goes missing, which then slowly but surely leads to the typical hunch.</br></br>Collaboration with various physiotherapists helped me to design a cane, which senses a bad posture and gives a gentle reminder to straighten up.';
   }
@@ -107,7 +107,7 @@ function toggleButtonOff(x) {
   var button = document.getElementsByClassName("toggle_button");
   var container = document.getElementsByClassName("toggle_container");
   buttonStage[x] = 0;
-  if(parent.window.innerWidth <= 800) {
+  if(parent.window.innerWidth <= 1000) {
     button[x].style.transform = "translateX(4vw)";
   } else {
     button[x].style.transform = "translateX(1vw)";
@@ -188,7 +188,7 @@ function handleScrollCane() {
     var vw = parent.window.innerWidth / 100 * 5;
 
     if (basePos < (parent.window.innerHeight / 100 * 85) - vw) {
-      if(parent.window.innerWidth <= 800) {
+      if(parent.window.innerWidth <= 1000) {
         document.getElementById('canvas_top').style.transform = 'translateY(-40.3vw)';
       } else {
         document.getElementById('canvas_top').style.transform = 'translateY(-18.2vw)';
