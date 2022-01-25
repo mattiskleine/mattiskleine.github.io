@@ -159,23 +159,23 @@ a[href^=tel] {
 
 #profile {
   position: absolute;
-  top: 33.5vw;
+  top: 30vw;
   left: 7.8vw;
 }
 
 #profile_text {
   position: absolute;
-  top: 39.5vw;
+  top: 36vw;
   left: 7.8vw;
-  width: 54.644vw;
+  width: 53vw;
   hyphens: auto;
-	text-align: justify;
+	//text-align: justify;
 }
 
 #languages {
   position: absolute;
-  top: 33.5vw;
-  left: 70.2vw;
+  top: 30vw;
+  left: 66vw;
   width: 23.8vw;
 }
 
@@ -218,72 +218,78 @@ a[href^=tel] {
   left: 5.34vw;
 }
 
+#education {
+  position: absolute;
+  top: 64vw;
+  left: 7.8vw;
+}
+
 #timeline_container {
   position: absolute;
-  top: 68.5vw;
+  top: 71vw;
   left: 7.8vw;
   width: 54.8vw;
 }
 
-#timeline_2021 {
+#timeline_0 {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#timeline_2019 {
+#timeline_1 {
   position: absolute;
   top: 6vw;
   left: 0px;
 }
 
-#timeline_2014 {
+#timeline_2 {
   position: absolute;
   top: 12vw;
   left: 0px;
 }
 
-#timeline_2012 {
+#timeline_3 {
   position: absolute;
   top: 18vw;
   left: 0px;
 }
 
-#timeline_1992 {
+#timeline_4 {
   position: absolute;
   top: 24vw;
   left: 0px;
 }
 
-#timeline_2021_text {
+#timeline_0_text {
   position: absolute;
   top: -0.6vw;
   left: 13vw;
   line-height: 2.1vw;
 }
 
-#timeline_2019_text {
+#timeline_1_text {
   position: absolute;
   top: 5.4vw;
   left: 13vw;
   line-height: 2.1vw;
 }
 
-#timeline_2014_text {
+#timeline_2_text {
   position: absolute;
   top: 11.4vw;
   left: 13vw;
   line-height: 2.1vw;
 }
 
-#timeline_2012_text {
+#timeline_3_text {
   position: absolute;
   top: 17.4vw;
   left: 13vw;
   line-height: 2.1vw;
 }
 
-#timeline_1992_text {
+#timeline_4_text {
   position: absolute;
   top: 23.4vw;
   left: 13vw;
@@ -316,68 +322,30 @@ a[href^=tel] {
   margin-bottom: 0;
 }
 
-#interests {
+#experience {
   position: absolute;
-  top: 67vw;
-  left: 70.2vw;
+  top: 64vw;
+  left: 66vw;
   width: 23vw;
 }
 
-#icon_travel {
+#xp {
   position: absolute;
-  top: 5.95vw;
+  top: 4.5vw;
   left: 0;
-  width: 2.86vw;
+  width: 30vw;
 }
 
-#icon_music {
-  position: absolute;
-  top: 10.12vw;
-  left: 0.48vw;
-  width: 2.38vw;
-}
-
-#icon_tinker {
-  position: absolute;
-  top: 14.28vw;
-  left: 0.36vw;
-  width: 2.38vw;
-}
-
-#icon_sports {
-  position: absolute;
-  top: 18.45vw;
-  left: -0.24vw;
-  width: 3.33vw;
-}
-
-#travel {
-  position: absolute;
-  top: 5.95vw;
-  left: 5.34vw;
-}
-
-#music {
-  position: absolute;
-  top: 10.12vw;
-  left: 5.34vw;
-}
-
-#tinker {
-  position: absolute;
-  top: 14.28vw;
-  left: 5.34vw;
-}
-
-#sports {
-  position: absolute;
-  top: 18.45vw;
-  left: 5.34vw;
+.xp_heading {
+  font-family: MontserratMedium;
+  font-size: 1.755vw;
+  margin-top: 1.5vw;
+  letter-spacing: 0.1vw;
 }
 
 #skills {
   position: absolute;
-  top: 100vw;
+  top: 106vw;
   left: 0;
   right: 0;
   margin: 0 7.8vw;
@@ -385,10 +353,10 @@ a[href^=tel] {
 
 .skills_heading_container {
   position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  top: 24%;
+  left: 24%;
+  width: 52%;
+  height: 52%;
   border-radius: 50%;
   background-color: #666666;
   z-index: 2;
@@ -408,7 +376,7 @@ a[href^=tel] {
   font-family: MontserratMedium;
   color: #dddddd;
   text-align: center;
-  padding-top: calc(50% - 2.26vw);
+  padding-top: 40%;
 }
 
 .skills_center {
@@ -557,6 +525,10 @@ h1 {
   --segment4: 25;
 }
 
+#skills_creative_heading {
+  padding-top: 34%;
+}
+
 #skills_creative_segment1 {
   background-color: #87ABA1;
 }
@@ -691,6 +663,10 @@ h1 {
   --segment4: 15;
 }
 
+#skills_applied {
+  letter-spacing:
+}
+
 #skills_applied_segment1 {
   background-color: #86AECA;
 }
@@ -722,24 +698,24 @@ h1 {
 #skills_applied_segment1_text {
   position: absolute;
   top: -11%;
-  right: -8%;
+  right: -2%;
 }
 
 #skills_applied_segment2_text {
   position: absolute;
-  bottom: -1%;
-  right: -1%;
+  bottom: -0.4%;
+  right: -23%;
 }
 
 #skills_applied_segment3_text {
   position: absolute;
-  bottom: -2%;
-  left: 0%;
+  bottom: 2%;
+  left: -30%;
 }
 
 #skills_applied_segment4_text {
   position: absolute;
-  top: 30%;
+  top: 29%;
   left: -23%;
 }
 
@@ -780,7 +756,7 @@ h1 {
   left: 60%;
 }
 #skills_description_engineering_embedded {
-  width: 49vw;
+  width: 47vw;
   top: 400%;
   left: 50%;
 }
@@ -791,27 +767,27 @@ h1 {
 }
 
 #skills_description_applied {
-  width: 40vw;
+  width: 56vw;
   top: 290%;
   left: 87%;
 }
 #skills_description_applied_innovation {
-  width: 59vw;
+  width: 41vw;
   top: 50%;
   left: 87%;
 }
 #skills_description_applied_iot {
-  width: 51vw;
+  width: 54vw;
   top: 400%;
   left: 95%;
 }
 #skills_description_applied_ar {
-  width: 45vw;
+  width: 36vw;
   top: 450%;
   left: 85%;
 }
 #skills_description_applied_dl {
-  width: 44vw;
+  width: 51vw;
   top: 250%;
   left: 80%;
 }
