@@ -6,6 +6,8 @@ window.onload = function() {
     proCon[i].style.display = 'none';
   }
   if(window.innerWidth <= 1000) {
+    window.addEventListener('click', smallScreenListener);
+    window.addEventListener('scroll', smallScreenListener);
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_projects'));
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_about'));
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_line'));
@@ -31,6 +33,13 @@ window.onload = function() {
     compList[14].innerHTML = '3D Design: Fusion360, Inventor, NX, Blender';
     compList[15].innerHTML = 'Prototyping: hardware workshop and electronics';
   }
+}
+
+function smallScreenListener() {
+  document.getElementById("small_screen").style.display = "none";
+  document.getElementById("small_screen_text").style.display = "none";
+  window.removeEventListener('click', smallScreenListener);
+  window.removeEventListener('scroll', smallScreenListener);
 }
 
 window.onresize = function() {
