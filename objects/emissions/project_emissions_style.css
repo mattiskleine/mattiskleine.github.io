@@ -1,0 +1,85 @@
+@import url("../../index_style.css");
+
+body {
+  margin: 0;
+}
+
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding-top: 2vw;
+  overflow: hidden;
+}
+
+#section0 {
+  position: absolute;
+  height: 74vw;
+}
+
+#imac_wrapper {
+  position: absolute;
+  top: 15vw;
+  left: 50%;
+  width: 70vw;
+  height: 57vw;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+#imac {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.option {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform .5s, top .5s, left .5s;
+}
+
+#option_0 {
+  transform: translateX(-50%) scale(1);
+}
+
+.form_style {
+  font-family: Nunito;
+  font-size: 1.3vw;
+  border-radius: 5vw;
+  padding: 1vw 2vw;
+  background-color: #ffffff;
+  border: none;
+  color: #444444;
+  box-shadow: 0 0 .8vw #aaaaaa;
+  width: 19vw;
+}
+.form_style:focus-visible {
+  outline: none;
+}
+
+.text_input{
+  padding: .9vw 2vw;
+  width: 15vw;
+}
+
+.text_input_unit{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: Nunito;
+  font-size: 1.3vw;
+  padding: 1vw 2vw;
+  color: #444444;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
