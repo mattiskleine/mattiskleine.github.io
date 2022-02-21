@@ -15,55 +15,26 @@
       emissions of Battery Electric Vehicles (BEV) vs Internal Combustion Engines (ICE).
     </p>
     <div id="imac_wrapper">
-      <div class="option" id="option_0">
-        <form>
-          <select class="form_style" onchange="changeInput(0)">
-            <option value="">– country of residence –</option>
-            <option value="denmark">Denmark</option>
-            <option value="poland">Poland</option>
-            <option value="norway">Norway</option>
-            <option value="norway">Germany</option>
-          </select>
-        </form>
+      <div class="input_wrapper" id="input_wrapper_0">Country of Residence
+        <div class="input_button" id="input_button_countries" onclick="expandCountries()">
+          <div id="countries_placeholder">select</div>
+          <div id="countries_denmark" class="item_countries" onclick="selectCountry('Denmark')">Denmark</div>
+          <div class="item_countries" onclick="selectCountry('Poland')">Poland</div>
+          <div class="item_countries" onclick="selectCountry('Norway')">Norway</div>
+          <div id="countries_germany" class="item_countries" onclick="selectCountry('Germany')">Germany</div>
+        </div>
       </div>
-      <div class="option" id="option_1">
-        <form>
-          <select class="form_style" onchange="changeInput(1)">
-            <option value="">– yearly kilometers –</option>
-            <option value="1">10.000 km</option>
-            <option value="2">20.000 km</option>
-            <option value="3">30.000 km</option>
-            <option value="4">40.000 km</option>
-            <option value="5">50.000 km</option>
-          </select>
-        </form>
+      <div class="input_wrapper" id="input_wrapper_1">Yearly Kilometers
+        <div class="input_button" id="input_button_kilometers" onclick="expandKilometers()">
+          <div id="kilometers_placeholder">select</div>
+          <div id="kilometers_0" class="item_kilometers" onclick="selectKilometers('10.000 km')">10.000 km</div>
+          <div class="item_kilometers" onclick="selectKilometers('20.000 km')">20.000 km</div>
+          <div class="item_kilometers" onclick="selectKilometers('30.000 km')">30.000 km</div>
+          <div class="item_kilometers" onclick="selectKilometers('20.000 km')">40.000 km</div>
+          <div id="kilometers_1" class="item_kilometers" onclick="selectKilometers('50.000 km')">50.000 km</div>
+        </div>
       </div>
-      <div class="option" id="option_2">
-        <form>
-          <select class="form_style" onchange="changeInput(2)">
-            <option value="">– propellant –</option>
-            <option value="electric">Electric</option>
-            <option value="diesel">Diesel</option>
-            <option value="gasoline">Gasoline</option>
-            <option value="lpg">LPG</option>
-            <option value="hybrid">Hybrid</option>
-          </select>
-        </form>
-      </div>
-      <div class="option" id="option_3">
-        <form>
-          <button type="submit" disabled style="display: none" aria-hidden="true"></button>
-          <input type="text" class="form_style text_input" id="text_input_consumption" name="consumption" value="– consumption" onclick="getInput('consumption', 3)" onchange="changeInput(3)">
-        </form>
-        <div class="text_input_unit">l/100km</div>
-      </div>
-      <div class="option" id="option_4">
-        <form>
-          <button type="submit" disabled style="display: none" aria-hidden="true"></button>
-          <input type="text" class="form_style text_input" id="text_input_emission" name="emissions" value="– CO2" onclick="getInput('emission', 4)" onchange="changeInput(4)">
-        </form>
-        <div class="text_input_unit">g/km</div>
-      </div>
+
       <img id="imac" src="files/imac.svg">
     </div>
   </div>

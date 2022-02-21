@@ -37,49 +37,112 @@ body {
   pointer-events: none;
 }
 
-.option {
+.input_wrapper {
   position: absolute;
-  top: 35%;
+  top: 10%;
+  font-family: Nunito;
+  font-size: 1.3vw;
+  color: #444444;
+  transform: translate(-50%, -50%);
+}
+
+.input_button {
+  position: absolute;
+  top: 130%;
   left: 50%;
-  transform: translateX(-50%) scale(0);
-  transition: transform .5s, top .5s, left .5s;
-}
-
-#option_0 {
-  transform: translateX(-50%) scale(1);
-}
-
-.form_style {
+  width: 5vw;
+  height: 150%;
   font-family: Nunito;
   font-size: 1.3vw;
-  border-radius: 5vw;
-  padding: 1vw 2vw;
-  background-color: #ffffff;
-  border: none;
-  color: #444444;
-  box-shadow: 0 0 .8vw #aaaaaa;
-  width: 19vw;
-}
-.form_style:focus-visible {
-  outline: none;
+  color: #fafafa;
+  background-color: #5489B0;
+  border-radius: 2vw;
+  text-align: center;
+  transform: translateX(-50%);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: .1vw .1vw .8vw #aaaaaa;
 }
 
-.text_input{
-  padding: .9vw 2vw;
-  width: 15vw;
+#input_button_countries {
+  transition: width .5s, height .5s;
 }
 
-.text_input_unit{
+#input_button_kilometers {
+  transition: width .5s, height .5s;
+}
+
+#input_wrapper_0 {
+  left: 35%;
+}
+
+#input_wrapper_1 {
+  left: 65%;
+}
+
+#countries_placeholder {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#kilometers_placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8vw;
+}
+
+.item_countries {
   font-family: Nunito;
   font-size: 1.3vw;
-  padding: 1vw 2vw;
+  color: #fafafa;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  padding: .8vw 0;
+  user-select: none;
+  display: none;
+}
+
+.item_countries:hover {
+  cursor: pointer;
+  background-color: #ffffff;
   color: #444444;
 }
 
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+#countries_denmark {
+  border-radius: 2vw 2vw 0 0;
+}
+
+#countries_germany {
+  border-radius: 0 0 2vw 2vw;
+}
+
+.item_kilometers {
+  font-family: Nunito;
+  font-size: 1.3vw;
+  color: #fafafa;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  padding: .8vw 0;
+  user-select: none;
+  display: none;
+}
+
+.item_kilometers:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #444444;
+}
+
+#kilometers_0 {
+  border-radius: 2vw 2vw 0 0;
+}
+
+#kilometers_1 {
+  border-radius: 0 0 2vw 2vw;
 }
