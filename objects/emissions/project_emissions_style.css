@@ -37,112 +37,353 @@ body {
   pointer-events: none;
 }
 
-.input_wrapper {
+.option_text {
   position: absolute;
   top: 10%;
+  left: 5%;
   font-family: Nunito;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   color: #444444;
-  transform: translate(-50%, -50%);
 }
 
-.input_button {
+.option_button {
   position: absolute;
-  top: 130%;
-  left: 50%;
-  width: 5vw;
-  height: 150%;
+  width: 6vw;
+  top: 50%;
+  left: 12vw;
+  transform: translateY(-50%);
+  text-align: center;
   font-family: Nunito;
-  font-size: 1.3vw;
-  color: #fafafa;
-  background-color: #5489B0;
+  font-size: 1.2vw;
+  padding: .2vw .6vw;
+  border: .2vw solid #444444;
   border-radius: 2vw;
-  text-align: center;
-  transform: translateX(-50%);
-  cursor: pointer;
-  user-select: none;
-  box-shadow: .1vw .1vw .8vw #aaaaaa;
-}
-
-#input_button_countries {
-  transition: width .5s, height .5s;
-}
-
-#input_button_kilometers {
-  transition: width .5s, height .5s;
-}
-
-#input_wrapper_0 {
-  left: 35%;
-}
-
-#input_wrapper_1 {
-  left: 65%;
-}
-
-#countries_placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#kilometers_placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8vw;
-}
-
-.item_countries {
-  font-family: Nunito;
-  font-size: 1.3vw;
-  color: #fafafa;
-  width: 100%;
-  top: 0;
-  text-align: center;
-  padding: .8vw 0;
-  user-select: none;
-  display: none;
-}
-
-.item_countries:hover {
-  cursor: pointer;
-  background-color: #ffffff;
   color: #444444;
 }
 
-#countries_denmark {
-  border-radius: 2vw 2vw 0 0;
-}
-
-#countries_germany {
-  border-radius: 0 0 2vw 2vw;
-}
-
-.item_kilometers {
-  font-family: Nunito;
-  font-size: 1.3vw;
-  color: #fafafa;
-  width: 100%;
-  top: 0;
+.option_button:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
   text-align: center;
-  padding: .8vw 0;
-  user-select: none;
+}
+
+#option_countries {
+  position: absolute;
+  top: 9.3%;
+  left: calc(5% + 12vw);
+  width: 7.2vw;
+  background-color: #eeeeee;
+  border: .2vw solid #444444;
+  border-radius: 1.2vw;
   display: none;
 }
 
-.item_kilometers:hover {
-  cursor: pointer;
-  background-color: #ffffff;
+.countries {
+  font-family: Nunito;
+  font-size: 1.2vw;
+  text-align: center;
+  padding: .2vw 0;
   color: #444444;
+}
+
+.countries:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+#country_0 {
+  border-radius: 1.2vw 1.2vw 0 0;
+}
+
+#country_3 {
+  border-radius: 0 0 1.2vw 1.2vw;
+}
+
+#option_1 {
+  top: 15%;
+}
+
+#option_2 {
+  top: 26%;
+}
+
+#option_3 {
+  top: 31%;
+}
+
+#option_countries {
+  position: absolute;
+  top: 9.3%;
+  left: calc(5% + 12vw);
+  width: 7.2vw;
+  background-color: #eeeeee;
+  border: .2vw solid #444444;
+  border-radius: 1.2vw;
+  display: none;
+}
+
+.countries {
+  font-family: Nunito;
+  font-size: 1.2vw;
+  text-align: center;
+  padding: .2vw 0;
+  color: #444444;
+}
+
+.countries:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+#country_0 {
+  border-radius: 1.2vw 1.2vw 0 0;
+}
+
+#country_3 {
+  border-radius: 0 0 1.2vw 1.2vw;
+}
+
+#option_kilometers {
+  position: absolute;
+  top: 14.3%;
+  left: calc(5% + 12vw);
+  width: 7.2vw;
+  background-color: #eeeeee;
+  border: .2vw solid #444444;
+  border-radius: 1.2vw;
+  display: none;
+}
+
+.kilometers {
+  font-family: Nunito;
+  font-size: 1.2vw;
+  text-align: center;
+  padding: .2vw 0;
+  color: #444444;
+}
+
+.kilometers:hover {
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 #kilometers_0 {
-  border-radius: 2vw 2vw 0 0;
+  border-radius: 1.2vw 1.2vw 0 0;
 }
 
-#kilometers_1 {
-  border-radius: 0 0 2vw 2vw;
+#kilometers_4 {
+  border-radius: 0 0 1.2vw 1.2vw;
+}
+
+.option_input {
+  position: absolute;
+  width: 4vw;
+  top: 50%;
+  left: 12vw;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 1.2vw;
+  padding: .2vw 3.2vw .2vw 0;
+  border: .2vw solid #444444;
+  border-radius: 2vw;
+  color: #444444;
+  background-color: transparent;
+}
+
+.option_input:focus-visible {
+  outline: none;
+}
+
+.option_input_static {
+  position: absolute;
+  top: 50%;
+  left: 16vw;
+  transform: translateY(-50%);
+  font-family: Nunito;
+  font-size: 1.2vw;
+  color: #444444;
+}
+
+#option_input_consumption_diesel {
+  left: 21vw;
+  padding: .2vw 2.2vw .2vw 1vw;
+  width: 3vw;
+}
+
+#option_input_consumption_static_diesel {
+  left: 25.3vw;
+}
+
+#option_input_consumption_gasoline {
+  left: 29vw;
+  padding: .2vw 2.2vw .2vw 1vw;
+  width: 3vw;
+}
+
+#option_input_consumption_static_gasoline {
+  left: 33.3vw;
+}
+
+#option_input_consumption_lpg {
+  left: 37vw;
+  padding: .2vw 2.2vw .2vw 1vw;
+  width: 3vw;
+}
+
+#option_input_consumption_static_lpg {
+  left: 41.3vw;
+}
+
+#option_input_consumption_hybrid_0 {
+  left: 45vw;
+  padding: .2vw 2.2vw .2vw 1vw;
+  width: 3vw;
+}
+
+#option_input_consumption_static_hybrid_0 {
+  left: 49.3vw;
+}
+
+#option_input_consumption_hybrid_1 {
+  left: 53vw;
+  padding: .2vw 3.2vw .2vw 0;
+}
+
+#option_input_consumption_static_hybrid_1 {
+  left: 57vw;
+}
+
+#option_input_emissions_electric {
+  background-color: #eeeeee;
+  color: #888888;
+  user-select: none;
+}
+
+#option_input_static_emissions_electric {
+  color: #888888;
+  user-select: none;
+  cursor: default;
+}
+
+#option_input_emissions_diesel {
+  left: 21vw;
+  padding: .2vw 3.2vw .2vw 0;
+  width: 3vw;
+}
+
+#option_input_emissions_static_diesel {
+  left: 24.2vw;
+}
+
+#option_input_emissions_gasoline {
+  left: 29vw;
+  padding: .2vw 3.2vw .2vw 0;
+  width: 3vw;
+}
+
+#option_input_emissions_static_gasoline {
+  left: 32.2vw;
+}
+
+#option_input_emissions_lpg {
+  left: 37vw;
+  padding: .2vw 3.2vw .2vw 0;
+  width: 3vw;
+}
+
+#option_input_emissions_static_lpg {
+  left: 40.2vw;
+}
+
+#option_input_emissions_hybrid_0 {
+  left: 45vw;
+  padding: .2vw 3.2vw .2vw 0;
+  width: 3vw;
+}
+
+#option_input_emissions_static_hybrid_0 {
+  left: 48.2vw;
+}
+
+#option_input_emissions_hybrid_1 {
+  left: 53vw;
+  padding: .2vw 3.2vw .2vw 0;
+  background-color: #eeeeee;
+  color: #888888;
+  user-select: none;
+}
+
+#option_input_emissions_static_hybrid_1 {
+  left: 57vw;
+  color: #888888;
+  user-select: none;
+  cursor: default;
+}
+
+.car_box {
+  position: absolute;
+  top: 20%;
+  font-family: Nunito;
+  font-size: 1.2vw;
+  color: #444444;
+  background-color: #ffffff;
+  width: 7.2vw;
+  border: .2vw solid #444444;
+  border-radius: 2vw;
+  text-align: center;
+  padding: .2vw 0;
+  cursor: pointer;
+}
+
+.car_box:hover {
+  background-color: #666666;
+  color: #fafafa;
+}
+
+.car_box_active {
+  color: #fafafa;
+  background-color: #444444;
+}
+
+#car_box_electric {
+  left: calc(5% + 12vw);
+}
+
+#car_box_diesel {
+  left: calc(5% + 21vw);
+  width: 6.2vw;
+}
+
+#car_box_gasoline {
+  left: calc(5% + 29vw);
+  width: 6.2vw;
+}
+
+#car_box_lpg {
+  left: calc(5% + 37vw);
+  width: 6.2vw;
+}
+
+#car_box_hybrid {
+  left: calc(5% + 45vw);
+  width: 15.2vw;
+}
+
+#hybrid_plus_0 {
+  position: absolute;
+  font-family: Nunito;
+  font-size: 1.2vw;
+  color: #444444;
+  top: 26%;
+  left: 55.5vw;
+}
+
+#hybrid_plus_1 {
+  position: absolute;
+  font-family: Nunito;
+  font-size: 1.2vw;
+  color: #444444;
+  top: 31%;
+  left: 55.5vw;
 }

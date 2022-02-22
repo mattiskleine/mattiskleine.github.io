@@ -1,55 +1,98 @@
-var countriesActive = 0;
-function expandCountries() {
-  if(countriesActive == 0) {
-    countriesActive = 1;
-    document.getElementById("input_button_countries").style.width = "100%";
-    document.getElementById("input_button_countries").style.height = "760%";
-    document.getElementById("countries_placeholder").style.display = "none";
-    var item = document.getElementsByClassName("item_countries");
-    for(var i = 0; i < item.length; i++) {
-      item[i].style.display = "block";
-    }
-  }
+function openCountries() {
+  document.getElementById("option_kilometers").style.display = "none";
+  document.getElementById("option_countries").style.display = "block";
+  window.addEventListener('click', closeCountries);
 }
 
+var counterCountries = 0;
+function closeCountries(e) {
+  if (counterCountries > 0) {
+    if (document.getElementById("option_countries").contains(e.target)) {
+      window.removeEventListener('click', closeCountries);
+      counterCountries = 0;
+      return;
+    } else {
+      window.removeEventListener('click', closeCountries);
+      selectCountry(0);
+      counterCountries = 0;
+      return;
+    }
+  }
+  counterCountries++;
+}
+
+var countries = ['Denmark', 'Poland', 'Norway', 'Germany'];
 function selectCountry(x) {
-  document.getElementById("input_button_countries").style.width = "7vw";
-  document.getElementById("input_button_countries").style.height = "150%";
-  document.getElementById("countries_placeholder").style.display = "block";
-  document.getElementById("countries_placeholder").innerHTML = x;
-  var item = document.getElementsByClassName("item_countries");
-  for(var i = 0; i < item.length; i++) {
-    item[i].style.display = "none";
+  var volatileCountry = countries[0];
+  countries[0] = countries[x];
+  countries[x] = volatileCountry;
+  document.getElementById("option_button_countries").innerHTML = countries[0];
+  document.getElementById("option_countries").style.display = "none";
+  var country = document.getElementsByClassName("countries");
+  for(var i = 0; i < country.length; i++) {
+    country[i].innerHTML = countries[i];
   }
-  setTimeout(() => {
-    countriesActive = 0;
-  }, 100);
 }
 
-var kilometersActive = 0;
-function expandKilometers() {
-  if(kilometersActive == 0) {
-    kilometersActive = 1;
-    document.getElementById("input_button_kilometers").style.width = "100%";
-    document.getElementById("input_button_kilometers").style.height = "950%";
-    document.getElementById("kilometers_placeholder").style.display = "none";
-    var item = document.getElementsByClassName("item_kilometers");
-    for(var i = 0; i < item.length; i++) {
-      item[i].style.display = "block";
+function openKilometers() {
+  document.getElementById("option_countries").style.display = "none";
+  document.getElementById("option_kilometers").style.display = "block";
+  window.addEventListener('click', closeKilometers);
+}
+
+var counterKilometers = 0;
+function closeKilometers(e) {
+  if (counterKilometers > 0) {
+    if (document.getElementById("option_countries").contains(e.target)) {
+      window.removeEventListener('click', closeKilometers);
+      counterKilometers = 0;
+      return;
+    } else {
+      window.removeEventListener('click', closeKilometers);
+      selectKilometers(currentKilometers);
+      counterKilometers = 0;
+      return;
     }
   }
+  counterKilometers++;
 }
 
+var kilometers = ['10.000 km', '20.000 km', '30.000 km', '40.000 km', '50.000 km'];
+var currentKilometers = 0;
 function selectKilometers(x) {
-  document.getElementById("input_button_kilometers").style.width = "8vw";
-  document.getElementById("input_button_kilometers").style.height = "150%";
-  document.getElementById("kilometers_placeholder").style.display = "block";
-  document.getElementById("kilometers_placeholder").innerHTML = x;
-  var item = document.getElementsByClassName("item_kilometers");
-  for(var i = 0; i < item.length; i++) {
-    item[i].style.display = "none";
-  }
-  setTimeout(() => {
-    kilometersActive = 0;
-  }, 100);
+  currentKilometers = x;
+  document.getElementById("option_button_kilometers").innerHTML = kilometers[x];
+  document.getElementById("option_kilometers").style.display = "none";
 }
+
+function editConsumption(x) {
+  const input = document.getElementById("option_input_consumption_"+x);
+  input.select();
+}
+
+function editEmissions(x) {
+  const input = document.getElementById("option_input_emissions_"+x);
+  input.select();
+}
+
+
+function setActive(x) {
+  const item = document.getElementsByClassName("car_box");
+  if(item[x].classList.contains("car_box_active") === true) {
+    item[x].classList.remove("car_box_active");
+  } else {
+    item[x].classList.add("car_box_active");
+  }
+}
+
+const cicDenmark = 164;
+const cicPoland = 577;
+const cicNorway = 29;
+const cicGermany = 254;
+
+const wttDiesel = 640;
+const wttGasoline = 720;
+const wttLPG = 612;
+
+const bevLife = 8887;
+const icevLife = 4878;

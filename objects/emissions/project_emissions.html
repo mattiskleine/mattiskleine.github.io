@@ -12,29 +12,87 @@
     <h1>Automotive Emission Calculator</h1>
     <p>
       Make a sustainable choice when buying your next car by comparing the CO<sub>2</sub>
-      emissions of Battery Electric Vehicles (BEV) vs Internal Combustion Engines (ICE).
+      emissions of Battery Electric Vehicles (BEV) vs Internal Combustion Engine Vehicles (ICEV).
     </p>
     <div id="imac_wrapper">
-      <div class="input_wrapper" id="input_wrapper_0">Country of Residence
-        <div class="input_button" id="input_button_countries" onclick="expandCountries()">
-          <div id="countries_placeholder">select</div>
-          <div id="countries_denmark" class="item_countries" onclick="selectCountry('Denmark')">Denmark</div>
-          <div class="item_countries" onclick="selectCountry('Poland')">Poland</div>
-          <div class="item_countries" onclick="selectCountry('Norway')">Norway</div>
-          <div id="countries_germany" class="item_countries" onclick="selectCountry('Germany')">Germany</div>
-        </div>
+      <div class="option_text">Country of residence:
+        <div class="option_button" onclick="openCountries()" id="option_button_countries">Denmark</div>
       </div>
-      <div class="input_wrapper" id="input_wrapper_1">Yearly Kilometers
-        <div class="input_button" id="input_button_kilometers" onclick="expandKilometers()">
-          <div id="kilometers_placeholder">select</div>
-          <div id="kilometers_0" class="item_kilometers" onclick="selectKilometers('10.000 km')">10.000 km</div>
-          <div class="item_kilometers" onclick="selectKilometers('20.000 km')">20.000 km</div>
-          <div class="item_kilometers" onclick="selectKilometers('30.000 km')">30.000 km</div>
-          <div class="item_kilometers" onclick="selectKilometers('20.000 km')">40.000 km</div>
-          <div id="kilometers_1" class="item_kilometers" onclick="selectKilometers('50.000 km')">50.000 km</div>
-        </div>
+      <div id="option_1" class="option_text">Yearly kilometers:
+        <div class="option_button" onclick="openKilometers()" id="option_button_kilometers">10.000 km</div>
       </div>
-
+      <div id="option_2" class="option_text">Consumption/100km:
+        <form>
+          <div class="option_input_static">kWh</div>
+          <input class="option_input" id="option_input_consumption_electric" type="text" value="19.7" onclick="editConsumption('electric')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_consumption_static_diesel">l</div>
+          <input class="option_input" id="option_input_consumption_diesel" type="text" value="4.4" onclick="editConsumption('diesel')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_consumption_static_gasoline">l</div>
+          <input class="option_input" id="option_input_consumption_gasoline" type="text" value="5.2" onclick="editConsumption('gasoline')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_consumption_static_lpg">l</div>
+          <input class="option_input" id="option_input_consumption_lpg" type="text" value="3.5" onclick="editConsumption('lpg')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_consumption_static_hybrid_0">l</div>
+          <input class="option_input" id="option_input_consumption_hybrid_0" type="text" value="2.1" onclick="editConsumption('hybrid_0')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_consumption_static_hybrid_1">kWh</div>
+          <input class="option_input" id="option_input_consumption_hybrid_1" type="text" value="7.5" onclick="editConsumption('hybrid_1')">
+        </form>
+      </div>
+      <div id="option_3" class="option_text">CO<sub>2</sub> emissions:
+        <form>
+          <input class="option_input" id="option_input_emissions_electric" type="text" value="0" disabled>
+          <div class="option_input_static" id="option_input_static_emissions_electric">g/km</div>
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_emissions_static_diesel">g/km</div>
+          <input class="option_input" id="option_input_emissions_diesel" type="text" value="4.4" onclick="editEmissions('diesel')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_emissions_static_gasoline">g/km</div>
+          <input class="option_input" id="option_input_emissions_gasoline" type="text" value="5.2" onclick="editEmissions('gasoline')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_emissions_static_lpg">g/km</div>
+          <input class="option_input" id="option_input_emissions_lpg" type="text" value="3.5" onclick="editEmissions('lpg')">
+        </form>
+        <form>
+          <div class="option_input_static" id="option_input_emissions_static_hybrid_0">g/km</div>
+          <input class="option_input" id="option_input_emissions_hybrid_0" type="text" value="2.1" onclick="editEmissions('hybrid_0')">
+        </form>
+        <form>
+          <input class="option_input" id="option_input_emissions_hybrid_1" type="text" value="0" disabled>
+          <div class="option_input_static" id="option_input_emissions_static_hybrid_1">g/km</div>
+        </form>
+      </div>
+      <div class="car_box car_box_active" id="car_box_electric" onclick="setActive(0)">Electric</div>
+      <div class="car_box car_box_active" id="car_box_diesel" onclick="setActive(1)">Diesel</div>
+      <div class="car_box car_box_active" id="car_box_gasoline" onclick="setActive(2)">Gasoline</div>
+      <div class="car_box car_box_active" id="car_box_lpg" onclick="setActive(3)">LPG</div>
+      <div class="car_box car_box_active" id="car_box_hybrid" onclick="setActive(4)">Hybrid</div>
+      <div id="hybrid_plus_0">+</div>
+      <div id="hybrid_plus_1">+</div>
+      <div id="option_countries">
+        <div id="country_0" class="countries" onclick="selectCountry(0)">Denmark</div>
+        <div class="countries" onclick="selectCountry(1)">Poland</div>
+        <div class="countries" onclick="selectCountry(2)">Norway</div>
+        <div id="country_3" class="countries" onclick="selectCountry(3)">Germany</div>
+      </div>
+      <div id="option_kilometers">
+        <div id="kilometers_0" class="kilometers" onclick="selectKilometers(0)">10.000 km</div>
+        <div class="kilometers" onclick="selectKilometers(1)">20.000 km</div>
+        <div class="kilometers" onclick="selectKilometers(2)">30.000 km</div>
+        <div class="kilometers" onclick="selectKilometers(3)">40.000 km</div>
+        <div id="kilometers_4" class="kilometers" onclick="selectKilometers(4)">50.000 km</div>
+      </div>
       <img id="imac" src="files/imac.svg">
     </div>
   </div>
