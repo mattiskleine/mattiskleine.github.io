@@ -2,82 +2,83 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" src="project_emissions_script.js"></script>
+<script src="../../node_modules/chart.js/dist/chart.js"></script>
 <link rel="stylesheet" href="project_emissions_style.css">
 <title></title>
 </head>
-<body>
+<body onload="selectKilometers(1); recalculate()">
 
   <div id="section0" class="section">
     <h1>Automotive Emission Calculator</h1>
     <p>
-      Make a sustainable choice when buying your next car by comparing the CO<sub>2</sub>
+      Make a sustainable choice with your next car by comparing the CO<sub>2</sub>
       emissions of Battery Electric Vehicles (BEV) vs Internal Combustion Engine Vehicles (ICEV).
     </p>
     <div id="imac_wrapper">
+      <canvas id="chart"></canvas>
       <div class="option_text">Country of residence:
         <div class="option_button" onclick="openCountries()" id="option_button_countries">Denmark</div>
       </div>
       <div id="option_1" class="option_text">Yearly kilometers:
         <div class="option_button" onclick="openKilometers()" id="option_button_kilometers">10.000 km</div>
       </div>
-      <div id="option_2" class="option_text">Consumption/100km:
+      <div id="option_2" class="option_text">Consumption</br>(l/100km)
         <form>
-          <div class="option_input_static">kWh</div>
-          <input class="option_input" id="option_input_consumption_electric" type="text" value="19.7" onclick="editConsumption('electric')">
+          <div class="option_input_static" id="option_input_consumption_static_electric">kWh</div>
+          <input class="option_input" id="option_input_consumption_electric" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="19.7" oninput="recalculate()" onclick="editConsumption('electric')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_consumption_static_diesel">l</div>
-          <input class="option_input" id="option_input_consumption_diesel" type="text" value="4.4" onclick="editConsumption('diesel')">
+          <input class="option_input" id="option_input_consumption_diesel" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="4.4" oninput="recalculate()" onclick="editConsumption('diesel')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_consumption_static_gasoline">l</div>
-          <input class="option_input" id="option_input_consumption_gasoline" type="text" value="5.2" onclick="editConsumption('gasoline')">
+          <input class="option_input" id="option_input_consumption_gasoline" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="5.2" oninput="recalculate()" onclick="editConsumption('gasoline')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_consumption_static_lpg">l</div>
-          <input class="option_input" id="option_input_consumption_lpg" type="text" value="3.5" onclick="editConsumption('lpg')">
+          <input class="option_input" id="option_input_consumption_lpg" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="3.5" oninput="recalculate()" onclick="editConsumption('lpg')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_consumption_static_hybrid_0">l</div>
-          <input class="option_input" id="option_input_consumption_hybrid_0" type="text" value="2.1" onclick="editConsumption('hybrid_0')">
+          <input class="option_input" id="option_input_consumption_hybrid_0" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="2.1" oninput="recalculate()" onclick="editConsumption('hybrid_0')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_consumption_static_hybrid_1">kWh</div>
-          <input class="option_input" id="option_input_consumption_hybrid_1" type="text" value="7.5" onclick="editConsumption('hybrid_1')">
+          <input class="option_input" id="option_input_consumption_hybrid_1" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="7.5" oninput="recalculate()" onclick="editConsumption('hybrid_1')">
         </form>
       </div>
-      <div id="option_3" class="option_text">CO<sub>2</sub> emissions:
+      <div id="option_3" class="option_text">CO<sub>2</sub> Emissions</br>(g/km)
         <form>
           <input class="option_input" id="option_input_emissions_electric" type="text" value="0" disabled>
           <div class="option_input_static" id="option_input_static_emissions_electric">g/km</div>
         </form>
         <form>
           <div class="option_input_static" id="option_input_emissions_static_diesel">g/km</div>
-          <input class="option_input" id="option_input_emissions_diesel" type="text" value="4.4" onclick="editEmissions('diesel')">
+          <input class="option_input" id="option_input_emissions_diesel" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="114" oninput="recalculate()" onclick="editEmissions('diesel')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_emissions_static_gasoline">g/km</div>
-          <input class="option_input" id="option_input_emissions_gasoline" type="text" value="5.2" onclick="editEmissions('gasoline')">
+          <input class="option_input" id="option_input_emissions_gasoline" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="119" oninput="recalculate()" onclick="editEmissions('gasoline')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_emissions_static_lpg">g/km</div>
-          <input class="option_input" id="option_input_emissions_lpg" type="text" value="3.5" onclick="editEmissions('lpg')">
+          <input class="option_input" id="option_input_emissions_lpg" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="95" oninput="recalculate()" onclick="editEmissions('lpg')">
         </form>
         <form>
           <div class="option_input_static" id="option_input_emissions_static_hybrid_0">g/km</div>
-          <input class="option_input" id="option_input_emissions_hybrid_0" type="text" value="2.1" onclick="editEmissions('hybrid_0')">
+          <input class="option_input" id="option_input_emissions_hybrid_0" type="text" maxlength="4" onkeypress="return event.keyCode!=13" value="47" oninput="recalculate()" onclick="editEmissions('hybrid_0')">
         </form>
         <form>
           <input class="option_input" id="option_input_emissions_hybrid_1" type="text" value="0" disabled>
           <div class="option_input_static" id="option_input_emissions_static_hybrid_1">g/km</div>
         </form>
       </div>
-      <div class="car_box car_box_active" id="car_box_electric" onclick="setActive(0)">Electric</div>
-      <div class="car_box car_box_active" id="car_box_diesel" onclick="setActive(1)">Diesel</div>
-      <div class="car_box car_box_active" id="car_box_gasoline" onclick="setActive(2)">Gasoline</div>
-      <div class="car_box car_box_active" id="car_box_lpg" onclick="setActive(3)">LPG</div>
-      <div class="car_box car_box_active" id="car_box_hybrid" onclick="setActive(4)">Hybrid</div>
+      <div class="car_box" id="car_box_electric" onclick="setActive(0)">Electric</div>
+      <div class="car_box" id="car_box_diesel" onclick="setActive(1)">Diesel</div>
+      <div class="car_box" id="car_box_gasoline" onclick="setActive(2)">Gasoline</div>
+      <div class="car_box" id="car_box_lpg" onclick="setActive(3)">LPG</div>
+      <div class="car_box" id="car_box_hybrid" onclick="setActive(4)">Hybrid</div>
       <div id="hybrid_plus_0">+</div>
       <div id="hybrid_plus_1">+</div>
       <div id="option_countries">
@@ -93,9 +94,11 @@
         <div class="kilometers" onclick="selectKilometers(3)">40.000 km</div>
         <div id="kilometers_4" class="kilometers" onclick="selectKilometers(4)">50.000 km</div>
       </div>
+      <div id="x_axis">number of years</div>
+      <div id="y_axis">kg CO<sub>2</sub></div>
       <img id="imac" src="files/imac.svg">
     </div>
   </div>
-
+<script type="text/javascript" src="project_emissions_script.js"></script>
 </body>
 </html>

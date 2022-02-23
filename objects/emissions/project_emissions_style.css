@@ -37,6 +37,12 @@ body {
   pointer-events: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .option_text {
   position: absolute;
   top: 10%;
@@ -104,11 +110,15 @@ body {
 }
 
 #option_2 {
-  top: 26%;
+  top: 17%;
+  left: 48vw;
+  text-align: center;
 }
 
 #option_3 {
-  top: 31%;
+  top: 17%;
+  left: 57vw;
+  text-align: center;
 }
 
 #option_countries {
@@ -178,13 +188,12 @@ body {
 .option_input {
   position: absolute;
   width: 4vw;
-  top: 50%;
-  left: 12vw;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   font-family: Nunito;
   font-size: 1.2vw;
-  padding: .2vw 3.2vw .2vw 0;
+  padding: .2vw 3.2vw .2vw .4vw;
   border: .2vw solid #444444;
   border-radius: 2vw;
   color: #444444;
@@ -197,117 +206,126 @@ body {
 
 .option_input_static {
   position: absolute;
-  top: 50%;
-  left: 16vw;
-  transform: translateY(-50%);
+  left: 55%;
   font-family: Nunito;
   font-size: 1.2vw;
   color: #444444;
 }
 
+#option_input_consumption_electric {
+  top: 4.5vw;
+}
+
+#option_input_consumption_static_electric {
+  top: 4.9vw;
+}
+
 #option_input_consumption_diesel {
-  left: 21vw;
+  top: 8.5vw;
   padding: .2vw 2.2vw .2vw 1vw;
-  width: 3vw;
 }
 
 #option_input_consumption_static_diesel {
-  left: 25.3vw;
+  left: 65%;
+  top: 8.9vw;
 }
 
 #option_input_consumption_gasoline {
-  left: 29vw;
+  top: 12.5vw;
   padding: .2vw 2.2vw .2vw 1vw;
-  width: 3vw;
 }
 
 #option_input_consumption_static_gasoline {
-  left: 33.3vw;
+  left: 65%;
+  top: 12.9vw;
 }
 
 #option_input_consumption_lpg {
-  left: 37vw;
+  top: 16.5vw;
   padding: .2vw 2.2vw .2vw 1vw;
-  width: 3vw;
 }
 
 #option_input_consumption_static_lpg {
-  left: 41.3vw;
+  left: 65%;
+  top: 16.9vw;
 }
 
 #option_input_consumption_hybrid_0 {
-  left: 45vw;
+  top: 20.5vw;
   padding: .2vw 2.2vw .2vw 1vw;
-  width: 3vw;
 }
 
 #option_input_consumption_static_hybrid_0 {
-  left: 49.3vw;
+  left: 65%;
+  top: 20.9vw;
 }
 
 #option_input_consumption_hybrid_1 {
-  left: 53vw;
+  top: 24.5vw;
   padding: .2vw 3.2vw .2vw 0;
 }
 
 #option_input_consumption_static_hybrid_1 {
-  left: 57vw;
+  left: 55%;
+  top: 24.9vw;
 }
 
 #option_input_emissions_electric {
   background-color: #eeeeee;
   color: #888888;
   user-select: none;
+  top: 4.5vw;
 }
 
 #option_input_static_emissions_electric {
   color: #888888;
   user-select: none;
   cursor: default;
+  top: 4.9vw;
 }
 
 #option_input_emissions_diesel {
-  left: 21vw;
+  top: 8.5vw;
   padding: .2vw 3.2vw .2vw 0;
-  width: 3vw;
 }
 
 #option_input_emissions_static_diesel {
-  left: 24.2vw;
+  left: 55%;
+  top: 8.9vw;
 }
 
 #option_input_emissions_gasoline {
-  left: 29vw;
+  top: 12.5vw;
   padding: .2vw 3.2vw .2vw 0;
-  width: 3vw;
 }
 
 #option_input_emissions_static_gasoline {
-  left: 32.2vw;
+  left: 55%;
+  top: 12.9vw;
 }
 
 #option_input_emissions_lpg {
-  left: 37vw;
+  top: 16.5vw;
   padding: .2vw 3.2vw .2vw 0;
-  width: 3vw;
 }
 
 #option_input_emissions_static_lpg {
-  left: 40.2vw;
+  left: 55%;
+  top: 16.9vw;
 }
 
 #option_input_emissions_hybrid_0 {
-  left: 45vw;
+  top: 20.5vw;
   padding: .2vw 3.2vw .2vw 0;
-  width: 3vw;
 }
 
 #option_input_emissions_static_hybrid_0 {
-  left: 48.2vw;
+  left: 55%;
+  top: 20.9vw;
 }
 
 #option_input_emissions_hybrid_1 {
-  left: 53vw;
+  top: 24.5vw;
   padding: .2vw 3.2vw .2vw 0;
   background-color: #eeeeee;
   color: #888888;
@@ -315,7 +333,8 @@ body {
 }
 
 #option_input_emissions_static_hybrid_1 {
-  left: 57vw;
+  left: 55%;
+  top: 24.9vw;
   color: #888888;
   user-select: none;
   cursor: default;
@@ -323,51 +342,48 @@ body {
 
 .car_box {
   position: absolute;
-  top: 20%;
+  left: 57%;
   font-family: Nunito;
   font-size: 1.2vw;
   color: #444444;
-  background-color: #ffffff;
-  width: 7.2vw;
-  border: .2vw solid #444444;
+  width: 5vw;
+  border: .4vw solid #444444;
   border-radius: 2vw;
   text-align: center;
-  padding: .2vw 0;
   cursor: pointer;
 }
-
 .car_box:hover {
-  background-color: #666666;
-  color: #fafafa;
-}
-
-.car_box_active {
-  color: #fafafa;
-  background-color: #444444;
+  background-color: #eeeeee !important;
 }
 
 #car_box_electric {
-  left: calc(5% + 12vw);
+  top: 25%;
+  background-color: #64AFE7;
+  border-color: #64AFE7;
 }
 
 #car_box_diesel {
-  left: calc(5% + 21vw);
-  width: 6.2vw;
+  top: 32%;
+  background-color: #E9516F;
+  border-color: #E9516F;
 }
 
 #car_box_gasoline {
-  left: calc(5% + 29vw);
-  width: 6.2vw;
+  top: 39%;
+  background-color: #FFD473;
+  border-color: #FFD473;
 }
 
 #car_box_lpg {
-  left: calc(5% + 37vw);
-  width: 6.2vw;
+  top: 46%;
+  background-color: #7ECAA7;
+  border-color: #7ECAA7;
 }
 
 #car_box_hybrid {
-  left: calc(5% + 45vw);
-  width: 15.2vw;
+  top: 53%;
+  background-color: #FFA774;
+  border-color: #FFA774;
 }
 
 #hybrid_plus_0 {
@@ -375,8 +391,8 @@ body {
   font-family: Nunito;
   font-size: 1.2vw;
   color: #444444;
-  top: 26%;
-  left: 55.5vw;
+  top: 57.2%;
+  left: 51.2vw;
 }
 
 #hybrid_plus_1 {
@@ -384,6 +400,32 @@ body {
   font-family: Nunito;
   font-size: 1.2vw;
   color: #444444;
-  top: 31%;
-  left: 55.5vw;
+  top: 57.2%;
+  left: 60.5vw;
+}
+
+#x_axis {
+  position: absolute;
+  top: 36vw;
+  left: 20vw;
+  font-family: Nunito;
+  font-size: .8vw;
+  color: #444444;
+}
+
+#y_axis {
+  position: absolute;
+  top: 12vw;
+  left: 5.2%;
+  font-family: Nunito;
+  font-size: .8vw;
+  color: #444444;
+}
+
+#chart {
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  width: 36vw !important;
+  height: 22vw !important;
 }
