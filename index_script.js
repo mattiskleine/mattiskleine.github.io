@@ -7,6 +7,7 @@ window.onload = function() {
   }
   if(window.innerWidth <= 1000) {
     window.addEventListener('click', smallScreenListener);
+    window.addEventListener('touchstart', smallScreenListener);
     window.addEventListener('scroll', smallScreenListener);
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_projects'));
     document.getElementById('menu_bar_mobile_header').appendChild(document.getElementById('menu_bar_about'));
@@ -39,6 +40,7 @@ function smallScreenListener() {
   document.getElementById("small_screen").style.display = "none";
   document.getElementById("small_screen_text").style.display = "none";
   window.removeEventListener('click', smallScreenListener);
+  window.removeEventListener('touchstart', smallScreenListener);
   window.removeEventListener('scroll', smallScreenListener);
 }
 
