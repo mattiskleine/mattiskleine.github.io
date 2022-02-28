@@ -117,7 +117,7 @@ input::-webkit-inner-spin-button {
 
 #option_3 {
   top: 17%;
-  left: 57vw;
+  left: 59vw;
   text-align: center;
 }
 
@@ -403,7 +403,7 @@ input::-webkit-inner-spin-button {
   font-size: 1.2vw;
   color: #444444;
   top: 57.2%;
-  left: 59.2vw;
+  left: 61.2vw;
 }
 
 #x_axis {
@@ -713,13 +713,15 @@ li:nth-child(4) {
   }
 
   #hybrid_plus_0 {
-    top: 56.2%;
-    left: 72.5vw;
+    top: 55.4%;
+    left: 42vw;
+    font-size: 4vw;
   }
 
   #hybrid_plus_1 {
-    top: 61.6%;
-    left: 72.5vw;
+    top: 55.4%;
+    left: 67vw;
+    font-size: 4vw;
   }
 
   #chart {
@@ -820,64 +822,64 @@ li:nth-child(4) {
   }
 
   #option_input_emissions_electric {
-    top: 123%;
+    top: 132%;
   }
 
   #option_input_static_emissions_electric {
-    top: 142%;
+    top: 153%;
   }
 
   #option_input_emissions_diesel {
-    top: 217%;
+    top: 232%;
     padding: .2vw 7vw .2vw 0;
     width: 12vw;
   }
 
   #option_input_emissions_static_diesel {
     left: 55%;
-    top: 236%;
+    top: 253%;
   }
 
   #option_input_emissions_gasoline {
-    top: 311%;
+    top: 332%;
     padding: .2vw 7vw .2vw 0;
     width: 12vw;
   }
 
   #option_input_emissions_static_gasoline {
     left: 55%;
-    top: 330%;
+    top: 353%;
   }
 
   #option_input_emissions_lpg {
-    top: 405%;
+    top: 432%;
     padding: .2vw 7vw .2vw 0;
     width: 12vw;
   }
 
   #option_input_emissions_static_lpg {
     left: 55%;
-    top: 426%;
+    top: 453%;
   }
 
   #option_input_emissions_hybrid_0 {
-    top: 499%;
+    top: 532%;
     padding: .2vw 7vw .2vw 0;
     width: 12vw;
   }
 
   #option_input_emissions_static_hybrid_0 {
     left: 55%;
-    top: 518%;
+    top: 553%;
   }
 
   #option_input_emissions_hybrid_1 {
-    top: 593%;
+    top: 632%;
   }
 
   #option_input_emissions_static_hybrid_1 {
     left: 55%;
-    top: 612%;
+    top: 653%;
   }
 
   .option_button {
