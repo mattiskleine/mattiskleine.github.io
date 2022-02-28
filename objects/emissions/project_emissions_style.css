@@ -214,6 +214,7 @@ input::-webkit-inner-spin-button {
 
 #option_input_consumption_electric {
   top: 4.5vw;
+  padding: .2vw 3.2vw .2vw 0;
 }
 
 #option_input_consumption_static_electric {
@@ -275,6 +276,7 @@ input::-webkit-inner-spin-button {
   color: #888888;
   user-select: none;
   top: 4.5vw;
+  padding: .2vw 3.2vw .2vw 0;
 }
 
 #option_input_static_emissions_electric {
@@ -392,7 +394,7 @@ input::-webkit-inner-spin-button {
   font-size: 1.2vw;
   color: #444444;
   top: 57.2%;
-  left: 51.2vw;
+  left: 51.4vw;
 }
 
 #hybrid_plus_1 {
@@ -401,7 +403,7 @@ input::-webkit-inner-spin-button {
   font-size: 1.2vw;
   color: #444444;
   top: 57.2%;
-  left: 60.5vw;
+  left: 59.2vw;
 }
 
 #x_axis {
@@ -560,7 +562,7 @@ li:nth-child(4) {
 
   #option_3 {
     top: 28%;
-    left: 74vw;
+    left: 76vw;
   }
 
   .car_box {
@@ -589,12 +591,12 @@ li:nth-child(4) {
 
   #hybrid_plus_0 {
     top: 56.2%;
-    left: 72.5vw;
+    left: 72.8vw;
   }
 
   #hybrid_plus_1 {
     top: 61.6%;
-    left: 72.5vw;
+    left: 72.8vw;
   }
 
   #chart {
