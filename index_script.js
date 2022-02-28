@@ -43,12 +43,18 @@ function smallScreenListener() {
 }
 
 window.onresize = function() {
-  if(initVP <= 1000) {
-    if(window.innerWidth > 1000) {
+  if(initVP > 1000) {
+    if(window.innerWidth <= 1000) {
       location.reload();
     }
-  } else {
-    if(window.innerWidth <= 1000) {
+  }
+  if(initVP <= 500) {
+    if(window.innerWidth > 500) {
+      location.reload();
+    }
+  }
+  if(initVP > 500 && initVP <= 1000) {
+    if(window.innerWidth <= 500 || window.innerWidth > 1000) {
       location.reload();
     }
   }
@@ -120,8 +126,9 @@ function openPageProjects() {
     document.getElementById('menu_bar_line').style.right = "90.3vw";
     showProjectPreviews();
   }, 200);
+  document.getElementById('content').style.height = '204vw';
   if(window.innerWidth <= 1000) {
-    document.getElementById('content').style.height = "400vw";
+    document.getElementById('content').style.height = "484vw";
     document.getElementById('menu_bar_line').style.left = "20.3vw";
     setTimeout(() => {
       document.getElementById('menu_bar_line').style.right = "67.5vw";
@@ -159,8 +166,9 @@ function openPageAbout() {
   }
 
   document.getElementById('menu_bar_line').style.right = "84.4vw";
+  document.getElementById('content').style.height = '178vw';
   if(window.innerWidth <= 1000) {
-    document.getElementById('content').style.height = "559vw";
+    document.getElementById('content').style.height = '559vw';
     document.getElementById('menu_bar_line').style.right = "41vw";
   }
   if(window.innerWidth <= 500) {
@@ -302,7 +310,7 @@ function unhoverProject(x) {
   }
 }
 
-var projectSource = ['objects/adam/project_adam.html', 'objects/cane/project_cane.html', 'objects/ar/project_ar.html', 'objects/vc/project_vc.html'];
+var projectSource = ['objects/adam/project_adam.html', 'objects/cane/project_cane.html', 'objects/ar/project_ar.html', 'objects/vc/project_vc.html', 'objects/emissions/project_emissions.html'];
 function openProject(x) {
   scrollPosBefore = window.scrollY;
   scrollWindowActive = 0;

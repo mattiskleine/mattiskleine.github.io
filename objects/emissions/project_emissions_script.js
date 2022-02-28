@@ -1,3 +1,7 @@
+if(window.innerWidth <= 500) {
+  document.getElementById('imac').src = 'files/iphone.svg';
+}
+
 function openCountries() {
   document.getElementById("option_kilometers").style.display = "none";
   document.getElementById("option_countries").style.display = "block";
@@ -96,9 +100,9 @@ function setActive(x) {
 }
 
 const cicDenmark = 177;
-const cicPoland = 577;
+const cicPoland = 817;
 const cicNorway = 29;
-const cicGermany = 254;
+const cicGermany = 454;
 
 const wttDiesel = 640;
 const wttGasoline = 720;

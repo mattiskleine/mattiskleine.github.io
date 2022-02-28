@@ -551,10 +551,14 @@ li {
 
 #project4 {
   top: 137vw;
+}
+
+#project5 {
+  top: 170vw;
   cursor: auto;
 }
 
-#project4_heading {
+#project5_heading {
   position: absolute;
   font-family: MontserratMedium;
   font-size: 2vw;
@@ -604,7 +608,9 @@ li {
   height: 147vw;
 }
 
-
+#project4_content {
+  height: 130vw;
+}
 
 
 
@@ -946,11 +952,15 @@ li {
 
   #project4 {
     top: 338vw;
+  }
+
+  #project5 {
+    top: 420vw;
     cursor: auto;
     height: 55vw;
   }
 
-  #project4_heading {
+  #project5_heading {
     font-size: 5vw;
     left: 0;
     transform: translateX(0);
@@ -984,7 +994,11 @@ li {
   }
 
   #project3_content {
-    height: 147vw;
+    height: 615vw;
+  }
+
+  #project4_content {
+    height: 270vw;
   }
 
 }
@@ -1041,6 +1055,10 @@ li {
 
   #scroll_header_bg {
     display: none;
+  }
+
+  #project4_content {
+    height: 402vw;
   }
 
 }

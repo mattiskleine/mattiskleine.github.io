@@ -429,3 +429,508 @@ input::-webkit-inner-spin-button {
   width: 36vw !important;
   height: 22vw !important;
 }
+
+#section1 {
+  position: absolute;
+  top: 76vw;
+  height: 50vw;
+  padding-top: 4vw;
+  background-color: #fafafa;
+}
+
+#car {
+  position: absolute;
+  top: 4vw;
+  width: 80vw;
+  left: 10vw;
+}
+
+#emissions_h2 {
+  position: absolute;
+  top: 10vw;
+  text-align: left;
+  left: 15vw;
+}
+
+#emissions_p {
+  position: absolute;
+  top: 14vw;
+  text-align: left;
+  left: 15vw;
+  margin: 0;
+  width: 28vw;
+}
+
+#formula_list {
+  position: absolute;
+  top: 10vw;
+  width: 40vw;
+  padding-left: 0;
+  left: 48vw;
+}
+
+li:nth-child(1) {
+  width: 32vw;
+  margin-left: 3vw;
+}
+
+li:nth-child(3) {
+  width: 32vw;
+  margin-left: 2vw;
+}
+
+li:nth-child(4) {
+  width: 25vw;
+  margin-left: 4vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  #imac_wrapper {
+    top: 64vw;
+    width: 90vw;
+    height: 74vw;
+  }
+
+  #section0 {
+    height: 144vw;
+  }
+
+  #section1 {
+    top: 146vw;
+    height: 120vw;
+    padding-top: 4vw;
+    background-color: #fafafa;
+  }
+
+  #car {
+    top: 60vw;
+    width: 120vw;
+    left: -22vw;
+  }
+
+  #emissions_h2 {
+    position: absolute;
+    top: auto;
+    text-align: center;
+    left: auto;
+    width: 100vw;
+  }
+
+  #emissions_p {
+    position: absolute;
+    top: 24vw;
+    text-align: center;
+    left: 5vw;
+    margin: 0;
+    width: 90vw;
+  }
+
+  #formula_list {
+    position: absolute;
+    top: 69vw;
+    width: 59vw;
+    padding-left: 0;
+    left: 35vw;
+  }
+
+  li {
+    font-size: 2.5vw;
+    line-height: 3vw;
+  }
+
+  li:nth-child(1) {
+    width: 47vw;
+    margin-left: 3vw;
+  }
+
+  li:nth-child(3) {
+    width: 48vw;
+    margin-left: 3vw;
+  }
+
+  li:nth-child(4) {
+    width: 40vw;
+    margin-left: 4vw;
+  }
+
+  #option_2 {
+    top: 28%;
+    left: 64vw;
+  }
+
+  #option_3 {
+    top: 28%;
+    left: 74vw;
+  }
+
+  .car_box {
+    left: 61%;
+  }
+
+  #car_box_electric {
+    top: 34%;
+  }
+
+  #car_box_diesel {
+    top: 39.6%;
+  }
+
+  #car_box_gasoline {
+    top: 44.9%;
+  }
+
+  #car_box_lpg {
+    top: 50.4%;
+  }
+
+  #car_box_hybrid {
+    top: 55.6%;
+  }
+
+  #hybrid_plus_0 {
+    top: 56.2%;
+    left: 72.5vw;
+  }
+
+  #hybrid_plus_1 {
+    top: 61.6%;
+    left: 72.5vw;
+  }
+
+  #chart {
+    left: 8%;
+    width: 46vw !important;
+    height: 30vw !important;
+  }
+
+  #x_axis {
+    top: 48.5vw;
+    left: 28.5vw;
+  }
+
+  #y_axis {
+    top: 15vw;
+    left: 8.2%;
+  }
+
+  .option_text {
+    left: 8%;
+  }
+
+  #option_kilometers {
+    top: 14.45%;
+    left: calc(8% + 12vw);
+  }
+
+  #option_countries {
+    top: 9.5%;
+    left: calc(8% + 12vw);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #car {
+    width: 140vw;
+    left: -45vw;
+  }
+
+  #formula_list {
+    top: 70vw;
+    width: 70vw;
+    left: 21vw;
+  }
+
+  li {
+    font-size: 3vw;
+    line-height: 3.5vw;
+  }
+
+  li:nth-child(1) {
+    width: 58vw;
+  }
+
+  li:nth-child(3) {
+    width: 58vw;
+    margin-left: 4vw;
+  }
+
+  li:nth-child(4) {
+    width: 47vw;
+    margin-left: 5vw;
+  }
+
+  #section0 {
+    height: 256vw;
+  }
+
+  #imac_wrapper {
+    height: 181vw;
+  }
+
+  #section1 {
+    top: 258vw;
+    height: 140vw;
+  }
+
+  #option_2 {
+    top: 20%;
+    left: 31vw;
+  }
+
+  #option_3 {
+    top: 20%;
+    left: 59vw;
+  }
+
+  .car_box {
+    left: 10%;
+    font-size: 4vw;
+    border: 1vw solid #444444;
+    width: 17vw;
+    border-radius: 4vw;
+  }
+
+  #car_box_electric {
+    top: 28%;
+  }
+
+  #car_box_diesel {
+    top: 34%;
+  }
+
+  #car_box_gasoline {
+    top: 40%;
+  }
+
+  #car_box_lpg {
+    top: 46%;
+  }
+
+  #car_box_hybrid {
+    top: 52%;
+  }
+
+  #hybrid_plus_0 {
+    top: 56.2%;
+    left: 72.5vw;
+  }
+
+  #hybrid_plus_1 {
+    top: 61.6%;
+    left: 72.5vw;
+  }
+
+  #chart {
+    left: 10%;
+    width: 72vw !important;
+    height: 50vw !important;
+    top: 64%;
+  }
+
+  #x_axis {
+    top: 165vw;
+    left: 33.5vw;
+    font-size: 3vw;
+  }
+
+  #y_axis {
+    top: 108vw;
+    left: 10%;
+    font-size: 3vw;
+  }
+
+  .option_text {
+    font-size: 4vw;
+  }
+
+  .option_input {
+    width: 15vw;
+    font-size: 4vw;
+    padding: .2vw 4vw .2vw 0;
+    border: 1vw solid #444444;
+    border-radius: 4vw;
+  }
+
+  .option_input_static {
+    left: 55%;
+    font-size: 3vw;
+  }
+
+  #option_input_consumption_electric {
+    top: 132%;
+    padding: .2vw 7vw .2vw 0;
+    width: 12vw;
+  }
+
+  #option_input_consumption_static_electric {
+    top: 153%;
+  }
+
+  #option_input_consumption_diesel {
+    top: 232%;
+    padding: .2vw 4vw .2vw 0;
+  }
+
+  #option_input_consumption_static_diesel {
+    left: 65%;
+    top: 253%;
+  }
+
+  #option_input_consumption_gasoline {
+    top: 332%;
+    padding: .2vw 4vw .2vw 0;
+  }
+
+  #option_input_consumption_static_gasoline {
+    left: 65%;
+    top: 353%;
+  }
+
+  #option_input_consumption_lpg {
+    top: 432%;
+    padding: .2vw 4vw .2vw 0;
+  }
+
+  #option_input_consumption_static_lpg {
+    left: 65%;
+    top: 453%;
+  }
+
+  #option_input_consumption_hybrid_0 {
+    top: 532%;
+    padding: .2vw 4vw .2vw 0;
+  }
+
+  #option_input_consumption_static_hybrid_0 {
+    left: 65%;
+    top: 553%;
+  }
+
+  #option_input_consumption_hybrid_1 {
+    top: 632%;
+    padding: .2vw 7vw .2vw 0;
+    width: 12vw;
+  }
+
+  #option_input_consumption_static_hybrid_1 {
+    left: 55%;
+    top: 653%;
+  }
+
+  #option_input_emissions_electric {
+    top: 123%;
+  }
+
+  #option_input_static_emissions_electric {
+    top: 142%;
+  }
+
+  #option_input_emissions_diesel {
+    top: 217%;
+    padding: .2vw 7vw .2vw 0;
+    width: 12vw;
+  }
+
+  #option_input_emissions_static_diesel {
+    left: 55%;
+    top: 236%;
+  }
+
+  #option_input_emissions_gasoline {
+    top: 311%;
+    padding: .2vw 7vw .2vw 0;
+    width: 12vw;
+  }
+
+  #option_input_emissions_static_gasoline {
+    left: 55%;
+    top: 330%;
+  }
+
+  #option_input_emissions_lpg {
+    top: 405%;
+    padding: .2vw 7vw .2vw 0;
+    width: 12vw;
+  }
+
+  #option_input_emissions_static_lpg {
+    left: 55%;
+    top: 426%;
+  }
+
+  #option_input_emissions_hybrid_0 {
+    top: 499%;
+    padding: .2vw 7vw .2vw 0;
+    width: 12vw;
+  }
+
+  #option_input_emissions_static_hybrid_0 {
+    left: 55%;
+    top: 518%;
+  }
+
+  #option_input_emissions_hybrid_1 {
+    top: 593%;
+  }
+
+  #option_input_emissions_static_hybrid_1 {
+    left: 55%;
+    top: 612%;
+  }
+
+  .option_button {
+    width: 22vw;
+    left: 42vw;
+    font-size: 4vw;
+    padding: .6vw 0;
+    border: 1vw solid #444444;
+    border-radius: 6vw;
+  }
+
+  #option_kilometers {
+    top: 14.45%;
+    left: 42vw;
+  }
+
+  #option_countries {
+    top: 9.1%;
+    left: 49.1vw;
+    border: 1vw solid #444444;
+    border-radius: 4vw;
+    width: 22.1vw;
+  }
+
+  .countries {
+    font-size: 4vw;
+    padding: .2vw 0;
+  }
+
+  #country_0 {
+    border-radius: 4vw 4vw 0 0;
+  }
+
+  #country_3 {
+    border-radius: 0 0 4vw 4vw;
+  }
+
+  #option_kilometers {
+    top: 14.1%;
+    left: 49.1vw;
+    border: 1vw solid #444444;
+    border-radius: 4vw;
+    width: 22.1vw;
+  }
+
+  .kilometers {
+    font-size: 4vw;
+    padding: .2vw 0;
+  }
+
+  #kilometers_0 {
+    border-radius: 4vw 4vw 0 0;
+  }
+
+  #kilometers_4 {
+    border-radius: 0 0 4vw 4vw;
+  }
+}
