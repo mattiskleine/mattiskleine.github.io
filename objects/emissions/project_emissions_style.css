@@ -675,12 +675,12 @@ li:nth-child(4) {
   }
 
   #option_2 {
-    top: 20%;
+    top: 36vw;
     left: 31vw;
   }
 
   #option_3 {
-    top: 20%;
+    top: 36vw;
     left: 59vw;
   }
 
@@ -693,23 +693,23 @@ li:nth-child(4) {
   }
 
   #car_box_electric {
-    top: 28%;
+    top: 50.7vw;
   }
 
   #car_box_diesel {
-    top: 34%;
+    top: 61.5vw;
   }
 
   #car_box_gasoline {
-    top: 40%;
+    top: 72.3vw;
   }
 
   #car_box_lpg {
-    top: 46%;
+    top: 83.1vw;
   }
 
   #car_box_hybrid {
-    top: 52%;
+    top: 93.9vw;
   }
 
   #hybrid_plus_0 {
