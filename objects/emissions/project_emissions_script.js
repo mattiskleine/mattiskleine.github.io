@@ -99,6 +99,17 @@ function setActive(x) {
   }
 }
 
+function hoverCarBox(x) {
+  const item = document.getElementsByClassName('car_box');
+  item[x].style.backgroundColor = '#eeeeee';
+}
+
+const carBoxColors = ['#64AFE7', '#E9516F', '#FFD473', '#7ECAA7', '#FFA774']
+function unhoverCarBox(x) {
+  const item = document.getElementsByClassName('car_box');
+  item[x].style.backgroundColor = carBoxColors[x];
+}
+
 const cicDenmark = 177;
 const cicPoland = 817;
 const cicNorway = 29;
