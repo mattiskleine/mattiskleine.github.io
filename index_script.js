@@ -34,6 +34,23 @@ window.onload = function() {
     compList[14].innerHTML = '3D Design: Fusion360, Inventor, NX, Blender';
     compList[15].innerHTML = 'Prototyping: hardware workshop and electronics';
   }
+
+  document.getElementById('button_project').addEventListener('mouseenter', e => {
+    var rect = document.getElementById('button_project').getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
+    document.getElementById('button_project_arrow').style.right = "0.7vw";
+    document.getElementById('button_project_filler').style.top = y + "px";
+    document.getElementById('button_project_filler').style.left = x + "px";
+    document.getElementById('button_project_filler').style.transition = "transform 1s";
+    document.getElementById('button_project_filler').style.transform = "translate(-50%, -50%) scale(1)";
+  });
+
+  document.getElementById('button_project').addEventListener('mouseleave', e => {
+    document.getElementById('button_project_arrow').style.right = "1vw";
+    document.getElementById('button_project_filler').style.transition = "transform 0s";
+    document.getElementById('button_project_filler').style.transform = "translate(-50%, -50%) scale(0)";
+  });
 }
 
 function smallScreenListener() {
@@ -150,11 +167,13 @@ function openPageProjects() {
   document.getElementById('cv_pdf').style.opacity = '0';
   document.getElementById('cv_pdf_img').style.opacity = '0';
   document.getElementById('competence_profile').style.opacity = '0';
+  document.getElementById('button_project').style.opacity = '0';
   setTimeout(() => {
     document.getElementById('cv').style.display = 'none';
     document.getElementById('cv_pdf').style.display = 'none';
     document.getElementById('cv_pdf_img').style.display = 'none';
     document.getElementById('competence_profile').style.display = 'none';
+    document.getElementById('button_project').style.display = 'none';
   }, 320);
 }
 
@@ -180,6 +199,7 @@ function openPageAbout() {
   document.getElementById('cv_pdf').style.display = 'block';
   document.getElementById('cv_pdf_img').style.display = 'block';
   document.getElementById('competence_profile').style.display = 'block';
+  document.getElementById('button_project').style.display = 'block';
   setTimeout(function(){
     document.getElementById('menu_bar_line').style.left = "11.8vw";
     if(window.innerWidth <= 1000) {
@@ -189,6 +209,7 @@ function openPageAbout() {
     document.getElementById('cv_pdf').style.opacity = '1';
     document.getElementById('cv_pdf_img').style.opacity = '1';
     document.getElementById('competence_profile').style.opacity = '1';
+    document.getElementById('button_project').style.opacity = '1';
   }, 200);
   document.getElementById('menu_bar_projects').classList.remove('menu_bar_item_active');
   document.getElementById('menu_bar_about').classList.add('menu_bar_item_active');
@@ -370,10 +391,3 @@ function showProjectPreviews() {
     }
   }, 20);
 }
-
-/*
-write property of child
-document.getElementById('cv').contentWindow.document.getElementById('skills_description_creative').style.opacity = '0';
-read property of child
-var creativeActive = window.getComputedStyle(document.getElementById('cv').contentWindow.document.getElementById('skills_description_creative')).getPropertyValue('opacity');
-*/
