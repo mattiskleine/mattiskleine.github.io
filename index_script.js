@@ -39,7 +39,11 @@ window.onload = function() {
     var rect = document.getElementById('button_project').getBoundingClientRect();
     var x = e.clientX - rect.left;
     var y = e.clientY - rect.top;
-    document.getElementById('button_project_arrow').style.right = "0.7vw";
+    if(window.innerWidth <= 1000) {
+      document.getElementById('button_project_arrow').style.right = "2.5vw";
+    } else {
+      document.getElementById('button_project_arrow').style.right = "0.7vw";
+    }
     document.getElementById('button_project_filler').style.top = y + "px";
     document.getElementById('button_project_filler').style.left = x + "px";
     document.getElementById('button_project_filler').style.transition = "transform 1s";
@@ -47,7 +51,11 @@ window.onload = function() {
   });
 
   document.getElementById('button_project').addEventListener('mouseleave', e => {
-    document.getElementById('button_project_arrow').style.right = "1vw";
+    if(window.innerWidth <= 1000) {
+      document.getElementById('button_project_arrow').style.right = "3vw";
+    } else {
+      document.getElementById('button_project_arrow').style.right = "1vw";
+    }
     document.getElementById('button_project_filler').style.transition = "transform 0s";
     document.getElementById('button_project_filler').style.transform = "translate(-50%, -50%) scale(0)";
   });

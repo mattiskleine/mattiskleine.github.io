@@ -902,6 +902,31 @@ li {
     padding: 2vw;
   }
 
+  #button_project {
+    top: 564vw;
+    right: 50%;
+    transform: translateX(50%);
+    width: 25vw;
+    height: 8vw;
+    border-radius: 10vw;
+  }
+  
+  #button_project_text {
+    font-size: 2.5vw;
+    left: 3vw;
+  }
+  
+  #button_project_arrow {
+    right: 3vw;
+    top: 13%;
+    font-size: 4.5vw;
+  }
+  
+  #button_project_filler {
+    width: 60vw;
+    height: 60vw;
+  }
+
   .project {
     width: 92vw;
     height: 72vw;
