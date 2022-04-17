@@ -59,6 +59,46 @@ window.onload = function() {
     document.getElementById('button_project_filler').style.transition = "transform 0s";
     document.getElementById('button_project_filler').style.transform = "translate(-50%, -50%) scale(0)";
   });
+  
+  var projectCards = document.getElementsByClassName('project');
+  for(var i = 0; i < projectCards.length; i++) {
+    projectCards[i].addEventListener('mousemove', projectCardMove);
+  }
+
+  var projectFrames = document.getElementsByClassName('project_frame');
+  for(var i = 0; i < projectFrames.length; i++) {
+    projectFrames[i].addEventListener('mousemove', projectCardLeave);
+  }
+}
+
+function projectCardMove(e) {
+  document.getElementById('content').style.perspectiveOrigin = `50% ${e.currentTarget.offsetTop}px`;
+  var card = e.currentTarget.getBoundingClientRect();
+  var x = (e.clientX - card.left) * (100/(card.right - card.left));
+  var y = (e.clientY - card.top) * (100/(card.bottom - card.top));
+  var alpha = mapRange(x, 0, 100, -5, 5);
+  var beta = mapRange(y, 0, 100, 10, -10);
+
+  e.currentTarget.style.transform = `translateX(-50%) rotateX(${beta}deg) rotateY(${alpha}deg)`;
+
+  var projectCards = document.getElementsByClassName('project');
+  setTimeout( ()=> {
+    for(var i = 0; i < projectCards.length; i++) {
+      projectCards[i].style.transition = 'transform 0s';
+    }
+  }, 500);
+}
+
+function mapRange (number, inMin, inMax, outMin, outMax) {
+  return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+}
+
+function projectCardLeave(e) {
+  var projectCards = document.getElementsByClassName('project');
+  for(var i = 0; i < projectCards.length; i++) {
+    projectCards[i].style.transition = 'transform .5s';
+    projectCards[i].style.transform = 'translateX(-50%) rotateX(0) rotateY(0)';
+  }
 }
 
 function smallScreenListener() {
@@ -386,6 +426,10 @@ function hideProjectPreviews() {
       projects[i].style.display = 'none';
     }
   }, 320);
+  var projectFrames = document.getElementsByClassName('project_frame');
+  for(var i = 0; i < projectFrames.length; i++) {
+    projectFrames[i].style.display = 'none';
+  }
 }
 
 function showProjectPreviews() {
@@ -398,4 +442,8 @@ function showProjectPreviews() {
       projects[i].style.opacity = '1';
     }
   }, 20);
+  var projectFrames = document.getElementsByClassName('project_frame');
+  for(var i = 0; i < projectFrames.length; i++) {
+    projectFrames[i].style.display = 'block';
+  }
 }
