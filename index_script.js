@@ -60,14 +60,16 @@ window.onload = function() {
     document.getElementById('button_project_filler').style.transform = "translate(-50%, -50%) scale(0)";
   });
   
-  var projectCards = document.getElementsByClassName('project');
-  for(var i = 0; i < projectCards.length; i++) {
-    projectCards[i].addEventListener('mousemove', projectCardMove);
-  }
+  if(window.innerWidth > 1000) {
+    var projectCards = document.getElementsByClassName('project');
+    for(var i = 0; i < projectCards.length; i++) {
+      projectCards[i].addEventListener('mousemove', projectCardMove);
+    }
 
-  var projectFrames = document.getElementsByClassName('project_frame');
-  for(var i = 0; i < projectFrames.length; i++) {
-    projectFrames[i].addEventListener('mousemove', projectCardLeave);
+    var projectFrames = document.getElementsByClassName('project_frame');
+    for(var i = 0; i < projectFrames.length; i++) {
+      projectFrames[i].addEventListener('mousemove', projectCardLeave);
+    }
   }
 }
 
@@ -442,8 +444,11 @@ function showProjectPreviews() {
       projects[i].style.opacity = '1';
     }
   }, 20);
-  var projectFrames = document.getElementsByClassName('project_frame');
-  for(var i = 0; i < projectFrames.length; i++) {
-    projectFrames[i].style.display = 'block';
+
+  if(window.innerWidth > 1000) {
+    var projectFrames = document.getElementsByClassName('project_frame');
+    for(var i = 0; i < projectFrames.length; i++) {
+      projectFrames[i].style.display = 'block';
+    }
   }
 }
