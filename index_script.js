@@ -237,9 +237,9 @@ function openPageAbout() {
   }
 
   document.getElementById('menu_bar_line').style.right = "84.4vw";
-  document.getElementById('content').style.height = '178vw';
+  document.getElementById('content').style.height = '180vw';
   if(window.innerWidth <= 1000) {
-    document.getElementById('content').style.height = '559vw';
+    document.getElementById('content').style.height = '578vw';
     document.getElementById('menu_bar_line').style.right = "41vw";
   }
   if(window.innerWidth <= 500) {

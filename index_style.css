@@ -342,7 +342,7 @@ li {
   top: 38vw;
   left: 0;
   right: 0;
-  height: 178vw;
+  height: 180vw;
   background-color: #ffffff;
   perspective: 4000px;
 }
@@ -454,6 +454,10 @@ li {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 1s;
 }
+
+
+
+
 
 .project {
   position: absolute;
@@ -878,7 +882,7 @@ li {
 
   #content {
     top: 100vh;
-    height: 559vw;
+    height: 578vw;
   }
 
   #scroll_header_text_header {
@@ -1192,6 +1196,30 @@ li {
 
   #scroll_header_bg {
     display: none;
+  }
+
+  #button_project {
+    top: auto;
+    bottom: 4vw;
+    width: 35vw;
+    height: 12vw;
+    border-radius: 15vw;
+  }
+  
+  #button_project_text {
+    font-size: 4vw;
+    left: 3vw;
+  }
+  
+  #button_project_arrow {
+    right: 3vw;
+    top: 11%;
+    font-size: 7vw;
+  }
+  
+  #button_project_filler {
+    width: 60vw;
+    height: 60vw;
   }
 
   #project4_content {
