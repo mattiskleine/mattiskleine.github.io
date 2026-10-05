@@ -4,8 +4,12 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
-    "dev": "nodemon main.js -e js,html,css"
+    "dev": "pnpm --dir app dev",
+    "build": "pnpm --dir app build",
+    "check": "pnpm --dir app check",
+    "preview": "pnpm --dir app preview",
+    "dev:legacy": "nodemon main.js -e js,html,css",
+    "start": "node main.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +17,6 @@
     "chart.js": "^3.7.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.16"
-  }
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }
